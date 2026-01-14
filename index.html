@@ -247,6 +247,12 @@
 
       // Рендерим меню на фоне
       applyLanguage();
+      try {
+        const data = await loadMenuJSONP();
+        applyRemoteData(data);
+      } catch (e) {
+        console.warn("⚠️ MENU API error, using local MENU:", e);
+      }
       render();
 
       // Включаем блюр и показываем модалку
@@ -470,6 +476,76 @@ const MENU = [
         { id:"lotus-cheesecake", cat:"desserts", name:"Lotus Cheesecake", price:220, img:"images/lotus-cheesecake.webp" },
         { id:"mini-cookies", cat:"desserts", name:"Atıştırmalık Kurabiye Çeşitleri", price:70, img:"images/mini-cookies.webp" },
       ];
+
+const MENU_API_BASE =
+  "https://script.google.com/macros/s/AKfycbwknrlwCAxdrvI6t9VU5jdrg-wfE00urZTDyml2Mlbkja3NzTCO4-g2RPiJ7Qmpjes/exec";
+
+function loadMenuJSONP() {
+  return new Promise((resolve, reject) => {
+    const cbName = "__menu_cb_" + Math.random().toString(36).slice(2);
+    const script = document.createElement("script");
+
+    window[cbName] = (data) => {
+      cleanup();
+      resolve(data);
+    };
+
+    function cleanup() {
+      try { delete window[cbName]; } catch {}
+      if (script.parentNode) script.parentNode.removeChild(script);
+    }
+
+    script.onerror = () => {
+      cleanup();
+      reject(new Error("JSONP load failed"));
+    };
+
+    const url = `${MENU_API_BASE}?activeOnly=0&callback=${cbName}&t=${Date.now()}`;
+    script.src = url;
+    document.head.appendChild(script);
+  });
+}
+
+function applyRemoteData(data) {
+  if (!data?.ok || !Array.isArray(data.items)) {
+    console.warn("⚠️ Bad API data, using local MENU");
+    return;
+  }
+
+  const map = new Map(data.items.map(it => [String(it.id).trim(), it]));
+
+  let updated = 0;
+  let hidden = 0;
+  let missing = 0;
+
+  for (const item of MENU) {
+    const r = map.get(item.id);
+    if (!r) {
+      item.active = true;
+      missing++;
+      continue;
+    }
+
+    item.active = (r.active !== false);
+    if (!item.active) hidden++;
+
+    if (item.sizes && typeof item.sizes === "object") {
+      if (typeof r.price_s === "number") {
+        item.sizes.S = r.price_s;
+        updated++;
+      }
+      if (typeof r.price_m === "number") {
+        item.sizes.M = r.price_m;
+        updated++;
+      }
+    } else if (typeof r.price === "number" && typeof item.price === "number") {
+      item.price = r.price;
+      updated++;
+    }
+  }
+
+  console.log(`✅ MENU applied. updated:${updated} hidden:${hidden} not_in_sheet:${missing}`);
+}
 const AMOUR_ENRICH = {
 		//КОФЕ СДЕЛАЛ
 		"espresso":{"desc":"Yoğun aromalı güçlü ve konsantre kahve","ingredients":["Espresso"],"caffeine":63},
@@ -810,7 +886,9 @@ const AMOUR_ENRICH = {
 ---------------------------------------------- */
 async function render(){
  root.innerHTML="";
- const items = MENU.filter(m=>m.cat===active).map(renderCard);
+ const items = MENU
+  .filter(m => m.cat === active && m.active !== false)
+  .map(renderCard);
  root.append(header(),layout(items));
  initReveal();
 }
