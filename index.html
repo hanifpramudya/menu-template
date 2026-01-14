@@ -247,8 +247,12 @@
 
       // Рендерим меню на фоне
       applyLanguage();
-      const remoteMap = await loadRemoteMenuMap();
-      applyRemoteMenuMap(remoteMap);
+      try {
+        const data = await loadMenuJSONP();
+        applyRemoteData(data);
+      } catch (e) {
+        console.warn("⚠️ MENU API error, using local MENU:", e);
+      }
       render();
 
       // Включаем блюр и показываем модалку
@@ -476,34 +480,46 @@ const MENU = [
 const MENU_API_BASE =
   "https://script.google.com/macros/s/AKfycbwknrlwCAxdrvI6t9VU5jdrg-wfE00urZTDyml2Mlbkja3NzTCO4-g2RPiJ7Qmpjes/exec";
 
-async function loadRemoteMenuMap() {
-  const url = `${MENU_API_BASE}?activeOnly=0&t=${Date.now()}`;
+function loadMenuJSONP() {
+  return new Promise((resolve, reject) => {
+    const cbName = "__menu_cb_" + Math.random().toString(36).slice(2);
+    const script = document.createElement("script");
 
-  try {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    if (!data?.ok || !Array.isArray(data.items)) throw new Error("Bad JSON shape");
+    window[cbName] = (data) => {
+      cleanup();
+      resolve(data);
+    };
 
-    const map = new Map();
-    for (const it of data.items) {
-      if (!it?.id) continue;
-      map.set(String(it.id).trim(), it);
+    function cleanup() {
+      try { delete window[cbName]; } catch {}
+      if (script.parentNode) script.parentNode.removeChild(script);
     }
-    return map;
-  } catch (err) {
-    console.warn("⚠️ MENU API error, using local MENU:", err);
-    return new Map();
-  }
+
+    script.onerror = () => {
+      cleanup();
+      reject(new Error("JSONP load failed"));
+    };
+
+    const url = `${MENU_API_BASE}?activeOnly=0&callback=${cbName}&t=${Date.now()}`;
+    script.src = url;
+    document.head.appendChild(script);
+  });
 }
 
-function applyRemoteMenuMap(remoteMap) {
+function applyRemoteData(data) {
+  if (!data?.ok || !Array.isArray(data.items)) {
+    console.warn("⚠️ Bad API data, using local MENU");
+    return;
+  }
+
+  const map = new Map(data.items.map(it => [String(it.id).trim(), it]));
+
   let updated = 0;
   let hidden = 0;
   let missing = 0;
 
   for (const item of MENU) {
-    const r = remoteMap.get(item.id);
+    const r = map.get(item.id);
     if (!r) {
       item.active = true;
       missing++;
@@ -511,21 +527,18 @@ function applyRemoteMenuMap(remoteMap) {
     }
 
     item.active = (r.active !== false);
-    if (item.active === false) hidden++;
+    if (!item.active) hidden++;
 
     if (item.sizes && typeof item.sizes === "object") {
-      const s = (typeof r.price_s === "number") ? r.price_s : null;
-      const m = (typeof r.price_m === "number") ? r.price_m : null;
-
-      if (s !== null && item.sizes.S !== s) {
-        item.sizes.S = s;
+      if (typeof r.price_s === "number") {
+        item.sizes.S = r.price_s;
         updated++;
       }
-      if (m !== null && item.sizes.M !== m) {
-        item.sizes.M = m;
+      if (typeof r.price_m === "number") {
+        item.sizes.M = r.price_m;
         updated++;
       }
-    } else if (typeof r.price === "number" && typeof item.price === "number" && item.price !== r.price) {
+    } else if (typeof r.price === "number" && typeof item.price === "number") {
       item.price = r.price;
       updated++;
     }
