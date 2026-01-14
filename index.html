@@ -247,6 +247,8 @@
 
       // Рендерим меню на фоне
       applyLanguage();
+      const remoteMap = await loadRemoteMenu();
+      applyRemoteMenu(remoteMap);
       render();
 
       // Включаем блюр и показываем модалку
@@ -470,6 +472,53 @@ const MENU = [
         { id:"lotus-cheesecake", cat:"desserts", name:"Lotus Cheesecake", price:220, img:"images/lotus-cheesecake.webp" },
         { id:"mini-cookies", cat:"desserts", name:"Atıştırmalık Kurabiye Çeşitleri", price:70, img:"images/mini-cookies.webp" },
       ];
+
+const MENU_API_URL =
+  "https://script.google.com/macros/s/AKfycbwknrlwCAxdrvI6t9VU5jdrg-wfE00urZTDyml2Mlbkja3NzTCO4-g2RPiJ7Qmpjes/exec?activeOnly=0";
+
+async function loadRemoteMenu() {
+  try {
+    const res = await fetch(MENU_API_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (!data?.ok || !Array.isArray(data.items)) throw new Error("Bad JSON shape");
+
+    const map = new Map();
+    for (const it of data.items) {
+      if (!it?.id) continue;
+      map.set(String(it.id).trim(), it);
+    }
+    return map;
+  } catch (err) {
+    console.warn("⚠️ MENU API unavailable, using local MENU:", err);
+    return new Map();
+  }
+}
+
+function applyRemoteMenu(remoteMap) {
+  let updatedPrices = 0;
+  let hiddenCount = 0;
+
+  for (const item of MENU) {
+    const r = remoteMap.get(item.id);
+    if (!r) {
+      item.active = true;
+      continue;
+    }
+
+    item.active = (r.active !== false);
+    if (item.active === false) hiddenCount++;
+
+    if (!item.sizes && typeof r.price === "number" && typeof item.price === "number") {
+      if (item.price !== r.price) {
+        item.price = r.price;
+        updatedPrices++;
+      }
+    }
+  }
+
+  console.log(`✅ MENU API applied. Prices updated: ${updatedPrices}, hidden: ${hiddenCount}`);
+}
 const AMOUR_ENRICH = {
 		//КОФЕ СДЕЛАЛ
 		"espresso":{"desc":"Yoğun aromalı güçlü ve konsantre kahve","ingredients":["Espresso"],"caffeine":63},
@@ -810,7 +859,9 @@ const AMOUR_ENRICH = {
 ---------------------------------------------- */
 async function render(){
  root.innerHTML="";
- const items = MENU.filter(m=>m.cat===active).map(renderCard);
+ const items = MENU
+  .filter(m => m.cat === active && m.active !== false)
+  .map(renderCard);
  root.append(header(),layout(items));
  initReveal();
 }
