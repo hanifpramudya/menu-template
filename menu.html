@@ -143,11 +143,7 @@
 </section>
    <!-- footer -->
     <footer class="border-t border-white/10 text-center text-sm text-white/60 py-6">
-      <div class="space-y-1">
-        <p>(!) Görseldeki ürün gerçeğinden farklılık gösterebilir</p>
-        <p>© 2025 Amour Coffee — instagram <a href="https://www.instagram.com/amour_coffee77" target="_blank" class="hover:text-white">@amour_coffee77</a></p>
-        <p>Site yapıldı <a href="https://bond-dev.vercel.app/" target="_blank" class="font-semibold hover:text-white">Dmitrii Bondarev</a></p>
-      </div>
+      <p>© 2025 Amour Coffee — Site yapıldı <a href="https://bond-dev.vercel.app/" target="_blank" class="font-semibold hover:text-white">Dmitrii Bondarev</a></p>
     </footer>
 
 <!-- dil -->
@@ -174,17 +170,21 @@
   .lang-btn {
     width: 100%;
     padding: 0.75rem 1.5rem;
-    background: #fff;
-    color: #000;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
     font-weight: 600;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
 
   .lang-btn:hover {
     transform: scale(1.05);
-    background: #e5e7eb;
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   .lang-btn:active {

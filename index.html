@@ -73,7 +73,7 @@
     <section class="mt-10 grid gap-10">
 
       <article class="grid gap-6 md:grid-cols-2 md:items-start">
-        <img src="images/gallery1.jpg" class="w-full rounded-2xl object-cover" alt="Tarihçe">
+        <img src="images/gallery1.jpg" class="w-full rounded-2xl object-cover md:max-h-64" alt="Tarihçe">
         <div>
           <h3 class="text-xl font-semibold">Tarihçe & Konum</h3>
           <p class="mt-2 text-white/70 leading-relaxed">
@@ -92,7 +92,6 @@
       </article>
 
       <article class="grid gap-6 md:grid-cols-2 md:items-start">
-        <img src="images/gallery2.jpg" class="w-full rounded-2xl object-cover" alt="Kahve">
         <div>
           <h3 class="text-xl font-semibold">Kahve & Teknoloji</h3>
           <p class="mt-2 text-white/70 leading-relaxed">
@@ -102,10 +101,11 @@
             10+ yıl tecrübe ve işe alımda sıkı seçim süreci.
           </p>
         </div>
+        <img src="images/gallery2.jpg" class="w-full rounded-2xl object-cover md:max-h-64" alt="Kahve">
       </article>
 
       <article class="grid gap-6 md:grid-cols-2 md:items-start">
-        <img src="images/gallery3.jpg" class="w-full rounded-2xl object-cover" alt="Topluluk">
+        <img src="images/gallery3.jpg" class="w-full rounded-2xl object-cover md:max-h-64" alt="Topluluk">
         <div>
           <h3 class="text-xl font-semibold">Topluluk</h3>
           <p class="mt-2 text-white/70 leading-relaxed">
@@ -116,7 +116,6 @@
       </article>
 
       <article class="grid gap-6 md:grid-cols-2 md:items-start">
-        <img src="images/gallery4.jpg" class="w-full rounded-2xl object-cover" alt="Ekip">
         <div>
           <h3 class="text-xl font-semibold">Ekip & Aile</h3>
           <p class="mt-2 text-white/70 leading-relaxed">
@@ -135,57 +134,15 @@
             </a>
           </div>
         </div>
+        <img src="images/gallery4.jpg" class="w-full rounded-2xl object-cover md:max-h-64" alt="Ekip">
       </article>
 
     </section>
   </main>
 
   <footer class="border-t border-white/10 text-center text-sm text-white/60 py-6">
-    <p>© 2025 Amour Coffee</p>
+    <p>© 2025 Amour Coffee — Site yapıldı <a href="https://bond-dev.vercel.app/" target="_blank" class="font-semibold hover:text-white">Dmitrii Bondarev</a></p>
   </footer>
-
-<script>
-  // global olarak tanimli, setLanguage icinden de cagrilabilir
-  window.goToSection = function(id){
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-    history.replaceState(null, "", "#" + id);
-    setActiveNav(id);
-  };
-
-  function setActiveNav(id){
-    const a = document.getElementById("navAbout");
-    const m = document.getElementById("navMenu");
-    if (!a || !m) return;
-
-    a.classList.remove("bg-white","text-zinc-950","shadow-sm");
-    m.classList.remove("bg-white","text-zinc-950","shadow-sm");
-    a.classList.add("text-zinc-200");
-    m.classList.add("text-zinc-200");
-
-    if (id === "hakkimizda") {
-      a.classList.add("bg-white","text-zinc-950","shadow-sm");
-      a.classList.remove("text-zinc-200");
-    } else {
-      m.classList.add("bg-white","text-zinc-950","shadow-sm");
-      m.classList.remove("text-zinc-200");
-    }
-  }
-
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-nav]");
-    if (!btn) return;
-    const id = btn.getAttribute("data-nav");
-    if (id === "hakkimizda" || id === "menu") window.goToSection(id);
-  });
-
-  // ilk yuklemede hakkimizda acik olsun
-  window.addEventListener("load", () => {
-    setActiveNav("hakkimizda");
-    history.replaceState(null, "", "#hakkimizda");
-  });
-</script>
 
 </body>
 </html>
