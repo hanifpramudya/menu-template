@@ -72,32 +72,30 @@
     .lang-btn:hover{ transform: scale(1.03); opacity:.95; background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.3); }
     .lang-btn:active{ transform: scale(.98); }
     .amour-logo{
-      display:inline-flex;
+      display:flex;
+      flex-direction:column;
       align-items:center;
       line-height:1;
     }
     .amour-word{
-      position:relative;
-      display:inline-block;
       font-family: "Varela Round","Quicksand","Nunito","Poppins",system-ui,sans-serif;
       font-weight: 300;
-      font-size: clamp(28px, 4vw, 40px);
+      font-size: clamp(44px, 7vw, 92px);
       letter-spacing: 0.03em;
       color:#fff;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      padding-bottom: 0.18em;
     }
-    .amour-word::after{
-      content:"";
-      position:absolute;
-      left: 2%;
-      width: 96%;
-      bottom: 0.02em;
-      height: clamp(2px, 0.22vw, 4px);
-      background:#fff;
-      border-radius: 999px;
-      opacity: 0.98;
+    .amour-tagline{
+      margin-top: 0.35em;
+      font-family: "Inter","Poppins",system-ui,sans-serif;
+      font-size: clamp(11px, 1.4vw, 14px);
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      text-align:center;
+      white-space: nowrap;
     }
   </style>
 
@@ -108,6 +106,7 @@
         <img src="images/logo.png" alt="Amour logo" class="h-10 w-auto">
         <div class="amour-logo" aria-label="amour logo">
           <span class="amour-word">amour</span>
+          <span class="amour-tagline">Yalova’nın İtalyan Kahvecisi</span>
         </div>
       </a>
 
