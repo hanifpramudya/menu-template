@@ -213,7 +213,7 @@
     (function(){
       const LS_KEY = "lang";
       const modal = document.getElementById("lang-modal");
-      const ALWAYS_SHOW_LANG_MODAL = true;
+      const ALWAYS_SHOW_LANG_MODAL = false;
 
       window.currentLang = localStorage.getItem(LS_KEY) || "tr";
       window.translations = {};
@@ -288,9 +288,7 @@
         await loadTranslations(window.currentLang);
         applyI18nToDOM();
 
-        if (ALWAYS_SHOW_LANG_MODAL) {
-          openModal();
-        } else if (!localStorage.getItem(LS_KEY)) {
+        if (ALWAYS_SHOW_LANG_MODAL || !localStorage.getItem(LS_KEY)) {
           openModal();
         } else if (modal) {
           modal.classList.add("hidden");
