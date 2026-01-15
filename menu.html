@@ -132,8 +132,8 @@
     </a>
 
     <nav class="flex items-center gap-4 text-sm text-white/80">
-      <a href="index.html" class="hover:text-white">Hakkımızda</a>
-      <a href="menu.html" class="hover:text-white">Menü</a>
+      <a href="index.html" class="hover:text-white" data-i18n="ui.nav_about">Hakkımızda</a>
+      <a href="menu.html" class="hover:text-white" data-i18n="ui.nav_menu">Menü</a>
     </nav>
   </div>
 </header>
@@ -146,43 +146,47 @@
       <p>© 2025 Amour Coffee — Site yapıldı <a href="https://bond-dev.vercel.app/" target="_blank" class="font-semibold hover:text-white">Dmitrii Bondarev</a></p>
     </footer>
 
-<!-- dil -->
-<div id="lang-modal" class="fixed inset-0 flex flex-col items-center justify-center text-white z-50 text-center px-4 hidden">
-  <div class="max-w-md w-full">
-    <h2 class="text-2xl font-semibold mb-8 tracking-wide uppercase text-gray-100">
-      🌐 Select Your Language
-    </h2>
+<div id="lang-modal" class="fixed inset-0 z-[99999] hidden">
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-xl"></div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
-      <button data-lang="tr" class="lang-btn">🇹🇷 Türkçe</button>
-      <button data-lang="en" class="lang-btn">🇬🇧 English</button>
-      <button data-lang="ru" class="lang-btn">🇷🇺 Rusça</button>
-      <button data-lang="ar" class="lang-btn">🇸🇦 العربية</button>
-      <button data-lang="fa" class="lang-btn">🇮🇷 فارسی</button>
-      <button data-lang="fr" class="lang-btn">🇫🇷 Français</button>
+  <div class="relative mx-auto flex min-h-screen max-w-md items-center px-4">
+    <div class="w-full rounded-3xl border border-white/10 bg-black/70 p-6 text-center shadow-xl">
+      <h2 class="text-2xl font-semibold mb-6 tracking-wide text-white" data-i18n="ui.lang_title">
+        🌐 Select Your Language
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+        <button class="lang-btn" data-lang="tr">🇹🇷 Türkçe</button>
+        <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+        <button class="lang-btn" data-lang="ru">🇷🇺 Русский</button>
+        <button class="lang-btn" data-lang="ar">🇸🇦 العربية</button>
+        <button class="lang-btn" data-lang="fa">🇮🇷 فارسی</button>
+        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+      </div>
+
+      <p class="mt-6 text-sm text-white/60 italic" data-i18n="ui.lang_sub">Amour Café — Yalova</p>
     </div>
-
-    <p class="mt-8 text-sm text-gray-400 italic">Amour Café — Yalova</p>
   </div>
 </div>
-<!-- dil secim butonlari -->
+
 <style>
   .lang-btn {
     width: 100%;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1rem;
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
-    font-weight: 600;
-    border-radius: 0.5rem;
+    font-weight: 700;
+    border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
 
   .lang-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    opacity: 0.95;
     background: rgba(255, 255, 255, 0.16);
     border-color: rgba(255, 255, 255, 0.3);
   }
@@ -191,89 +195,24 @@
     transform: scale(0.95);
   }
 </style>
+
 <script>
-    const langModal = document.getElementById("lang-modal");
-    window.translations = {};
-    window.currentLang = localStorage.getItem("lang") || "en";
+  function applyLanguage() {
+    MENU.forEach(item => {
+      const trItem = window.translations.menu?.[item.id];
+      if (!trItem) return;
 
-    // ===== JSON =====
-    async function loadTranslations(lang) {
-      try {
-        const res = await fetch(`./lang/lang-${lang}.json`);
-        window.translations = await res.json();
-      } catch (e) {
-        console.warn("❗ JSON dil dosyasi bulunamadi:", lang);
-        window.translations = {};
-      }
-    }
-
-        // ===== Cevirileri uygula =====
-    function applyLanguage() {
-      MENU.forEach(item => {
-        const trItem = window.translations.menu?.[item.id];
-        if (!trItem) return;
-
-        if (trItem.name) {
-          item.name = {
-            ...item.name,
-            [window.currentLang]: trItem.name
-          };
-        }
-
-        if (trItem.desc) item.desc = trItem.desc;
-        if (trItem.ingredients) item.ingredients = trItem.ingredients;
-      });
-    }
-
-    // ===== Dil ayari =====
-    async function setLanguage(lang) {
-      window.currentLang = lang;
-      localStorage.setItem("lang", lang);
-
-      // RTL
-      if (lang === "ar" || lang === "fa") {
-        document.documentElement.setAttribute("dir", "rtl");
-      } else {
-        document.documentElement.setAttribute("dir", "ltr");
+      if (trItem.name) {
+        item.name = {
+          ...item.name,
+          [window.currentLang]: trItem.name
+        };
       }
 
-      await loadTranslations(lang);
-
-      applyLanguage();
-      render(); // ⚡ menu yeniden cizimi
-
-      langModal.classList.add("hidden");
-      document.body.classList.remove("modal-open"); // blur'u kapat
-    }
-
-    // ===== Buton secim islemi =====
-    document.querySelectorAll(".lang-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const lang = btn.dataset.lang;
-        if (!lang) return;
-        setLanguage(lang);
-      });
+      if (trItem.desc) item.desc = trItem.desc;
+      if (trItem.ingredients) item.ingredients = trItem.ingredients;
     });
-
-    // ✅ ✅ ✅ ANA BOLUM — MENÜYÜ MODALDAN ÖNCE ÇİZ
-    (async function init() {
-      // Varsayilan (veya kaydedilmis) dili yukle
-      await loadTranslations(window.currentLang);
-
-      // Arka planda menüyü ciz
-      applyLanguage();
-      try {
-        const data = await loadMenuJSONP();
-        applyRemoteData(data);
-      } catch (e) {
-        console.warn("⚠️ MENU API error, using local MENU:", e);
-      }
-      render();
-
-      // Blur'u ac ve modali goster
-      document.body.classList.add("modal-open");
-      langModal.classList.remove("hidden");
-    })();
+  }
 </script>
 
 
@@ -908,9 +847,113 @@ async function render(){
  initReveal();
 }
 
-// Siteyi baslat: once dil secimini goster
-langModal.classList.remove("hidden");
+async function initMenuData(){
+  try {
+    const data = await loadMenuJSONP();
+    applyRemoteData(data);
+  } catch (e) {
+    console.warn("⚠️ MENU API error, using local MENU:", e);
+  }
+  render();
+}
 
+</script>
+
+<script>
+  (function(){
+    const LS_KEY = "lang";
+    const modal = document.getElementById("lang-modal");
+    const ALWAYS_SHOW_LANG_MODAL = true;
+
+    window.currentLang = localStorage.getItem(LS_KEY) || "tr";
+    window.translations = {};
+
+    function deepGet(obj, path){
+      return path.split(".").reduce((acc, k) => (acc && acc[k] != null) ? acc[k] : undefined, obj);
+    }
+
+    async function loadTranslations(lang){
+      try{
+        const res = await fetch(`./lang/lang-${lang}.json`, { cache: "no-store" });
+        window.translations = await res.json();
+      } catch(e){
+        console.warn("❗ Translation JSON not found:", lang, e);
+        window.translations = {};
+      }
+    }
+
+    function applyI18nToDOM(){
+      document.querySelectorAll("[data-i18n-html]").forEach(el=>{
+        const key = el.getAttribute("data-i18n-html");
+        const val = deepGet(window.translations, key);
+        if (typeof val === "string") el.innerHTML = val;
+      });
+
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        const val = deepGet(window.translations, key);
+        if (typeof val === "string") el.textContent = val;
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
+        const key = el.getAttribute("data-i18n-placeholder");
+        const val = deepGet(window.translations, key);
+        if (typeof val === "string") el.setAttribute("placeholder", val);
+      });
+
+      document.querySelectorAll("[data-i18n-title]").forEach(el=>{
+        const key = el.getAttribute("data-i18n-title");
+        const val = deepGet(window.translations, key);
+        if (typeof val === "string") el.setAttribute("title", val);
+      });
+    }
+
+    function setDirForLang(lang){
+      const isRTL = (lang === "ar" || lang === "fa");
+      document.documentElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
+      document.body.classList.toggle("rtl", isRTL);
+    }
+
+    async function setLanguage(lang){
+      window.currentLang = lang;
+      localStorage.setItem(LS_KEY, lang);
+
+      setDirForLang(lang);
+      await loadTranslations(lang);
+      applyI18nToDOM();
+
+      if (typeof applyLanguage === "function") applyLanguage();
+      if (typeof initMenuData === "function") await initMenuData();
+
+      if (modal) modal.classList.add("hidden");
+    }
+
+    function openModal(){
+      if (modal) modal.classList.remove("hidden");
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(btn=>{
+      btn.addEventListener("click", ()=> setLanguage(btn.dataset.lang));
+    });
+
+    window.addEventListener("load", async ()=>{
+      setDirForLang(window.currentLang);
+      await loadTranslations(window.currentLang);
+      applyI18nToDOM();
+      if (typeof applyLanguage === "function") applyLanguage();
+      if (typeof initMenuData === "function") await initMenuData();
+
+      if (ALWAYS_SHOW_LANG_MODAL) {
+        openModal();
+      } else if (!localStorage.getItem(LS_KEY)) {
+        openModal();
+      } else if (modal) {
+        modal.classList.add("hidden");
+      }
+    });
+
+    window.openLangModal = openModal;
+  })();
 </script>
 
 </body>
