@@ -82,7 +82,7 @@
         object-position: center;
       }
 
-      /* выравнивание карточек по нижнему краю */
+      /* kartlari alt kenara hizala */
       .card { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
       .card .p-2, .card .p-3 { flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
       .grid { align-items: start; }
@@ -93,7 +93,7 @@
       .reveal.in { opacity: 1; transform: none; }
       @media (prefers-reduced-motion: reduce) { .reveal { transition: none; transform: none; } }
 
-      /* zoom для модалки */
+      /* modal icin zoom */
       @keyframes zoom { from { transform: scale(.85); opacity:.3; } to { transform: scale(1); opacity:1; } }
         /* RTL mode adjustments */
         body.rtl * {
@@ -125,8 +125,98 @@
 
 <body class="font-sans">
 
-<div id="root"></div>
-   <!-- футер -->
+<section id="hakkimizda" class="relative overflow-hidden bg-zinc-950 text-zinc-100">
+  <div class="pointer-events-none absolute inset-0 opacity-35">
+    <div class="absolute -top-28 -left-28 h-72 w-72 rounded-full bg-fuchsia-600 blur-[120px]"></div>
+    <div class="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-amber-500 blur-[140px]"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
+
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-200">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          Amour Coffee • Yalova
+        </div>
+
+        <h1 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Hakkımızda</h1>
+
+        <p class="mt-4 text-base leading-relaxed text-zinc-300">
+          Amour Coffee uzun yıllardır hizmet veriyor. Eskiden <span class="text-zinc-100 font-semibold">Choridor</span> adıyla
+          biliniyordu, sonra isim değişti. Doğal ve gerçek kahveyi sevgi ve tecrübeyle hazırlıyoruz.
+          Yeni teknolojilerle servisi geliştiriyoruz ama mekânımızın geçmişini koruyoruz.
+        </p>
+
+        <div class="mt-6 space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h3 class="text-sm font-semibold text-zinc-100">Teknoloji</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+              Kahve, profesyonel makinelerde ve net reçetelerle hazırlanır.
+              Baristalarımız Yalova’nın en deneyimlilerindendir (10+ yıl) ve titiz bir seçmeden geçer.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h3 class="text-sm font-semibold text-zinc-100">Konum</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+              Şehrin merkezindeyiz; her gün binlerce kişi bizi görür. Belediye başkanından öğrenciye kadar
+              herkes kahvesini burada içer. Burada hem misafirler arasında hem de ekipte kolayca arkadaş bulursun.
+            </p>
+
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="https://maps.app.goo.gl/kALGBiL9deJ3uM13A" target="_blank" rel="noopener"
+                 class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-zinc-100 transition hover:bg-white/10">
+                Konumu Gör
+              </a>
+
+              <a href="https://www.instagram.com/amour_coffee77" target="_blank" rel="noopener"
+                 class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-2.5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:opacity-90">
+                Instagram
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h3 class="text-sm font-semibold text-zinc-100">Ekip</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+              Sıcacık ve samimi bir ekip — adeta bir aile. Amour, Yalova’daki gençlik hareketinin kalbidir:
+              partiler, etkinlikler ve sıcak bir atmosfer.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-7">
+          <button type="button" data-nav="menu"
+            class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:bg-white/10">
+            Menüyü Aç
+          </button>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <figure class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+          <img src="images/gallery1.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-64" loading="lazy" />
+        </figure>
+        <figure class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+          <img src="images/gallery2.jpg" class="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-64" loading="lazy" />
+        </figure>
+        <figure class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 sm:col-span-2">
+          <img src="images/gallery3.jpg" class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72" loading="lazy" />
+        </figure>
+        <figure class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 sm:col-span-2">
+          <img src="images/gallery4.jpg" class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72" loading="lazy" />
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="pt-4">
+  <div id="root"></div>
+</section>
+   <!-- footer -->
     <footer class="border-t border-white/10 text-center text-sm text-white/60 py-6">
       <div class="space-y-1">
         <p>(!) Görseldeki ürün gerçeğinden farklılık gösterebilir</p>
@@ -135,7 +225,21 @@
       </div>
     </footer>
 
-<!-- язык -->
+<div class="fixed bottom-4 left-1/2 z-[9998] w-[min(92vw,420px)] -translate-x-1/2">
+  <div class="mx-auto flex items-center justify-between gap-2 rounded-3xl border border-white/10 bg-zinc-950/70 p-2 shadow-lg backdrop-blur">
+    <button id="navAbout" type="button" data-nav="hakkimizda"
+      class="flex w-1/2 items-center justify-center gap-2 rounded-2xl px-3 py-3 text-sm font-semibold transition text-zinc-200 hover:bg-white/5">
+      <span>🏠</span> Hakkımızda
+    </button>
+
+    <button id="navMenu" type="button" data-nav="menu"
+      class="flex w-1/2 items-center justify-center gap-2 rounded-2xl px-3 py-3 text-sm font-semibold transition text-zinc-200 hover:bg-white/5">
+      <span>📋</span> Menü
+    </button>
+  </div>
+</div>
+
+<!-- dil -->
 <div id="lang-modal" class="fixed inset-0 flex flex-col items-center justify-center text-white z-50 text-center px-4 hidden">
   <div class="max-w-md w-full">
     <h2 class="text-2xl font-semibold mb-8 tracking-wide uppercase text-gray-100">
@@ -145,7 +249,7 @@
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
       <button data-lang="tr" class="lang-btn">🇹🇷 Türkçe</button>
       <button data-lang="en" class="lang-btn">🇬🇧 English</button>
-      <button data-lang="ru" class="lang-btn">🇷🇺 Русский</button>
+      <button data-lang="ru" class="lang-btn">🇷🇺 Rusça</button>
       <button data-lang="ar" class="lang-btn">🇸🇦 العربية</button>
       <button data-lang="fa" class="lang-btn">🇮🇷 فارسی</button>
       <button data-lang="fr" class="lang-btn">🇫🇷 Français</button>
@@ -154,7 +258,7 @@
     <p class="mt-8 text-sm text-gray-400 italic">Amour Café — Yalova</p>
   </div>
 </div>
-<!-- кнопки выбора языка -->
+<!-- dil secim butonlari -->
 <style>
   .lang-btn {
     width: 100%;
@@ -187,12 +291,12 @@
         const res = await fetch(`./lang/lang-${lang}.json`);
         window.translations = await res.json();
       } catch (e) {
-        console.warn("❗ JSON языка не найден:", lang);
+        console.warn("❗ JSON dil dosyasi bulunamadi:", lang);
         window.translations = {};
       }
     }
 
-    // ===== Применение переводов =====
+        // ===== Cevirileri uygula =====
     function applyLanguage() {
       MENU.forEach(item => {
         const trItem = window.translations.menu?.[item.id];
@@ -210,7 +314,7 @@
       });
     }
 
-    // ===== Установка языка =====
+    // ===== Dil ayari =====
     async function setLanguage(lang) {
       window.currentLang = lang;
       localStorage.setItem("lang", lang);
@@ -225,13 +329,14 @@
       await loadTranslations(lang);
 
       applyLanguage();
-      render(); // ⚡ перерисовка меню
+      render(); // ⚡ menu yeniden cizimi
 
       langModal.classList.add("hidden");
-      document.body.classList.remove("modal-open"); // снимаем блюр
+      document.body.classList.remove("modal-open"); // blur'u kapat
+      window.goToSection("hakkimizda");
     }
 
-    // ===== Обработка выбора кнопки =====
+    // ===== Buton secim islemi =====
     document.querySelectorAll(".lang-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const lang = btn.dataset.lang;
@@ -240,12 +345,12 @@
       });
     });
 
-    // ✅ ✅ ✅ ГЛАВНАЯ ЧАСТЬ — РЕНДЕР МЕНЮ ПЕРЕД МОДАЛКОЙ
+    // ✅ ✅ ✅ ANA BOLUM — MENÜYÜ MODALDAN ÖNCE ÇİZ
     (async function init() {
-      // Загружаем язык по умолчанию (или сохранённый)
+      // Varsayilan (veya kaydedilmis) dili yukle
       await loadTranslations(window.currentLang);
 
-      // Рендерим меню на фоне
+      // Arka planda menüyü ciz
       applyLanguage();
       try {
         const data = await loadMenuJSONP();
@@ -255,7 +360,7 @@
       }
       render();
 
-      // Включаем блюр и показываем модалку
+      // Blur'u ac ve modali goster
       document.body.classList.add("modal-open");
       langModal.classList.remove("hidden");
     })();
@@ -264,7 +369,7 @@
 
 
 
-<!-- напитки модалки -->
+<!-- icecek modali -->
 <div id="drinkModal" class="fixed inset-0 z-[9999] hidden bg-black/70 backdrop-blur-sm flex items-center justify-center">
   <div class="bg-[#111] text-white p-5 rounded-2xl max-w-xs w-full relative animate-[zoom_.25s_ease]">
     <button id="modalClose" class="absolute top-2 right-2 text-xl text-white/70 hover:text-white">×</button>
@@ -281,7 +386,7 @@
 
 <script>
 /* ----------------------------------------------
-   меню + енрих, еще общая дата
+   menu + enrich, genel veriler
 ---------------------------------------------- */
 const CATS = {
   hot: "SICAK İÇECEKLER",
@@ -348,7 +453,7 @@ const MENU = [
         { id:"icecream-parca-cikolata", cat:"icecream", name:"Parça Çikolata Dondurma", price:60, img:"images/icecream-parca-cikolata.webp" },
         { id:"icecream-krokan", cat:"icecream", name:"Krokan Dondurma", price:60, img:"images/icecream-krokan.webp" },
 
-        // KAHVELER (добавлены описания/состав/кф)
+        // KAHVELER (aciklama/icerik/kafein eklendi)
         { id:"espresso", cat:"coffees", name:"Espresso", sizes:{S:140, M:160}, img:"images/espresso.webp",
           desc:"Yoğun, kısa ve güçlü kahve.",
           ingredients:["Espresso"],
@@ -547,7 +652,7 @@ function applyRemoteData(data) {
   console.log(`✅ MENU applied. updated:${updated} hidden:${hidden} not_in_sheet:${missing}`);
 }
 const AMOUR_ENRICH = {
-		//КОФЕ СДЕЛАЛ
+		// KAHVE TAMAMLANDI
 		"espresso":{"desc":"Yoğun aromalı güçlü ve konsantre kahve","ingredients":["Espresso"],"caffeine":63},
 		"espresso-macchiato":{"desc":"Az miktarda süt köpüğü ile servis edilen yoğun ve karakterli espresso","ingredients":["Espresso","Süt köpüğü"],"caffeine":63},
 		"americano":{"desc":"Espresso bazlı sıcak su ile hazırlanmış yumuşak siyah kahve.","ingredients":["Espresso","Sıcak su"],"caffeine":95},
@@ -565,28 +670,28 @@ const AMOUR_ENRICH = {
 		"double-turk":{"desc":"Çift porsiyon Türk kahvesi güçlü ve yoğun lezzet.","ingredients":["Türk kahvesi (duble)","Su"],"caffeine":120},
 		"dibek":{"desc":"Havanda dövülmüş yumuşak ve kremamsı kıvamda zengin aromalı kahve.","ingredients":["Dibek kahvesi","Su"],"caffeine":60},
 		"menengic":{"desc":"Doğal ve kafeinsiz fındıksı aromalı ve yumuşak dokulu içecek.","ingredients":["Menengiç","Süt veya su"]},
-		//фильтркофе СДЕЛАЛ
+		// FILTRE KAHVE TAMAMLANDI
 		"kenya":{"desc":"Meyvemsi notalar ve parlak asiditeye sahip filtre kahve","ingredients":["Filtre kahve","Su"],"caffeine":120},
 		"colombia":{"desc":"Yumuşak asidite karamel ve fındık notalarına sahip filtre kahve","ingredients":["Filtre kahve","Su"],"caffeine":115},
 		"ethiopia":{"desc":"Narenciye ve çiçek notalarına sahip hafif ve aromatik filtre kahve","ingredients":["Filtre kahve","Su"],"caffeine":120},
 		"costarica":{"desc":"Karamel ve narenciye notalarıyla dengeli ve parlak bir tat","ingredients":["Filtre kahve","Su"],"caffeine":115},
 		"guatemala":{"desc":"Çikolata notaları ve hafif meyvemsi tatlılığa sahip zengin bir lezzet","ingredients":["Filtre kahve","Su"],"caffeine":115},
 		"v60":{"desc":"El demleme yöntemiyle hazırlanan filtre kahve temiz ve parlak tat (V60)","ingredients":["Öğütülmüş kahve","Su"],"caffeine":120},
-		"chemex":{"desc":"Chemex yöntemiyle hazırlanmış temiz ve yumuşak hafif tatlılık sunan kahve","ingredients":["Öğütülmüş kahvе","Su"],"caffeine":120},
-		//кофе холодное
+		"chemex":{"desc":"Chemex yöntemiyle hazırlanmış temiz ve yumuşak, hafif tatlılık sunan kahve","ingredients":["Öğütülmüş kahve","Su"],"caffeine":120},
+		// SOGUK KAHVE
 		"iced-americano":{"desc":"Buzlu ferah ve net kahve tadı.","ingredients":["Espresso","Su","Buz"],"caffeine":95},
 		"iced-latte":{"desc":"Soğuk sütle yumuşak kahve.","ingredients":["Espresso","Süt","Buz"],"caffeine":80},
 		"iced-mocha":{"desc":"Çikolatalı buzlu latte.","ingredients":["Espresso","Süt","Çikolata","Buz"],"caffeine":90},
 		"iced-caramel-latte":{"desc":"Karamel dokunuşlu buzlu latte.","ingredients":["Espresso","Süt","Karamel","Buz"],"caffeine":80},
 		"iced-white-mocha":{"desc":"Beyaz çikolatalı buzlu latte.","ingredients":["Espresso","Süt","Beyaz çikolata","Buz"],"caffeine":90},
-		"cold-brew":{"desc":"Uzun demleme yumuşak ve güçlü.","ingredients":["Öğütülmüş kahве","Su","Buz"],"caffeine":150},
+		"cold-brew":{"desc":"Uzun demleme, yumuşak ve güçlü.","ingredients":["Öğütülmüş kahve","Su","Buz"],"caffeine":150},
 		"frappe":{"desc":"Çilek,Çikolata, Vanilya, Karamel","ingredients":["Kahve","Süt veya su","Buz"],"caffeine":80},
-		"italian-frappe":{"desc":"Klasik İtalyan tarzı frappe.","ingredients":["Kahве","Süt veya su","Buz"],"caffeine":85},
-		"greek-frappe":{"desc":"Yunan tarzı hafif köpüklü.","ingredients":["Çözünebilir kahве","Su","Buz"],"caffeine":75},
+		"italian-frappe":{"desc":"Klasik İtalyan tarzı frappe.","ingredients":["Kahve","Süt veya su","Buz"],"caffeine":85},
+		"greek-frappe":{"desc":"Yunan tarzı hafif köpüklü.","ingredients":["Çözünebilir kahve","Su","Buz"],"caffeine":75},
 		"ice-nutellatte":{"desc":"Fındık-kakaolu buzlu latte.","ingredients":["Espresso","Süt","Fındık-kakao kreması","Buz"],"caffeine":80},
 		"ice-chai-latte":{"desc":"Baharatlı sütlü ve ferah.","ingredients":["Çay","Süt","Baharat","Buz"]},
 		"affogato":{"desc":"Dondurma üstüne sıcak espresso.","ingredients":["Espresso","Dondurma"],"caffeine":63},
-		//Горячие напитки СДЕЛАЛ
+		// SICAK ICECEKLER TAMAMLANDI
 		"cay":{"desc":"Geleneksel ve taze demlenmiş siyah çay.","ingredients":["Siyah çay","Su"]},
 		"fincan-cay":{"desc":"Bardakta geleneksel çay","ingredients":["Siyah çay","Su"]},
 		"takeaway-cay":{"desc":"Kağıt bardakta çay","ingredients":["Siyah çay","Su"]},
@@ -595,7 +700,7 @@ const AMOUR_ENRICH = {
 		"beyaz-sicak-cikolata":{"desc":"Yoğun ve sıcak beyaz çikolatalı içecek.","ingredients":["Beyaz çikolata","Süt"]},
 		"chai-latte":{"desc":"Baharatlı sütlü çay içeceği","ingredients":["Çay","Süt","Chai baharatı"]},
 		"balli-sut":{"desc":"Bal ile tatlandırılmış sıcak süt","ingredients":["Süt","Bal"]},
-		//холодные напитки РЕДИ
+		// SOGUK ICECEKLER HAZIR
 		"su":{"ingredients":["Su"]},
 		"soda":{"desc":"Ferahlatıcı gazlı mineral içeceği","ingredients":["Soda"]},
 		"sikma-portakal":{"desc":"Taze sıkılmış doğal ve ferahlatıcı portakal suyu.","ingredients":["Portakal"]},
@@ -608,7 +713,7 @@ const AMOUR_ENRICH = {
 		"mesrubatlar":{"desc":"Cola turka, Uludağ portakal, Uludağ gazoz, Ice tea","ingredients":["Çeşitli meşrubatlar"]},
 		"milkshake":{"desc":"Çilek,Çikolata, Vanilya, Oreo","ingredients":["Süt","Dondurma","Şurup"]},
 		"meyveli-soda":{"desc":"Limon, Elma, Nar, Karpuz Çilek","ingredients":["Soda","Meyve aroması"]},
-		//морожка READY
+		// DONDURMA HAZIR
 		"icecream-vanilya":{"desc":"Klasik vanilya lezzeti.","ingredients":["Süt","Şeker","Vanilya"]},
 		"icecream-visne":{"desc":"Hafif ekşi vişne tadı.","ingredients":["Süt","Şeker","Vişne"]},
 		"icecream-cikolata":{"desc":"Zengin çikolata tadı.","ingredients":["Süt","Şeker","Kakao"]},
@@ -616,13 +721,13 @@ const AMOUR_ENRICH = {
 		"icecream-cilek":{"desc":"Taze çilek aroması.","ingredients":["Süt","Şeker","Çilek"]},
 		"icecream-parca-cikolata":{"desc":"Çikolata parçacıklı keyif.","ingredients":["Süt","Şeker","Çikolata parçaları"]},
 		"icecream-krokan":{"desc":"Kıtır krokan parçalarlı.","ingredients":["Süt","Şeker","Krokan"]},
-		//екстра ВРОДЕ
+		// EKSTRA (TAMAM)
 		"extra-shot":{"desc":"Bir shot espresso ekleme.","ingredients":["Espresso"]},
 		"extra-syrup":{"desc":"Favori şurubunu ekle.","ingredients":["Şurup"]},
 		"extra-milk":{"desc":"Süt tercihini seç.","ingredients":["Süt"]},
 		"extra-honey":{"desc":"Doğal bal dokunuşu.","ingredients":["Bal"]},
 		"powerbank":{"desc":"30 dk şarj hizmeti.","ingredients":["Hizmet"]},
-		// BİTKİ ÇAYLARI ГОТОВО
+		// BITKI CAYLARI HAZIR
 		"herbal-0":{"desc":"French press ile hazırlanan taze ıhlamur çayı","ingredients":["Ihlamur"]},
 		"herbal-1":{"desc":"French press ile hazırlanan taze kış çayı","ingredients":["Kış Çayı"]},
 		"herbal-2":{"desc":"French press ile hazırlanan hafif ve taze yeşil çay","ingredients":["Yeşil Çay"]},
@@ -640,8 +745,8 @@ const AMOUR_ENRICH = {
 		"amour-mango-portakal":{"desc":"Daha sonra buraya yazacağım","ingredients":["Espresso"]},
 		"amour-hibiscus":{"desc":"Daha sonra buraya yazacağım","ingredients":["Espresso"]},
 		"amour-dark":{"desc":"Daha sonra buraya yazacağım","ingredients":["Espresso"]},
-		//сладкое
-		"magnolia":{"desc":"İpeksi кремalı tatlı.","ingredients":["Süt","Krema","Meyve/kurabiye"]},
+		// TATLILAR
+		"magnolia":{"desc":"İpeksi kremalı tatlı.","ingredients":["Süt","Krema","Meyve/kurabiye"]},
 		"profiterol":{"desc":"Çikolata soslu mini toplar.","ingredients":["Hamur topları","Krema","Çikolata"]},
 		"san-sebastian":{"desc":"Kıvamlı cheesecake dokusu.","ingredients":["Krem peynir","Yumurta","Şeker"]},
 		"brownie":{"desc":"Yoğun çikolatalı tatlı.","ingredients":["Kakao","Tereyağı","Un","Şeker"]},
@@ -668,7 +773,7 @@ const AMOUR_ENRICH = {
         maximumFractionDigits: 0
       }).format(n);
 
-    // ф общий переводчик (сначала JSON, потом ENRICH, потом fallback)
+    // genel ceviri (once JSON, sonra ENRICH, sonra fallback)
     function t(id, fallback) {
       return window.translations?.menu?.[id]
           || window.translations?.[id]
@@ -676,7 +781,7 @@ const AMOUR_ENRICH = {
           || fallback;
     }
 
-    // ---------- i18n помощники ----------
+    // ---------- i18n yardimcilari ----------
     function getName(item) {
       const base = typeof item.name === "object" ? { ...item.name } : { tr: item.name };
       const fromJson = window.translations?.menu?.[item.id]?.name;
@@ -707,7 +812,7 @@ const AMOUR_ENRICH = {
       return "";
     }
 
-    //  единый источник текста категорий (универсальный)
+    //  kategori metinleri icin tek kaynak (genel)
     function catTitle(key) {
       if (window.translations && window.translations[key]) return window.translations[key];
 
@@ -756,7 +861,7 @@ const AMOUR_ENRICH = {
 	  const wrap = document.createElement("div");
 	  wrap.className = "max-w-6xl mx-auto grid grid-cols-12 gap-2 p-2";
 
-	  //  Левое меню (всегда)
+	  //  Sol menu (her zaman)
 	  const aside = document.createElement("aside");
 	  aside.className = `
 		col-span-4 sm:col-span-3 
@@ -777,11 +882,11 @@ const AMOUR_ENRICH = {
 		aside.append(btn);
 	  });
 
-	  //  Скрываем мобильную ленту
+	  //  Mobil seridi gizle
 	  const mobile = document.createElement("div");
 	  mobile.className = "hidden";
 
-	  //  Товары
+	  //  Urunler
 	  const grid = document.createElement("div");
 	  grid.className = `
 		col-span-8 sm:col-span-9 
@@ -820,12 +925,12 @@ const AMOUR_ENRICH = {
       document.getElementById("modalImg").src = item.img;
       document.getElementById("modalName").textContent = name;
 
-      // ✅ UI labels из JSON
+      // ✅ JSON icinden UI etiketleri
       const descLabel     = window.translations?.description  || t("desc","Description");
       const ingLabel      = window.translations?.ingredients  || t("ingredients","Ingredients");
-      const caffeineLabel = window.translations?.caffeine     || t("caffeine","Caffeine"); // ✅ добавили
+      const caffeineLabel = window.translations?.caffeine     || t("caffeine","Caffeine"); // ✅ eklendi
 
-      // ✅ ставим переводы заголовков
+      // ✅ baslik cevirilerini uygula
       document.getElementById("modalIngTitle").textContent = ingLabel;
       document.getElementById("modalDescUI").previousElementSibling.textContent = descLabel;
 
@@ -844,7 +949,7 @@ const AMOUR_ENRICH = {
       const mg    = document.getElementById("cafMg");
 
       if (caffeine) {
-        title.textContent = caffeineLabel; // ✅ теперь есть
+        title.textContent = caffeineLabel; // ✅ artik var
         title.classList.remove("hidden");
         dots.classList.remove("hidden");
         mg.classList.remove("hidden");
@@ -882,7 +987,7 @@ const AMOUR_ENRICH = {
 
 <script>
 /* ----------------------------------------------
-   рендер старта
+   ilk render
 ---------------------------------------------- */
 async function render(){
  root.innerHTML="";
@@ -893,9 +998,52 @@ async function render(){
  initReveal();
 }
 
-// Стартуем сайт: сначала показываем выбор языка
+// Siteyi baslat: once dil secimini goster
 langModal.classList.remove("hidden");
 
+</script>
+
+<script>
+  // global olarak tanimli, setLanguage icinden de cagrilabilir
+  window.goToSection = function(id){
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    history.replaceState(null, "", "#" + id);
+    setActiveNav(id);
+  };
+
+  function setActiveNav(id){
+    const a = document.getElementById("navAbout");
+    const m = document.getElementById("navMenu");
+    if (!a || !m) return;
+
+    a.classList.remove("bg-white","text-zinc-950","shadow-sm");
+    m.classList.remove("bg-white","text-zinc-950","shadow-sm");
+    a.classList.add("text-zinc-200");
+    m.classList.add("text-zinc-200");
+
+    if (id === "hakkimizda") {
+      a.classList.add("bg-white","text-zinc-950","shadow-sm");
+      a.classList.remove("text-zinc-200");
+    } else {
+      m.classList.add("bg-white","text-zinc-950","shadow-sm");
+      m.classList.remove("text-zinc-200");
+    }
+  }
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-nav]");
+    if (!btn) return;
+    const id = btn.getAttribute("data-nav");
+    if (id === "hakkimizda" || id === "menu") window.goToSection(id);
+  });
+
+  // ilk yuklemede hakkimizda acik olsun
+  window.addEventListener("load", () => {
+    setActiveNav("hakkimizda");
+    history.replaceState(null, "", "#hakkimizda");
+  });
 </script>
 
 </body>
