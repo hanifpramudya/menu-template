@@ -143,19 +143,6 @@
           text-align:center;
           white-space: nowrap;
         }
-        header .amour-word{
-          font-size: clamp(26px, 3.6vw, 36px);
-          letter-spacing: 0.02em;
-        }
-        header .amour-tagline{
-          margin-top: 0.25em;
-          font-size: 10px;
-          letter-spacing: 0.22em;
-          opacity: 0.65;
-        }
-        @media (max-width: 420px){
-          header .amour-tagline{ display:none; }
-        }
 
 
     </style>
@@ -909,14 +896,13 @@ async function render(){
 }
 
 async function initMenuData(){
-  render();
   try {
     const data = await loadMenuJSONP();
     applyRemoteData(data);
-    render();
   } catch (e) {
     console.warn("⚠️ MENU API error, using local MENU:", e);
   }
+  render();
 }
 
 </script>
