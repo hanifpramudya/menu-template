@@ -74,52 +74,38 @@
     .amour-logo{
       display:flex;
       flex-direction:column;
-      align-items:center;
+      align-items:flex-start;
       line-height:1;
     }
     .amour-word{
       font-family: "Varela Round","Quicksand","Nunito","Poppins",system-ui,sans-serif;
-      font-weight: 300;
-      font-size: clamp(44px, 7vw, 92px);
-      letter-spacing: 0.03em;
+      font-weight: 600;
+      font-size: clamp(16px, 2.6vw, 22px);
+      letter-spacing: 0.02em;
       color:#fff;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
     .amour-tagline{
-      margin-top: 0.35em;
+      margin-top: 0.15em;
       font-family: "Inter","Poppins",system-ui,sans-serif;
-      font-size: clamp(11px, 1.4vw, 14px);
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
-      text-align:center;
-      white-space: nowrap;
-    }
-    header .amour-word{
-      font-size: clamp(22px, 3vw, 30px);
-      letter-spacing: 0.02em;
-    }
-    header .amour-tagline{
-      margin-top: 0.2em;
       font-size: 9px;
+      font-weight: 600;
       letter-spacing: 0.2em;
-      opacity: 0.65;
-    }
-    @media (max-width: 420px){
-      header .amour-tagline{ display:none; }
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      white-space: nowrap;
     }
   </style>
 
   <!-- Ust menu (WE tarzinda sade) -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur">
-    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+    <div class="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2 text-xl font-semibold tracking-tight">
         <img src="images/logo.png" alt="Amour logo" class="h-10 w-auto">
         <div class="amour-logo" aria-label="amour logo">
           <span class="amour-word">amour</span>
-          <span class="amour-tagline">Yalova’nın İtalyan Kahvecisi</span>
+          <span class="amour-tagline"><span aria-hidden="true">🇮🇹</span> Yalova’nın İtalyan Kahvecisi</span>
         </div>
       </a>
 
@@ -273,16 +259,6 @@
             </div>
           </div>
         </div>
-      </article>
-
-      <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
-        <div class="order-1 md:order-1">
-          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
-            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery5.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Atmosfer" loading="lazy">
-            </div>
-          </div>
-        </div>
         <div class="order-2 md:order-2 text-left">
           <h3 class="text-xl font-semibold" data-i18n="about.block5_title">Atmosfer</h3>
           <p class="mt-2 text-white/70 leading-relaxed" data-i18n="about.block5_text">
@@ -294,9 +270,9 @@
 
       <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
         <div class="order-1 md:order-1">
-          <div class="mx-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-none">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery5.jpg" class="absolute inset-0 h-full w-full object-cover" alt="Atmosfer" loading="lazy">
+              <img src="images/gallery5.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Atmosfer" loading="lazy">
             </div>
           </div>
         </div>

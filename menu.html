@@ -120,41 +120,27 @@
         .amour-logo{
           display:flex;
           flex-direction:column;
-          align-items:center;
+          align-items:flex-start;
           line-height:1;
         }
         .amour-word{
           font-family: "Varela Round","Quicksand","Nunito","Poppins",system-ui,sans-serif;
-          font-weight: 300;
-          font-size: clamp(44px, 7vw, 92px);
-          letter-spacing: 0.03em;
+          font-weight: 600;
+          font-size: clamp(16px, 2.6vw, 22px);
+          letter-spacing: 0.02em;
           color:#fff;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
         .amour-tagline{
-          margin-top: 0.35em;
+          margin-top: 0.15em;
           font-family: "Inter","Poppins",system-ui,sans-serif;
-          font-size: clamp(11px, 1.4vw, 14px);
-          font-weight: 500;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          color: rgba(255,255,255,0.65);
-          text-align:center;
-          white-space: nowrap;
-        }
-        header .amour-word{
-          font-size: clamp(22px, 3vw, 30px);
-          letter-spacing: 0.02em;
-        }
-        header .amour-tagline{
-          margin-top: 0.2em;
           font-size: 9px;
+          font-weight: 600;
           letter-spacing: 0.2em;
-          opacity: 0.65;
-        }
-        @media (max-width: 420px){
-          header .amour-tagline{ display:none; }
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.6);
+          white-space: nowrap;
         }
 
 
@@ -165,12 +151,12 @@
 <body class="font-sans">
 
 <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur">
-  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+  <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-2 text-xl font-semibold tracking-tight">
       <img src="images/logo.png" alt="Amour logo" class="h-10 w-auto">
       <div class="amour-logo" aria-label="amour logo">
         <span class="amour-word">amour</span>
-        <span class="amour-tagline">Yalova’nın İtalyan Kahvecisi</span>
+        <span class="amour-tagline"><span aria-hidden="true">🇮🇹</span> Yalova’nın İtalyan Kahvecisi</span>
       </div>
     </a>
 
