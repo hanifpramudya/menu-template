@@ -998,7 +998,7 @@ async function initMenuData(){
       btn.addEventListener("click", ()=> setLanguage(btn.dataset.lang));
     });
 
-    window.addEventListener("load", async ()=>{
+    document.addEventListener("DOMContentLoaded", async ()=>{
       setDirForLang(window.currentLang);
       if (typeof render === "function") render();
       await loadTranslations(window.currentLang);
