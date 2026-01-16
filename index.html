@@ -71,16 +71,64 @@
     }
     .lang-btn:hover{ transform: scale(1.03); opacity:.95; background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.3); }
     .lang-btn:active{ transform: scale(.98); }
+    .amour-logo{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      line-height:1;
+    }
+    .amour-word{
+      font-family: "Varela Round","Quicksand","Nunito","Poppins",system-ui,sans-serif;
+      font-weight: 600;
+      font-size: clamp(16px, 2.6vw, 22px);
+      letter-spacing: 0.02em;
+      color:#fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .amour-tagline{
+      margin-top: 0.15em;
+      font-family: "Inter","Poppins",system-ui,sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      white-space: nowrap;
+    }
   </style>
 
   <!-- Ust menu (WE tarzinda sade) -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur">
-    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-      <a href="index.html" class="text-xl font-semibold tracking-tight">
-        <span class="font-script text-2xl">Amour</span>
+    <div class="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-xl font-semibold tracking-tight">
+        <img src="images/logo.png" alt="Amour logo" class="h-10 w-auto">
+        <div class="amour-logo" aria-label="amour logo">
+          <span class="amour-word">amour</span>
+          <span class="amour-tagline"><span aria-hidden="true">🇮🇹</span> Yalova’nın İtalyan Kahvecisi</span>
+        </div>
       </a>
 
       <nav class="flex items-center gap-4 text-sm text-white/80">
+        <button
+          onclick="openLangModal()"
+          aria-label="Change language"
+          class="mr-4 inline-flex h-9 w-9 items-center justify-center
+                 rounded-full border border-white/15 bg-white/5
+                 text-white/80 transition
+                 hover:bg-white/10 hover:text-white">
+
+          <!-- Globe icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"
+               class="h-4 w-4">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M2 12h20"></path>
+            <path d="M12 2a15 15 0 0 1 0 20"></path>
+            <path d="M12 2a15 15 0 0 0 0 20"></path>
+          </svg>
+        </button>
         <a href="index.html" class="hover:text-white" data-i18n="ui.nav_about">Hakkımızda</a>
         <a href="menu.html" class="hover:text-white" data-i18n="ui.nav_menu">Menü</a>
       </nav>
@@ -95,12 +143,23 @@
 
     <div class="mt-6 flex flex-wrap gap-3">
       <a href="https://maps.app.goo.gl/kALGBiL9deJ3uM13A" target="_blank" rel="noopener"
-         class="rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold hover:bg-white/10" data-i18n="ui.btn_location">
+         class="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold hover:bg-white/10" data-i18n="ui.btn_location">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+          <path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path>
+          <circle cx="12" cy="9" r="2.5"></circle>
+        </svg>
         Konum
       </a>
 
       <a href="https://www.instagram.com/amour_coffee77" target="_blank" rel="noopener"
-         class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black hover:opacity-90" data-i18n="ui.btn_instagram">
+         class="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black hover:opacity-90" data-i18n="ui.btn_instagram">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+          <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+          <circle cx="12" cy="12" r="3"></circle>
+          <circle cx="17.5" cy="6.5" r="1"></circle>
+        </svg>
         Instagram: @amour_coffee77
       </a>
 
@@ -115,9 +174,9 @@
 
       <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
         <div class="order-1 md:order-1">
-          <div class="mx-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-none">
-            <div class="relative aspect-[3/4] overflow-hidden rounded-2xl">
-              <img src="images/gallery1.jpg" class="absolute inset-0 h-full w-full object-cover" alt="Tarihçe" loading="lazy">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="images/gallery1.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Tarihçe" loading="lazy">
             </div>
           </div>
         </div>
@@ -149,9 +208,9 @@
           </p>
         </div>
         <div class="order-1 md:order-2">
-          <div class="mx-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-none">
-            <div class="relative aspect-[3/4] overflow-hidden rounded-2xl">
-              <img src="images/gallery2.jpg" class="absolute inset-0 h-full w-full object-cover" alt="Kahve" loading="lazy">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="images/gallery2.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Kahve" loading="lazy">
             </div>
           </div>
         </div>
@@ -159,9 +218,9 @@
 
       <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
         <div class="order-1 md:order-1">
-          <div class="mx-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-none">
-            <div class="relative aspect-[3/4] overflow-hidden rounded-2xl">
-              <img src="images/gallery3.jpg" class="absolute inset-0 h-full w-full object-cover" alt="Topluluk" loading="lazy">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="images/gallery3.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Topluluk" loading="lazy">
             </div>
           </div>
         </div>
@@ -194,11 +253,28 @@
           </div>
         </div>
         <div class="order-1 md:order-2">
-          <div class="mx-auto w-full max-w-[320px] sm:max-w-[360px] md:max-w-none">
-            <div class="relative aspect-[3/4] overflow-hidden rounded-2xl">
-              <img src="images/gallery4.jpg" class="absolute inset-0 h-full w-full object-cover" alt="Ekip" loading="lazy">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="images/gallery4.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Ekip" loading="lazy">
             </div>
           </div>
+        </div>
+      </article>
+
+      <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
+        <div class="order-1 md:order-1">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="images/gallery5.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Atmosfer" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="order-2 md:order-2 text-left">
+          <h3 class="text-xl font-semibold" data-i18n="about.block5_title">Atmosfer</h3>
+          <p class="mt-2 text-white/70 leading-relaxed" data-i18n="about.block5_text">
+            Здесь вы можете почувствовать уютную и тёплую атмосферу, поиграть в разные игры от шахмат до нардов,
+            а также насладиться разными десертами.
+          </p>
         </div>
       </article>
 
@@ -208,6 +284,31 @@
   <footer class="border-t border-white/10 text-center text-sm text-white/60 py-6">
     <p>© 2025 Amour Coffee — Site yapıldı <a href="https://bond-dev.vercel.app/" target="_blank" class="font-semibold hover:text-white">Dmitrii Bondarev</a></p>
   </footer>
+
+  <div id="about-gallery-modal" class="fixed inset-0 z-[99999] hidden">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div class="relative mx-auto flex min-h-screen max-w-5xl items-center px-4 py-10">
+      <div class="relative w-full rounded-3xl border border-white/10 bg-black/80 p-4 text-white shadow-2xl">
+        <button id="about-gallery-close" class="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 hover:bg-white/10" aria-label="Close gallery">
+          ✕
+        </button>
+        <div class="flex items-center justify-between gap-4">
+          <button id="about-gallery-prev" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/80 hover:bg-white/10" aria-label="Previous image">
+            ‹
+          </button>
+          <div class="flex-1">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img id="about-gallery-image" src="" alt="" class="absolute inset-0 h-full w-full object-cover">
+            </div>
+            <p id="about-gallery-caption" class="mt-3 text-center text-sm text-white/70"></p>
+          </div>
+          <button id="about-gallery-next" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/80 hover:bg-white/10" aria-label="Next image">
+            ›
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     (function(){
@@ -295,7 +396,71 @@
         }
       });
 
-      window.openLangModal = openModal;
+    window.openLangModal = openModal;
+  })();
+  </script>
+
+  <script>
+    (function(){
+      const modal = document.getElementById("about-gallery-modal");
+      const modalImage = document.getElementById("about-gallery-image");
+      const modalCaption = document.getElementById("about-gallery-caption");
+      const closeBtn = document.getElementById("about-gallery-close");
+      const prevBtn = document.getElementById("about-gallery-prev");
+      const nextBtn = document.getElementById("about-gallery-next");
+      const items = Array.from(document.querySelectorAll(".about-gallery-image")).map(img => {
+        const article = img.closest("article");
+        const captionEl = article ? article.querySelector("p") : null;
+        return {
+          src: img.getAttribute("src"),
+          alt: img.getAttribute("alt") || "",
+          caption: captionEl ? captionEl.textContent.trim() : ""
+        };
+      });
+      let currentIndex = 0;
+
+      function openAt(index){
+        if (!items.length) return;
+        currentIndex = (index + items.length) % items.length;
+        const item = items[currentIndex];
+        modalImage.src = item.src;
+        modalImage.alt = item.alt;
+        modalCaption.textContent = item.caption;
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeModal(){
+        modal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      function next(){
+        openAt(currentIndex + 1);
+      }
+
+      function prev(){
+        openAt(currentIndex - 1);
+      }
+
+      document.querySelectorAll(".about-gallery-image").forEach((img, index) => {
+        img.addEventListener("click", () => openAt(index));
+      });
+
+      closeBtn.addEventListener("click", closeModal);
+      prevBtn.addEventListener("click", prev);
+      nextBtn.addEventListener("click", next);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (modal.classList.contains("hidden")) return;
+        if (event.key === "Escape") closeModal();
+        if (event.key === "ArrowRight") next();
+        if (event.key === "ArrowLeft") prev();
+      });
     })();
   </script>
 
