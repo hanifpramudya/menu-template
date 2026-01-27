@@ -1,12 +1,12 @@
 {
-  "hot": "SICAK İÇECEKLER",
-  "herbal": "BİTKİ ÇAYLARI",
-  "cocktails": "KOKTEYLLER",
-  "cold": "SOĞUK İÇECEKLER",
-  "icecream": "DONDURMA",
-  "coffees": "KAHVELER",
-  "filter": "FİLTRE KAHVELER",
-  "iced": "SOĞUK KAHVELER",
-  "extras": "EKSTRALAR",
-  "desserts": "TATLILAR"
+  "hot": "MINUMAN PANAS",
+  "herbal": "TEH HERBAL",
+  "cocktails": "KOKTEYL",
+  "cold": "MINUMAN DINGIN",
+  "icecream": "ES KREM",
+  "coffees": "KOPI",
+  "filter": "KOPI FILTER",
+  "iced": "KOPI DINGIN",
+  "extras": "EKSTRA",
+  "desserts": "MANISAN"
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,24 @@
   </script>
 
   <style>
-    body { background:#000; color:#fff; }
+    :root {
+      --bg: #000;
+      --text-primary: #fff;
+      --text-secondary: rgba(255,255,255,0.8);
+      --text-muted: rgba(255,255,255,0.6);
+      --border-subtle: rgba(255,255,255,0.1);
+      --border-soft: rgba(255,255,255,0.15);
+      --overlay: rgba(0,0,0,0.25);
+      --shadow: rgba(0,0,0,0.25);
+      --interactive-bg: rgba(255,255,255,0.05);
+      --interactive-border: rgba(255,255,255,0.15);
+      --lang-bg: rgba(255,255,255,0.08);
+      --lang-bg-hover: rgba(255,255,255,0.16);
+      --lang-border: rgba(255,255,255,0.15);
+      --lang-border-hover: rgba(255,255,255,0.3);
+    }
+
+    body { background: var(--bg); color: var(--text-primary); }
     html { scroll-behavior:smooth; }
   </style>
 </head>
@@ -44,10 +61,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
           <button class="lang-btn" data-lang="tr">🇹🇷 Türkçe</button>
           <button class="lang-btn" data-lang="en">🇬🇧 English</button>
-          <button class="lang-btn" data-lang="ru">🇷🇺 Русский</button>
-          <button class="lang-btn" data-lang="ar">🇸🇦 العربية</button>
-          <button class="lang-btn" data-lang="fa">🇮🇷 فارسی</button>
-          <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+          <button class="lang-btn" data-lang="id">🇮🇩 Bahasa Indonesia</button>
         </div>
 
         <p class="mt-6 text-sm text-white/60 italic" data-i18n="ui.lang_sub">Amour Café — Yalova</p>
@@ -61,17 +75,17 @@
     .lang-btn{
       width:100%;
       padding:.75rem 1rem;
-      background: rgba(255, 255, 255, 0.08);
-      color:#fff;
+      background: var(--lang-bg);
+      color: var(--text-primary);
       font-weight:700;
       border-radius:14px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      border: 1px solid var(--lang-border);
+      box-shadow: 0 6px 16px var(--shadow);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       transition: transform .15s ease, opacity .15s ease, background-color .2s ease, border-color .2s ease;
     }
-    .lang-btn:hover{ transform: scale(1.03); opacity:.95; background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.3); }
+    .lang-btn:hover{ transform: scale(1.03); opacity:.95; background: var(--lang-bg-hover); border-color: var(--lang-border-hover); }
     .lang-btn:active{ transform: scale(.98); }
     .amour-logo{
       display:flex;
@@ -84,7 +98,7 @@
       font-weight: 600;
       font-size: clamp(16px, 2.6vw, 22px);
       letter-spacing: 0.02em;
-      color:#fff;
+      color: var(--text-primary);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -95,7 +109,7 @@
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: var(--text-muted);
       white-space: nowrap;
     }
   </style>
@@ -314,7 +328,7 @@
       const modal = document.getElementById("lang-modal");
       const ALWAYS_SHOW_LANG_MODAL = false;
 
-      window.currentLang = localStorage.getItem(LS_KEY) || "tr";
+      window.currentLang = localStorage.getItem(LS_KEY) || "id";
       window.translations = {};
 
       function deepGet(obj, path){

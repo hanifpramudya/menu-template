@@ -2,31 +2,40 @@
   {
     "id": "cay",
     "cat": "hot",
-    "name": "Çay",
+    "name": "Teh",
     "price": 60,
-    "img": "images/cay.webp",
-    "desc": "Geleneksel ve taze demlenmiş siyah çay.",
-    "ingredients": ["Siyah çay", "Su"],
+    "img": "images/image-20.webp",
+    "desc": "Teh hitam Turki tradisional yang seduh segar.",
+    "ingredients": [
+      "Teh hitam",
+      "Air"
+    ],
     "active": true
   },
   {
     "id": "fincan-cay",
     "cat": "hot",
-    "name": "Fincan Çay",
+    "name": "Teh Porselan",
     "price": 90,
-    "img": "images/fincan-cay.webp",
-    "desc": "Bardakta geleneksel çay",
-    "ingredients": ["Siyah çay", "Su"],
+    "img": "images/image-39.webp",
+    "desc": "Teh hitam tradisional disajikan dalam cangkir porselan.",
+    "ingredients": [
+      "Teh hitam",
+      "Air"
+    ],
     "active": true
   },
   {
     "id": "takeaway-cay",
     "cat": "hot",
-    "name": "Take a way Çay",
+    "name": "Teh Bawa Pulang",
     "price": 90,
-    "img": "images/takeaway-cay.webp",
-    "desc": "Kağıt bardakta çay",
-    "ingredients": ["Siyah çay", "Su"],
+    "img": "images/image-91.webp",
+    "desc": "Teh hitam disajikan dalam gelas kertas.",
+    "ingredients": [
+      "Teh hitam",
+      "Air"
+    ],
     "active": true
   },
   {
@@ -34,109 +43,146 @@
     "cat": "hot",
     "name": "Salep",
     "price": 220,
-    "img": "images/salep.webp",
-    "desc": "Tarçın ve sütlü sıcak içecek",
-    "ingredients": ["Salep", "Süt", "Tarçın", "Şeker"],
+    "img": "images/image-85.webp",
+    "desc": "Minuman tradisional panas dan creamy yang disajikan dengan kayu manis.",
+    "ingredients": [
+      "Salep",
+      "Susu",
+      "Kayu manis",
+      "Gula"
+    ],
     "active": true
   },
   {
     "id": "sicak-cikolata",
     "cat": "hot",
-    "name": "Sıcak Çikolata",
+    "name": "Cokelat Panas",
     "price": 220,
-    "img": "images/sicak-cikolata.webp",
-    "desc": "Sıcak ve yoğun kakaolu çikolatalı içecek",
-    "ingredients": ["Kakao", "Süt", "Şeker"],
+    "img": "images/image-87.webp",
+    "desc": "Minuman cokelat yang kaya dan hangat.",
+    "ingredients": [
+      "Kakao",
+      "Susu",
+      "Gula"
+    ],
     "active": true
   },
   {
     "id": "beyaz-sicak-cikolata",
     "cat": "hot",
-    "name": "Beyaz Sıcak Çikolata",
+    "name": "Cokelat Putih Panas",
     "price": 220,
-    "img": "images/beyaz-sicak-cikolata.webp",
-    "desc": "Yoğun ve sıcak beyaz çikolatalı içecek.",
-    "ingredients": ["Beyaz çikolata", "Süt"],
+    "img": "images/image-16.webp",
+    "desc": "Minuman cokelat putih yang creamy dan hangat.",
+    "ingredients": [
+      "Cokelat putih",
+      "Susu"
+    ],
     "active": true
   },
   {
     "id": "chai-latte",
     "cat": "hot",
-    "name": "Chai Tea Latte",
+    "name": "Chai Latte",
     "price": 220,
-    "img": "images/chai-latte.webp",
-    "desc": "Baharatlı sütlü çay içeceği",
-    "ingredients": ["Çay", "Süt", "Chai baharatı"],
+    "img": "images/image-21.webp",
+    "desc": "Kombinasi teh rempah dengan busa susu.",
+    "ingredients": [
+      "Teh",
+      "Susu",
+      "Campuran rempah"
+    ],
     "active": true
   },
   {
     "id": "balli-sut",
     "cat": "hot",
-    "name": "Ballı Süt",
+    "name": "Susu Madu",
     "price": 180,
-    "img": "images/balli-sut.webp",
-    "desc": "Bal ile tatlandırılmış sıcak süt",
-    "ingredients": ["Süt", "Bal"],
+    "img": "images/image-15.webp",
+    "desc": "Susu panas yang dimaniskan dengan madu.",
+    "ingredients": [
+      "Susu",
+      "Madu"
+    ],
     "active": true
   },
   {
     "id": "herbal-0",
     "cat": "herbal",
-    "name": "Ihlamur",
+    "name": "Teh Linden",
     "price": 220,
-    "img": "images/herbal-0.webp",
-    "desc": "French press ile hazırlanan taze ıhlamur çayı",
-    "ingredients": ["Ihlamur"],
+    "img": "images/image-46.webp",
+    "desc": "Teh linden penenang yang diseduh dengan French press.",
+    "ingredients": [
+      "Linden",
+      "Air"
+    ],
     "active": true
   },
   {
     "id": "herbal-1",
     "cat": "herbal",
-    "name": "Kış Çayı",
+    "name": "Teh Musim Dingin",
     "price": 220,
-    "img": "images/herbal-1.webp",
-    "desc": "French press ile hazırlanan taze kış çayı",
-    "ingredients": ["Kış Çayı"],
+    "img": "images/image-47.webp",
+    "desc": "Campuran tumbuhan dan rempah segar yang baru diseduh.",
+    "ingredients": [
+      "Tumbuhan musim dingin",
+      "Air"
+    ],
     "active": true
   },
   {
     "id": "herbal-2",
     "cat": "herbal",
-    "name": "Yeşil Çay",
+    "name": "Teh Hijau",
     "price": 220,
-    "img": "images/herbal-2.webp",
-    "desc": "French press ile hazırlanan hafif ve taze yeşil çay",
-    "ingredients": ["Yeşil Çay"],
+    "img": "images/image-48.webp",
+    "desc": "Teh hijau segar yang seduh ringan dengan aroma lembut.",
+    "ingredients": [
+      "Teh hijau",
+      "Air"
+    ],
     "active": true
   },
   {
     "id": "herbal-3",
     "cat": "herbal",
-    "name": "Ada Çayı",
+    "name": "Sage Tea",
     "price": 220,
-    "img": "images/herbal-3.webp",
-    "desc": "French press ile hazırlanan taze ada çayı",
-    "ingredients": ["Ada Çayı"],
+    "img": "images/image-49.webp",
+    "desc": "Sage aromatik yang diseduh perlahan.",
+    "ingredients": [
+      "Sage",
+      "Air"
+    ],
     "active": true
   },
   {
     "id": "herbal-4",
     "cat": "herbal",
-    "name": "Papatya",
+    "name": "Teh Kamomil",
     "price": 220,
-    "img": "images/herbal-4.webp",
-    "desc": "French press ile hazırlanan taze papatya çayı",
-    "ingredients": ["Papatya"],
+    "img": "images/image-50.webp",
+    "desc": "Teh bunga kamomil penenang yang baru diseduh.",
+    "ingredients": [
+      "Kamomil",
+      "Air"
+    ],
     "active": true
   },
   {
     "id": "herbal-5",
     "cat": "herbal",
-    "name": "Kuşburnu Çayı",
+    "name": "Teh Rosehip",
     "price": 220,
-    "img": "images/herbal-5.webp",
-    "desc": "French press ile hazırlanan taze kuşburnu çayı",
-    "ingredients": ["Kuşburnu Çayı"],
+    "img": "images/image-51.webp",
+    "desc": "Teh rosehip yang kaya vitamin dengan warna dan aroma yang kuat.",
+    "ingredients": [
+      "Rosehip",
+      "Air"
+    ],
     "active": true
   },
   {
@@ -144,9 +190,12 @@
     "cat": "cocktails",
     "name": "Amour Milano",
     "price": 230,
-    "img": "images/amour-milano.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-9.webp",
+    "desc": "Campuran buah segar dengan sentuhan Milano.",
+    "ingredients": [
+      "Campuran buah",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -154,9 +203,12 @@
     "cat": "cocktails",
     "name": "Amour Special",
     "price": 230,
-    "img": "images/amour-special.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-11.webp",
+    "desc": "Resep khusus dengan rasa yang cerah dan akhir yang lembut.",
+    "ingredients": [
+      "Campuran khusus",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -164,9 +216,12 @@
     "cat": "cocktails",
     "name": "Amour Melo",
     "price": 230,
-    "img": "images/amour-melo.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-8.webp",
+    "desc": "Minuman manis dan segar dengan sentuhan melon.",
+    "ingredients": [
+      "Aroma melon",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -174,9 +229,12 @@
     "cat": "cocktails",
     "name": "Amour Wild Berry",
     "price": 230,
-    "img": "images/amour-wild-berry.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-13.webp",
+    "desc": "Campuran buah liar yang alami dan cerah.",
+    "ingredients": [
+      "Campuran buah hutan",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -184,9 +242,12 @@
     "cat": "cocktails",
     "name": "Amour Vibe",
     "price": 230,
-    "img": "images/amour-vibe.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-12.webp",
+    "desc": "Minuman tanda tangan yang menyegarkan dan membangkitkan semangat.",
+    "ingredients": [
+      "Campuran sitrus",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -194,9 +255,12 @@
     "cat": "cocktails",
     "name": "Amour Sky",
     "price": 230,
-    "img": "images/amour-sky.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-10.webp",
+    "desc": "Minuman ringan, lembut dan segar berwarna biru.",
+    "ingredients": [
+      "Aroma sitrus",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -204,39 +268,54 @@
     "cat": "cocktails",
     "name": "Amour Lime",
     "price": 200,
-    "img": "images/amour-lime.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-6.webp",
+    "desc": "Soda jeruk nipis yang menyegarkan.",
+    "ingredients": [
+      "Jeruk nipis",
+      "Soda",
+      "Es"
+    ],
     "active": true
   },
   {
     "id": "amour-mango-portakal",
     "cat": "cocktails",
-    "name": "Amour Mango Portakal (Sıfır Şeker)",
+    "name": "Amour Mango Jeruk (Tanpa Gula)",
     "price": 190,
-    "img": "images/amour-mango-portakal.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-7.webp",
+    "desc": "Campuran mango jeruk tropis alami yang manis.",
+    "ingredients": [
+      "Mango",
+      "Jeruk",
+      "Es"
+    ],
     "active": true
   },
   {
     "id": "amour-lime-zero",
     "cat": "cocktails",
-    "name": "Amour Lime (Sıfır Şeker)",
+    "name": "Amour Lime (Tanpa Gula)",
     "price": 190,
-    "img": "images/amour-lime-zero.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-5.webp",
+    "desc": "Kesegaran jeruk nipis tanpa gula.",
+    "ingredients": [
+      "Jeruk nipis",
+      "Soda",
+      "Es"
+    ],
     "active": true
   },
   {
     "id": "amour-hibiscus",
     "cat": "cocktails",
-    "name": "Amour Hibiscus (Sıfır Şeker)",
+    "name": "Amour Hibiscus (Tanpa Gula)",
     "price": 190,
-    "img": "images/amour-hibiscus.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-4.webp",
+    "desc": "Kesegaran bunga hibiscus yang bunga-bunga, tanpa gula.",
+    "ingredients": [
+      "Hibiscus",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -244,38 +323,48 @@
     "cat": "cocktails",
     "name": "Amour Dark",
     "price": 230,
-    "img": "images/amour-dark.webp",
-    "desc": "Daha sonra buraya yazacağım",
-    "ingredients": ["Espresso"],
+    "img": "images/image-3.webp",
+    "desc": "Profil buah hutan yang kaya dan elegan.",
+    "ingredients": [
+      "Buah hutan",
+      "Es"
+    ],
     "active": true
   },
   {
     "id": "su",
     "cat": "cold",
-    "name": "Su",
+    "name": "Air",
     "price": 60,
-    "img": "images/su.webp",
-    "ingredients": ["Su"],
-    "active": true
+    "img": "images/image-90.webp",
+    "ingredients": [
+      "Air"
+    ],
+    "active": true,
+    "desc": "Air murni dan segar."
   },
   {
     "id": "soda",
     "cat": "cold",
     "name": "Soda",
     "price": 110,
-    "img": "images/soda.webp",
-    "desc": "Ferahlatıcı gazlı mineral içeceği",
-    "ingredients": ["Soda"],
+    "img": "images/image-89.webp",
+    "desc": "Air mineral dingin.",
+    "ingredients": [
+      "Air mineral"
+    ],
     "active": true
   },
   {
     "id": "sikma-portakal",
     "cat": "cold",
-    "name": "Sıkma Portakal Suyu",
+    "name": "Jeruk Segar Peras",
     "price": 220,
-    "img": "images/sikma-portakal.webp",
-    "desc": "Taze sıkılmış doğal ve ferahlatıcı portakal suyu.",
-    "ingredients": ["Portakal"],
+    "img": "images/image-88.webp",
+    "desc": "Jus jeruk alami yang baru diperas.",
+    "ingredients": [
+      "Jeruk"
+    ],
     "active": true
   },
   {
@@ -283,39 +372,55 @@
     "cat": "cold",
     "name": "Frozen",
     "price": 190,
-    "img": "images/frozen.webp",
-    "desc": "Mango, Çilek, Şeftali, Yaban Mersini, Frambuaz, Orman Meyveli",
-    "ingredients": ["Meyve püresi", "Buz"],
+    "img": "images/image-43.webp",
+    "desc": "Campuran mango, strawberry, persik, blueberry, blackberry",
+    "ingredients": [
+      "Smoothie buah beku"
+    ],
     "active": true
   },
   {
     "id": "italian-soda",
     "cat": "cold",
-    "name": "İtalian Soda",
+    "name": "Soda Italia",
     "price": 190,
-    "img": "images/italian-soda.webp",
-    "desc": "Nar, çilek, mango, böğürtlen",
-    "ingredients": ["Soda", "Meyve şurubu", "Buz"],
+    "img": "images/image-67.webp",
+    "desc": "Minuman soda buah di atas es.",
+    "ingredients": [
+      "Soda",
+      "Sirup buah",
+      "Es"
+    ],
     "active": true
   },
   {
     "id": "limonata",
     "cat": "cold",
-    "name": "Limonata",
+    "name": "Limonata Rumahan",
     "price": 180,
-    "img": "images/limonata.webp",
-    "desc": "Taze narenciye aromalı ev yapımı limonata.",
-    "ingredients": ["Limon", "Şeker", "Su", "Buz"],
+    "img": "images/image-71.webp",
+    "desc": "Limonata dengan aroma jeruk segar.",
+    "ingredients": [
+      "Jeruk lemon",
+      "Gula",
+      "Air",
+      "Es"
+    ],
     "active": true
   },
   {
     "id": "aromali-limonata",
     "cat": "cold",
-    "name": "Aromalı Limonata",
+    "name": "Limonata Aromatik",
     "price": 180,
-    "img": "images/aromali-limonata.webp",
-    "desc": "Çilek, nar, nane",
-    "ingredients": ["Limon", "Aroma", "Şeker", "Su", "Buz"],
+    "img": "images/image-14.webp",
+    "desc": "Limonata segar dengan aroma alami.",
+    "ingredients": [
+      "Jeruk lemon",
+      "Aroma",
+      "Air",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -323,29 +428,38 @@
     "cat": "cold",
     "name": "Churchill",
     "price": 100,
-    "img": "images/churchill.webp",
-    "desc": "Limon tuz ve soda ile ferah.",
-    "ingredients": ["Soda", "Limon", "Tuz", "Buz"],
+    "img": "images/image-23.webp",
+    "desc": "Campuran klasik jeruk lemon, garam, dan soda.",
+    "ingredients": [
+      "Soda",
+      "Jeruk lemon",
+      "Garam",
+      "Es"
+    ],
     "active": true
   },
   {
     "id": "enerji-icecek",
     "cat": "cold",
-    "name": "Enerji İçeceği",
+    "name": "Minuman Energi",
     "price": 180,
-    "img": "images/enerji-icecek.webp",
-    "desc": "Gazlı ve tatlı enerji içeceği.",
-    "ingredients": ["Gazlı içecek"],
+    "img": "images/image-31.webp",
+    "desc": "Minuman energi berkafein dan bergas.",
+    "ingredients": [
+      "Minuman energi"
+    ],
     "active": true
   },
   {
     "id": "mesrubatlar",
     "cat": "cold",
-    "name": "Meşrubatlar",
+    "name": "Minuman Lainnya",
     "price": 140,
-    "img": "images/mesrubatlar.webp",
-    "desc": "Cola turka, uludağ portakal, uludağ gazoz, ice tea",
-    "ingredients": ["Çeşitli meşrubatlar"],
+    "img": "images/image-76.webp",
+    "desc": "Cola Turka, Gazoz, Ice Tea dll.",
+    "ingredients": [
+      "Pilihan minuman bergas"
+    ],
     "active": true
   },
   {
@@ -353,89 +467,123 @@
     "cat": "cold",
     "name": "Milkshake",
     "price": 230,
-    "img": "images/milkshake.webp",
-    "desc": "Çikolata, çilek, muz, vanilya, oreo",
-    "ingredients": ["Süt", "Dondurma", "Şurup"],
+    "img": "images/image-78.webp",
+    "desc": "Strawberry, Vanilla, Cokelat, Oreo",
+    "ingredients": [
+      "Susu",
+      "Es krim",
+      "Sirup"
+    ],
     "active": true
   },
   {
     "id": "meyveli-soda",
     "cat": "cold",
-    "name": "Meyveli Soda",
+    "name": "Soda Buah",
     "price": 120,
-    "img": "images/meyveli-soda.webp",
-    "desc": "Limon, elma, nar, karpuz çilek",
-    "ingredients": ["Soda", "Meyve aroması"],
+    "img": "images/image-77.webp",
+    "desc": "Jeruk lemon, apel, delima, strawberry",
+    "ingredients": [
+      "Soda beraroma buah"
+    ],
     "active": true
   },
   {
     "id": "icecream-vanilya",
     "cat": "icecream",
-    "name": "Vanilya Dondurma",
+    "name": "Es Krim Vanila",
     "price": 60,
-    "img": "images/icecream-vanilya.webp",
-    "desc": "Klasik vanilya lezzeti.",
-    "ingredients": ["Süt", "Şeker", "Vanilya"],
+    "img": "images/image-59.webp",
+    "desc": "Rasa vanila klasik yang lembut.",
+    "ingredients": [
+      "Susu",
+      "Gula",
+      "Vanila"
+    ],
     "active": true
   },
   {
     "id": "icecream-visne",
     "cat": "icecream",
-    "name": "Vişne Dondurma",
+    "name": "Es Krim Ceri",
     "price": 60,
-    "img": "images/icecream-visne.webp",
-    "desc": "Hafif ekşi vişne tadı.",
-    "ingredients": ["Süt", "Şeker", "Vişne"],
+    "img": "images/image-60.webp",
+    "desc": "Aroma ceri yang cerah dan asam manis.",
+    "ingredients": [
+      "Susu",
+      "Gula",
+      "Ceri"
+    ],
     "active": true
   },
   {
     "id": "icecream-cikolata",
     "cat": "icecream",
-    "name": "Çikolata Dondurma",
+    "name": "Es Krim Cokelat",
     "price": 60,
-    "img": "images/icecream-cikolata.webp",
-    "desc": "Zengin çikolata tadı.",
-    "ingredients": ["Süt", "Şeker", "Kakao"],
+    "img": "images/image-54.webp",
+    "desc": "Rasa kakao yang kaya dengan tekstur creamy.",
+    "ingredients": [
+      "Susu",
+      "Gula",
+      "Kakao"
+    ],
     "active": true
   },
   {
     "id": "icecream-karamel",
     "cat": "icecream",
-    "name": "Karamel Dondurma",
+    "name": "Es Krim Karamel",
     "price": 60,
-    "img": "images/icecream-karamel.webp",
-    "desc": "Karamel dokunuşlu tatlı lezzet.",
-    "ingredients": ["Süt", "Şeker", "Karamel"],
+    "img": "images/image-56.webp",
+    "desc": "Es krim dengan aroma karamel yang lembut.",
+    "ingredients": [
+      "Susu",
+      "Gula",
+      "Karamel"
+    ],
     "active": true
   },
   {
     "id": "icecream-cilek",
     "cat": "icecream",
-    "name": "Çilek Dondurma",
+    "name": "Es Krim Strawberry",
     "price": 60,
-    "img": "images/icecream-cilek.webp",
-    "desc": "Taze çilek aroması.",
-    "ingredients": ["Süt", "Şeker", "Çilek"],
+    "img": "images/image-55.webp",
+    "desc": "Es krim dengan aroma strawberry segar.",
+    "ingredients": [
+      "Susu",
+      "Gula",
+      "Strawberry"
+    ],
     "active": true
   },
   {
     "id": "icecream-parca-cikolata",
     "cat": "icecream",
-    "name": "Parça Çikolata Dondurma",
+    "name": "Es Krim Cokelat Chip",
     "price": 60,
-    "img": "images/icecream-parca-cikolata.webp",
-    "desc": "Çikolata parçacıklı keyif.",
-    "ingredients": ["Süt", "Şeker", "Çikolata parçaları"],
+    "img": "images/image-58.webp",
+    "desc": "Es krim vanila dengan potongan cokelat.",
+    "ingredients": [
+      "Susu",
+      "Gula",
+      "Chip cokelat"
+    ],
     "active": true
   },
   {
     "id": "icecream-krokan",
     "cat": "icecream",
-    "name": "Krokan Dondurma",
+    "name": "Es Krim Krokan",
     "price": 60,
-    "img": "images/icecream-krokan.webp",
-    "desc": "Kıtır krokan parçalarlı.",
-    "ingredients": ["Süt", "Şeker", "Krokan"],
+    "img": "images/image-57.webp",
+    "desc": "Es krim dengan potongan karamel renyah.",
+    "ingredients": [
+      "Susu",
+      "Gula",
+      "Krokan"
+    ],
     "active": true
   },
   {
@@ -446,9 +594,11 @@
       "S": 140,
       "M": 160
     },
-    "img": "images/espresso.webp",
-    "desc": "Yoğun aromalı güçlü ve konsantre kahve",
-    "ingredients": ["Espresso"],
+    "img": "images/image-33.webp",
+    "desc": "Shot kopi pekat dengan aroma kaya.",
+    "ingredients": [
+      "Espresso"
+    ],
     "caffeine": 63,
     "active": true
   },
@@ -460,37 +610,47 @@
       "S": 160,
       "M": 180
     },
-    "img": "images/espresso-macchiato.webp",
-    "desc": "Az miktarda süt köpüğü ile servis edilen yoğun ve karakterli espresso",
-    "ingredients": ["Espresso", "Süt köpüğü"],
+    "img": "images/image-32.webp",
+    "desc": "Espresso dengan busa susu ringan di atasnya.",
+    "ingredients": [
+      "Espresso",
+      "Busa susu"
+    ],
     "caffeine": 63,
     "active": true
   },
   {
     "id": "americano",
     "cat": "coffees",
-    "name": "Coffee Americano",
+    "name": "Americano",
     "sizes": {
       "S": 200,
       "M": 210
     },
-    "img": "images/americano.webp",
-    "desc": "Espresso bazlı sıcak su ile hazırlanmış yumuşak siyah kahve.",
-    "ingredients": ["Espresso", "Sıcak su"],
+    "img": "images/image-2.webp",
+    "desc": "Minuman lembut dengan espresso dan air panas.",
+    "ingredients": [
+      "Espresso",
+      "Air panas"
+    ],
     "caffeine": 95,
     "active": true
   },
   {
     "id": "latte",
     "cat": "coffees",
-    "name": "Coffee Latte",
+    "name": "Latte",
     "sizes": {
       "S": 220,
       "M": 230
     },
-    "img": "images/latte.webp",
-    "desc": "Bol sütlü yumuşak içimli nazik kahve içeceği.",
-    "ingredients": ["Espresso", "Süt", "Süt köpüğü"],
+    "img": "images/image-70.webp",
+    "desc": "Espresso lembut dengan susu, busa halus.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Busa susu"
+    ],
     "caffeine": 80,
     "active": true
   },
@@ -502,9 +662,13 @@
       "S": 230,
       "M": 240
     },
-    "img": "images/white-mocha.webp",
-    "desc": "Beyaz çikolata ve süt ile hazırlanmış tatlı ve kremamsı kahve.",
-    "ingredients": ["Espresso", "Süt", "Beyaz çikolata sosu"],
+    "img": "images/image-94.webp",
+    "desc": "Kombinasi sempurna cokelat putih dan espresso.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Cokelat putih"
+    ],
     "caffeine": 90,
     "active": true
   },
@@ -516,9 +680,13 @@
       "S": 230,
       "M": 240
     },
-    "img": "images/mocha.webp",
-    "desc": "Çikolata ve süt ile hazırlanan, yoğun ve tatlı kahve.",
-    "ingredients": ["Espresso", "Süt", "Çikolata sosu"],
+    "img": "images/image-80.webp",
+    "desc": "Latte dengan aroma cokelat.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Cokelat"
+    ],
     "caffeine": 90,
     "active": true
   },
@@ -530,9 +698,13 @@
       "S": 230,
       "M": 240
     },
-    "img": "images/caramel-latte.webp",
-    "desc": "Vanilya-karamel tatlılığına sahip yumuşak ve kremamsı latte.",
-    "ingredients": ["Espresso", "Süt", "Karamel sosu"],
+    "img": "images/image-19.webp",
+    "desc": "Espresso dengan susu dan karamel.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Karamel"
+    ],
     "caffeine": 80,
     "active": true
   },
@@ -541,9 +713,13 @@
     "cat": "coffees",
     "name": "Cappuccino",
     "price": 220,
-    "img": "images/cappuccino.webp",
-    "desc": "Yoğun köpüklü süt ile hazırlanmış dengeli lezzette kahve.",
-    "ingredients": ["Espresso", "Süt", "Süt köpüğü"],
+    "img": "images/image-18.webp",
+    "desc": "Susu dan espresso seimbang dengan busa tebal.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Busa susu"
+    ],
     "caffeine": 75,
     "active": true
   },
@@ -552,9 +728,12 @@
     "cat": "coffees",
     "name": "Cortado",
     "price": 220,
-    "img": "images/cortado.webp",
-    "desc": "Az sütle hazırlanan yoğun ve yumuşak içimli espresso.",
-    "ingredients": ["Espresso", "Az süt"],
+    "img": "images/image-26.webp",
+    "desc": "Espresso pekat dengan sedikit susu.",
+    "ingredients": [
+      "Espresso",
+      "Susu"
+    ],
     "caffeine": 75,
     "active": true
   },
@@ -563,9 +742,12 @@
     "cat": "coffees",
     "name": "Flat White",
     "price": 220,
-    "img": "images/flat-white.webp",
-    "desc": "Kadifemsi süt dokusuyla güçlü kahve aroması.",
-    "ingredients": ["Çift espresso", "Süt"],
+    "img": "images/image-41.webp",
+    "desc": "Double shot espresso dengan susu silk.",
+    "ingredients": [
+      "Double espresso",
+      "Susu"
+    ],
     "caffeine": 126,
     "active": true
   },
@@ -574,9 +756,13 @@
     "cat": "coffees",
     "name": "Latte Macchiato",
     "price": 220,
-    "img": "images/latte-macchiato.webp",
-    "desc": "Sütün üzerine eklenen espresso dokunuşu hafif ve sütlü tat.",
-    "ingredients": ["Espresso", "Süt", "Süt köpüğü"],
+    "img": "images/image-69.webp",
+    "desc": "Espresso di atas susu panas.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Busa susu"
+    ],
     "caffeine": 75,
     "active": true
   },
@@ -585,64 +771,82 @@
     "cat": "coffees",
     "name": "Nutellatte",
     "price": 240,
-    "img": "images/nutellatte.webp",
-    "desc": "Nutella ile hazırlanan çikolatalı-fındıklı tatlı ve kremamsı latte.",
-    "ingredients": ["Espresso", "Süt", "Fındık-kakao kreması"],
+    "img": "images/image-81.webp",
+    "desc": "Latte dengan krim hazelnut-kakao.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Krim hazelnut-kakao"
+    ],
     "caffeine": 80,
     "active": true
   },
   {
     "id": "deca-cream",
     "cat": "coffees",
-    "name": "Deca Cream (Espresso)",
+    "name": "Espresso Creamy Tanpa Kafein",
     "price": 200,
-    "img": "images/deca-cream.webp",
-    "desc": "Süt bazlı, kafeinsiz kremamsı içecek.",
-    "ingredients": ["Kafeinsiz espresso"],
+    "img": "images/image-28.webp",
+    "desc": "Espresso tanpa kafein yang creamy.",
+    "ingredients": [
+      "Espresso tanpa kafein"
+    ],
     "caffeine": 6,
     "active": true
   },
   {
     "id": "turk-kahvesi",
     "cat": "coffees",
-    "name": "Türk Kahvesi",
+    "name": "Kopi Turki",
     "price": 170,
-    "img": "images/turk-kahvesi.webp",
-    "desc": "İnce çekilmiş kahvenin geleneksel yöntemle hazırlanmış aromatik hali.",
-    "ingredients": ["Türk kahvesi", "Su"],
+    "img": "images/image-92.webp",
+    "desc": "Kopi Turki klasik yang kental dan berbusa.",
+    "ingredients": [
+      "Kopi Turki",
+      "Air"
+    ],
     "caffeine": 60,
     "active": true
   },
   {
     "id": "double-turk",
     "cat": "coffees",
-    "name": "Duble Türk Kahvesi",
+    "name": "Double Kopi Turki",
     "price": 190,
-    "img": "images/double-turk.webp",
-    "desc": "Çift porsiyon Türk kahvesi güçlü ve yoğun lezzet.",
-    "ingredients": ["Türk kahvesi (duble)", "Su"],
+    "img": "images/image-30.webp",
+    "desc": "Kopi Turki double shot yang lebih kental.",
+    "ingredients": [
+      "Kopi Turki (double)",
+      "Air"
+    ],
     "caffeine": 120,
     "active": true
   },
   {
     "id": "dibek",
     "cat": "coffees",
-    "name": "Dibek Kahvesi",
+    "name": "Kopi Dibek",
     "price": 170,
-    "img": "images/dibek.webp",
-    "desc": "Havanda dövülmüş yumuşak ve kremamsı kıvamda zengin aromalı kahve.",
-    "ingredients": ["Dibek kahvesi", "Su"],
+    "img": "images/image-29.webp",
+    "desc": "Kopi dibek tradisional yang lembut.",
+    "ingredients": [
+      "Kopi dibek",
+      "Air"
+    ],
     "caffeine": 60,
     "active": true
   },
   {
     "id": "menengic",
     "cat": "coffees",
-    "name": "Menengiç Kahvesi",
+    "name": "Kopi Menengiç",
     "price": 180,
-    "img": "images/menengic.webp",
-    "desc": "Doğal ve kafeinsiz fındıksı aromalı ve yumuşak dokulu içecek.",
-    "ingredients": ["Menengiç", "Süt veya su"],
+    "img": "images/image-75.webp",
+    "desc": "Alami, tanpa kafein, dengan aroma hazelnut ringan.",
+    "ingredients": [
+      "Menengiç",
+      "Susu atau air"
+    ],
     "caffeine": 0,
     "active": true
   },
@@ -651,42 +855,54 @@
     "cat": "filter",
     "name": "Kenya AA",
     "price": 190,
-    "img": "images/kenya.webp",
-    "desc": "Meyvemsi notalar ve parlak asiditeye sahip filtre kahve",
-    "ingredients": ["Filtre kahve", "Su"],
+    "img": "images/image-68.webp",
+    "desc": "Buah-buahan, cerah dengan nada sitrus.",
+    "ingredients": [
+      "Kopi filter",
+      "Air"
+    ],
     "caffeine": 120,
     "active": true
   },
   {
     "id": "colombia",
     "cat": "filter",
-    "name": "Colombia",
+    "name": "Kolombia",
     "price": 190,
-    "img": "images/colombia.webp",
-    "desc": "Yumuşak asidite karamel ve fındık notalarına sahip filtre kahve",
-    "ingredients": ["Filtre kahve", "Su"],
+    "img": "images/image-25.webp",
+    "desc": "Minuman seimbang dengan nada hazelnut dan karamel.",
+    "ingredients": [
+      "Kopi filter",
+      "Air"
+    ],
     "caffeine": 115,
     "active": true
   },
   {
     "id": "ethiopia",
     "cat": "filter",
-    "name": "Ethiopia",
+    "name": "Etiopia",
     "price": 190,
-    "img": "images/ethiopia.webp",
-    "desc": "Narenciye ve çiçek notalarına sahip hafif ve aromatik filtre kahve",
-    "ingredients": ["Filtre kahve", "Su"],
+    "img": "images/image-34.webp",
+    "desc": "Ringan, bunga-bunga dan keasaman buah-buahan.",
+    "ingredients": [
+      "Kopi filter",
+      "Air"
+    ],
     "caffeine": 120,
     "active": true
   },
   {
     "id": "costarica",
     "cat": "filter",
-    "name": "Costarica",
+    "name": "Kosta Rika",
     "price": 190,
-    "img": "images/costarica.webp",
-    "desc": "Karamel ve narenciye notalarıyla dengeli ve parlak bir tat",
-    "ingredients": ["Filtre kahve", "Su"],
+    "img": "images/image-27.webp",
+    "desc": "Cerah, manis sitrus, minuman lembut.",
+    "ingredients": [
+      "Kopi filter",
+      "Air"
+    ],
     "caffeine": 115,
     "active": true
   },
@@ -695,9 +911,12 @@
     "cat": "filter",
     "name": "Guatemala",
     "price": 190,
-    "img": "images/guatemala.webp",
-    "desc": "Çikolata notaları ve hafif meyvemsi tatlılığa sahip zengin bir lezzet",
-    "ingredients": ["Filtre kahve", "Su"],
+    "img": "images/image-45.webp",
+    "desc": "Nada cokelat dengan manisnya buah ringan.",
+    "ingredients": [
+      "Kopi filter",
+      "Air"
+    ],
     "caffeine": 115,
     "active": true
   },
@@ -706,9 +925,12 @@
     "cat": "filter",
     "name": "V60",
     "price": 210,
-    "img": "images/v60.webp",
-    "desc": "El demleme yöntemiyle hazırlanan filtre kahve temiz ve parlak tat (V60)",
-    "ingredients": ["Öğütülmüş kahve", "Su"],
+    "img": "images/image-93.webp",
+    "desc": "Kopi seduhan tangan yang bersih dan cerah.",
+    "ingredients": [
+      "Kopi giling",
+      "Air"
+    ],
     "caffeine": 120,
     "active": true
   },
@@ -717,9 +939,12 @@
     "cat": "filter",
     "name": "Chemex",
     "price": 210,
-    "img": "images/chemex.webp",
-    "desc": "Chemex yöntemiyle hazırlanmış temiz ve yumuşak, hafif tatlılık sunan kahve",
-    "ingredients": ["Öğütülmüş kahve", "Su"],
+    "img": "images/image-22.webp",
+    "desc": "Seduhan lambat dengan tekstur silk dan akhir manis.",
+    "ingredients": [
+      "Kopi giling",
+      "Air"
+    ],
     "caffeine": 120,
     "active": true
   },
@@ -728,9 +953,13 @@
     "cat": "iced",
     "name": "Iced Americano",
     "price": 210,
-    "img": "images/iced-americano.webp",
-    "desc": "Buzlu ferah ve net kahve tadı.",
-    "ingredients": ["Espresso", "Su", "Buz"],
+    "img": "images/image-61.webp",
+    "desc": "Espresso di atas air es, segar dan kuat.",
+    "ingredients": [
+      "Espresso",
+      "Air",
+      "Es"
+    ],
     "caffeine": 95,
     "active": true
   },
@@ -739,9 +968,13 @@
     "cat": "iced",
     "name": "Iced Latte",
     "price": 230,
-    "img": "images/iced-latte.webp",
-    "desc": "Soğuk sütle yumuşak kahve.",
-    "ingredients": ["Espresso", "Süt", "Buz"],
+    "img": "images/image-63.webp",
+    "desc": "Kopi latte lembut dengan es.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Es"
+    ],
     "caffeine": 80,
     "active": true
   },
@@ -750,9 +983,14 @@
     "cat": "iced",
     "name": "Iced Mocha",
     "price": 240,
-    "img": "images/iced-mocha.webp",
-    "desc": "Çikolatalı buzlu latte.",
-    "ingredients": ["Espresso", "Süt", "Çikolata", "Buz"],
+    "img": "images/image-64.webp",
+    "desc": "Latte es dengan cokelat.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Cokelat",
+      "Es"
+    ],
     "caffeine": 90,
     "active": true
   },
@@ -761,9 +999,14 @@
     "cat": "iced",
     "name": "Iced Caramel Latte",
     "price": 240,
-    "img": "images/iced-caramel-latte.webp",
-    "desc": "Karamel dokunuşlu buzlu latte.",
-    "ingredients": ["Espresso", "Süt", "Karamel", "Buz"],
+    "img": "images/image-62.webp",
+    "desc": "Latte dingin dengan karamel.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Karamel",
+      "Es"
+    ],
     "caffeine": 80,
     "active": true
   },
@@ -772,9 +1015,14 @@
     "cat": "iced",
     "name": "Iced White Mocha",
     "price": 240,
-    "img": "images/iced-white-mocha.webp",
-    "desc": "Beyaz çikolatalı buzlu latte.",
-    "ingredients": ["Espresso", "Süt", "Beyaz çikolata", "Buz"],
+    "img": "images/image-65.webp",
+    "desc": "Kopi es dengan cokelat putih.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Cokelat putih",
+      "Es"
+    ],
     "caffeine": 90,
     "active": true
   },
@@ -783,9 +1031,12 @@
     "cat": "iced",
     "name": "Cold Brew",
     "price": 240,
-    "img": "images/cold-brew.webp",
-    "desc": "Uzun demleme, yumuşak ve güçlü.",
-    "ingredients": ["Öğütülmüş kahve", "Su", "Buz"],
+    "img": "images/image-24.webp",
+    "desc": "Kopi seduhan dingin dengan aroma dalam dan minuman lembut.",
+    "ingredients": [
+      "Kopi cold brew",
+      "Es"
+    ],
     "caffeine": 150,
     "active": true
   },
@@ -794,31 +1045,43 @@
     "cat": "iced",
     "name": "Frappe",
     "price": 240,
-    "img": "images/frappe.webp",
-    "desc": "Çilek, Çikolata, Vanilya, Karamel",
-    "ingredients": ["Kahve", "Süt veya su", "Buz"],
+    "img": "images/image-42.webp",
+    "desc": "Strawberry, Vanilla, Cokelat, Karamel",
+    "ingredients": [
+      "Kopi",
+      "Susu atau air",
+      "Es"
+    ],
     "caffeine": 80,
     "active": true
   },
   {
     "id": "italian-frappe",
     "cat": "iced",
-    "name": "Italian Frappe",
+    "name": "Frappe Italia",
     "price": 240,
-    "img": "images/italian-frappe.webp",
-    "desc": "Klasik İtalyan tarzı frappe.",
-    "ingredients": ["Kahve", "Süt veya su", "Buz"],
+    "img": "images/image-66.webp",
+    "desc": "Frappe gaya klasik yang aromatik dan berbusa.",
+    "ingredients": [
+      "Kopi",
+      "Susu atau air",
+      "Es"
+    ],
     "caffeine": 85,
     "active": true
   },
   {
     "id": "greek-frappe",
     "cat": "iced",
-    "name": "Greek Frappe",
+    "name": "Frappe Yunani",
     "price": 240,
-    "img": "images/greek-frappe.webp",
-    "desc": "Yunan tarzı hafif köpüklü.",
-    "ingredients": ["Çözünebilir kahve", "Su", "Buz"],
+    "img": "images/image-44.webp",
+    "desc": "Kopi es tradisional Yunani yang berbusa dan sedikit manis.",
+    "ingredients": [
+      "Kopi instan",
+      "Air",
+      "Es"
+    ],
     "caffeine": 75,
     "active": true
   },
@@ -827,20 +1090,30 @@
     "cat": "iced",
     "name": "Ice Nutellatte",
     "price": 250,
-    "img": "images/ice-nutellatte.webp",
-    "desc": "Fındık-kakaolu buzlu latte.",
-    "ingredients": ["Espresso", "Süt", "Fındık-kakao kreması", "Buz"],
+    "img": "images/image-53.webp",
+    "desc": "Latte dingin dengan krim hazelnut-kakao.",
+    "ingredients": [
+      "Espresso",
+      "Susu",
+      "Krim hazelnut-kakao",
+      "Es"
+    ],
     "caffeine": 80,
     "active": true
   },
   {
     "id": "ice-chai-latte",
     "cat": "iced",
-    "name": "Ice Chai Tea Latte",
+    "name": "Iced Chai Latte",
     "price": 240,
-    "img": "images/ice-chai-latte.webp",
-    "desc": "Baharatlı sütlü ve ferah.",
-    "ingredients": ["Çay", "Süt", "Baharat", "Buz"],
+    "img": "images/image-52.webp",
+    "desc": "Teh rempah dingin dengan susu.",
+    "ingredients": [
+      "Teh",
+      "Susu",
+      "Rempah",
+      "Es"
+    ],
     "active": true
   },
   {
@@ -848,60 +1121,73 @@
     "cat": "iced",
     "name": "Affogato",
     "price": 240,
-    "img": "images/affogato.webp",
-    "desc": "Dondurma üstüne sıcak espresso.",
-    "ingredients": ["Espresso", "Dondurma"],
+    "img": "images/image-1.webp",
+    "desc": "Espresso panas di atas es krim.",
+    "ingredients": [
+      "Espresso",
+      "Es krim"
+    ],
     "caffeine": 63,
     "active": true
   },
   {
     "id": "extra-shot",
     "cat": "extras",
-    "name": "Ekstra Shot (espresso)",
+    "name": "Extra Espresso Shot",
     "price": 60,
-    "img": "images/extra-shot.webp",
-    "desc": "Bir shot espresso ekleme.",
-    "ingredients": ["Espresso"],
+    "img": "images/image-37.webp",
+    "desc": "Untuk kopi yang lebih kuat.",
+    "ingredients": [
+      "Espresso"
+    ],
     "active": true
   },
   {
     "id": "extra-syrup",
     "cat": "extras",
-    "name": "Ekstra Şurup",
+    "name": "Extra Sirup",
     "price": 30,
-    "img": "images/extra-syrup.webp",
-    "desc": "Favori şurubunu ekle.",
-    "ingredients": ["Şurup"],
+    "img": "images/image-38.webp",
+    "desc": "Tambahkan sirup favorit Anda.",
+    "ingredients": [
+      "Sirup"
+    ],
     "active": true
   },
   {
     "id": "extra-milk",
     "cat": "extras",
-    "name": "Ekstra Süt",
+    "name": "Extra Susu",
     "price": 30,
-    "img": "images/extra-milk.webp",
-    "desc": "Süt tercihini seç.",
-    "ingredients": ["Süt"],
+    "img": "images/image-36.webp",
+    "desc": "Tambahan susu.",
+    "ingredients": [
+      "Susu"
+    ],
     "active": true
   },
   {
     "id": "extra-honey",
     "cat": "extras",
-    "name": "Ekstra Bal",
+    "name": "Extra Madu",
     "price": 30,
-    "img": "images/extra-honey.webp",
-    "desc": "Doğal bal dokunuşu.",
-    "ingredients": ["Bal"],
+    "img": "images/image-35.webp",
+    "desc": "Sentuhan madu alami.",
+    "ingredients": [
+      "Madu"
+    ],
     "active": true
   },
   {
     "id": "powerbank",
     "cat": "extras",
-    "name": "Powerbank (30 dakika)",
+    "name": "Powerbank (30 menit)",
     "price": 40,
-    "img": "images/powerbank.webp",
-    "desc": "30 dk şarj hizmeti.",
-    "ingredients": ["Hizmet"],
+    "img": "images/image-83.webp",
+    "desc": "Layanan pengisian daya 30 menit.",
+    "ingredients": [
+      "Layanan"
+    ],
     "active": true
   },
   {
@@ -909,9 +1195,14 @@
     "cat": "desserts",
     "name": "Magnolia",
     "price": 250,
-    "img": "images/magnolia.webp",
-    "desc": "İpeksi kremalı tatlı.",
-    "ingredients": ["Süt", "Krema", "Meyve/kurabiye"],
+    "img": "images/image-74.webp",
+    "desc": "Manisan pisang creamy, berlapis kue.",
+    "ingredients": [
+      "Susu",
+      "Krim",
+      "Pisang",
+      "Kue"
+    ],
     "active": true
   },
   {
@@ -919,19 +1210,27 @@
     "cat": "desserts",
     "name": "Profiterol",
     "price": 250,
-    "img": "images/profiterol.webp",
-    "desc": "Çikolata soslu mini toplar.",
-    "ingredients": ["Hamur topları", "Krema", "Çikolata"],
+    "img": "images/image-84.webp",
+    "desc": "Bola adonan mini creamy dengan saus cokelat.",
+    "ingredients": [
+      "Adonan",
+      "Krim",
+      "Cokelat"
+    ],
     "active": true
   },
   {
     "id": "san-sebastian",
     "cat": "desserts",
-    "name": "San Sebastian",
+    "name": "San Sebastian Cheesecake",
     "price": 280,
-    "img": "images/san-sebastian.webp",
-    "desc": "Kıvamlı cheesecake dokusu.",
-    "ingredients": ["Krem peynir", "Yumurta", "Şeker"],
+    "img": "images/image-86.webp",
+    "desc": "Cheesecake lembut dengan permukaan karamelize.",
+    "ingredients": [
+      "Krim keju",
+      "Telur",
+      "Gula"
+    ],
     "active": true
   },
   {
@@ -939,9 +1238,14 @@
     "cat": "desserts",
     "name": "Brownie",
     "price": 260,
-    "img": "images/brownie.webp",
-    "desc": "Yoğun çikolatalı tatlı.",
-    "ingredients": ["Kakao", "Tereyağı", "Un", "Şeker"],
+    "img": "images/image-17.webp",
+    "desc": "Manisan cokelat yang kaya.",
+    "ingredients": [
+      "Kakao",
+      "Mentega",
+      "Tepung",
+      "Gula"
+    ],
     "active": true
   },
   {
@@ -949,19 +1253,26 @@
     "cat": "desserts",
     "name": "Lotus Cup",
     "price": 280,
-    "img": "images/lotus-cup.webp",
-    "desc": "Lotus bisküvili fincan tatlı.",
-    "ingredients": ["Bisküvi", "Krema"],
+    "img": "images/image-73.webp",
+    "desc": "Manisan creamy dengan kue lotus.",
+    "ingredients": [
+      "Kue lotus",
+      "Krim"
+    ],
     "active": true
   },
   {
     "id": "fistikli-cup",
     "cat": "desserts",
-    "name": "Fıstıklı Cup",
+    "name": "Pistachio Cup",
     "price": 280,
-    "img": "images/fistikli-cup.webp",
-    "desc": "Fıstık aromalı fincan tatlı.",
-    "ingredients": ["Fıstık", "Krema", "Bisküvi"],
+    "img": "images/image-40.webp",
+    "desc": "Manisan creamy dengan rasa pistachio.",
+    "ingredients": [
+      "Pistachio",
+      "Krim",
+      "Kue"
+    ],
     "active": true
   },
   {
@@ -969,9 +1280,12 @@
     "cat": "desserts",
     "name": "Oreo Cup",
     "price": 280,
-    "img": "images/oreo-cup.webp",
-    "desc": "Oreo parçacıklı tatlı.",
-    "ingredients": ["Oreo", "Krema"],
+    "img": "images/image-82.webp",
+    "desc": "Manisan creamy dengan potongan Oreo.",
+    "ingredients": [
+      "Oreo",
+      "Krim"
+    ],
     "active": true
   },
   {
@@ -979,19 +1293,28 @@
     "cat": "desserts",
     "name": "Lotus Cheesecake",
     "price": 280,
-    "img": "images/lotus-cheesecake.webp",
-    "desc": "Lotus tabanlı cheesecake.",
-    "ingredients": ["Krem peynir", "Bisküvi", "Lotus"],
+    "img": "images/image-72.webp",
+    "desc": "Cheesecake dengan dasar lotus.",
+    "ingredients": [
+      "Krim keju",
+      "Kue",
+      "Krim lotus"
+    ],
     "active": true
   },
   {
     "id": "mini-cookies",
     "cat": "desserts",
-    "name": "Atıştırmalık Kurabiye Çeşitleri",
+    "name": "Mini Cookies",
     "price": 100,
-    "img": "images/mini-cookies.webp",
-    "desc": "Atıştırmalık mini kurabiyeler.",
-    "ingredients": ["Un", "Tereyağı", "Şeker", "Çikolata"],
+    "img": "images/image-79.webp",
+    "desc": "Berbagai jenis kue kecil.",
+    "ingredients": [
+      "Tepung",
+      "Mentega",
+      "Gula",
+      "Cokelat"
+    ],
     "active": true
   }
 ]

@@ -1,0 +1,867 @@
+{
+  "description": "Deskripsi",
+  "ingredients": "Bahan-bahan",
+  "caffeine": "Kafein",
+  "hot": "MINUMAN PANAS",
+  "herbal": "TEH HERBAL",
+  "cocktails": "KOKTEYL",
+  "cold": "MINUMAN DINGIN",
+  "icecream": "ES KRIM",
+  "coffees": "KOPI",
+  "filter": "KOPI FILTER",
+  "iced": "KOPI DINGIN",
+  "extras": "EKSTRA",
+  "desserts": "MANISAN",
+  "menu": {
+    "cay": {
+      "name": "Teh",
+      "desc": "Teh hitam Turki tradisional yang seduh segar.",
+      "ingredients": [
+        "Teh hitam",
+        "Air"
+      ]
+    },
+    "fincan-cay": {
+      "name": "Teh Porselan",
+      "desc": "Teh hitam tradisional disajikan dalam cangkir porselan.",
+      "ingredients": [
+        "Teh hitam",
+        "Air"
+      ]
+    },
+    "takeaway-cay": {
+      "name": "Teh Bawa Pulang",
+      "desc": "Teh hitam disajikan dalam gelas kertas.",
+      "ingredients": [
+        "Teh hitam",
+        "Air"
+      ]
+    },
+    "salep": {
+      "name": "Salep",
+      "desc": "Minuman tradisional panas dan creamy yang disajikan dengan kayu manis.",
+      "ingredients": [
+        "Salep",
+        "Susu",
+        "Kayu manis",
+        "Gula"
+      ]
+    },
+    "sicak-cikolata": {
+      "name": "Cokelat Panas",
+      "desc": "Minuman cokelat yang kaya dan hangat.",
+      "ingredients": [
+        "Kakao",
+        "Susu",
+        "Gula"
+      ]
+    },
+    "beyaz-sicak-cikolata": {
+      "name": "Cokelat Putih Panas",
+      "desc": "Minuman cokelat putih yang creamy dan hangat.",
+      "ingredients": [
+        "Cokelat putih",
+        "Susu"
+      ]
+    },
+    "chai-latte": {
+      "name": "Chai Latte",
+      "desc": "Kombinasi teh rempah dengan busa susu.",
+      "ingredients": [
+        "Teh",
+        "Susu",
+        "Campuran rempah"
+      ]
+    },
+    "balli-sut": {
+      "name": "Susu Madu",
+      "desc": "Susu panas yang dimaniskan dengan madu.",
+      "ingredients": [
+        "Susu",
+        "Madu"
+      ]
+    },
+    "herbal-0": {
+      "name": "Teh Linden",
+      "desc": "Teh linden penenang yang diseduh dengan French press.",
+      "ingredients": [
+        "Linden",
+        "Air"
+      ]
+    },
+    "herbal-1": {
+      "name": "Teh Musim Dingin",
+      "desc": "Campuran tumbuhan dan rempah segar yang baru diseduh.",
+      "ingredients": [
+        "Tumbuhan musim dingin",
+        "Air"
+      ]
+    },
+    "herbal-2": {
+      "name": "Teh Hijau",
+      "desc": "Teh hijau segar yang seduh ringan dengan aroma lembut.",
+      "ingredients": [
+        "Teh hijau",
+        "Air"
+      ]
+    },
+    "herbal-3": {
+      "name": "Sage Tea",
+      "desc": "Sage aromatik yang diseduh perlahan.",
+      "ingredients": [
+        "Sage",
+        "Air"
+      ]
+    },
+    "herbal-4": {
+      "name": "Teh Kamomil",
+      "desc": "Teh bunga kamomil penenang yang baru diseduh.",
+      "ingredients": [
+        "Kamomil",
+        "Air"
+      ]
+    },
+    "herbal-5": {
+      "name": "Teh Rosehip",
+      "desc": "Teh rosehip yang kaya vitamin dengan warna dan aroma yang kuat.",
+      "ingredients": [
+        "Rosehip",
+        "Air"
+      ]
+    },
+    "amour-milano": {
+      "name": "Amour Milano",
+      "desc": "Campuran buah segar dengan sentuhan Milano.",
+      "ingredients": [
+        "Campuran buah",
+        "Es"
+      ]
+    },
+    "amour-special": {
+      "name": "Amour Special",
+      "desc": "Resep khusus dengan rasa yang cerah dan akhir yang lembut.",
+      "ingredients": [
+        "Campuran khusus",
+        "Es"
+      ]
+    },
+    "amour-melo": {
+      "name": "Amour Melo",
+      "desc": "Minuman manis dan segar dengan sentuhan melon.",
+      "ingredients": [
+        "Aroma melon",
+        "Es"
+      ]
+    },
+    "amour-wild-berry": {
+      "name": "Amour Wild Berry",
+      "desc": "Campuran buah liar yang alami dan cerah.",
+      "ingredients": [
+        "Campuran buah hutan",
+        "Es"
+      ]
+    },
+    "amour-vibe": {
+      "name": "Amour Vibe",
+      "desc": "Minuman tanda tangan yang menyegarkan dan membangkitkan semangat.",
+      "ingredients": [
+        "Campuran sitrus",
+        "Es"
+      ]
+    },
+    "amour-sky": {
+      "name": "Amour Sky",
+      "desc": "Minuman ringan, lembut dan segar berwarna biru.",
+      "ingredients": [
+        "Aroma sitrus",
+        "Es"
+      ]
+    },
+    "amour-lime": {
+      "name": "Amour Lime",
+      "desc": "Soda jeruk nipis yang menyegarkan.",
+      "ingredients": [
+        "Jeruk nipis",
+        "Soda",
+        "Es"
+      ]
+    },
+    "amour-mango-portakal": {
+      "name": "Amour Mango Jeruk (Tanpa Gula)",
+      "desc": "Campuran mango jeruk tropis alami yang manis.",
+      "ingredients": [
+        "Mango",
+        "Jeruk",
+        "Es"
+      ]
+    },
+    "amour-lime-zero": {
+      "name": "Amour Lime (Tanpa Gula)",
+      "desc": "Kesegaran jeruk nipis tanpa gula.",
+      "ingredients": [
+        "Jeruk nipis",
+        "Soda",
+        "Es"
+      ]
+    },
+    "amour-hibiscus": {
+      "name": "Amour Hibiscus (Tanpa Gula)",
+      "desc": "Kesegaran bunga hibiscus yang bunga-bunga, tanpa gula.",
+      "ingredients": [
+        "Hibiscus",
+        "Es"
+      ]
+    },
+    "amour-dark": {
+      "name": "Amour Dark",
+      "desc": "Profil buah hutan yang kaya dan elegan.",
+      "ingredients": [
+        "Buah hutan",
+        "Es"
+      ]
+    },
+    "su": {
+      "name": "Air",
+      "desc": "Air murni dan segar.",
+      "ingredients": [
+        "Air"
+      ]
+    },
+    "soda": {
+      "name": "Soda",
+      "desc": "Air mineral dingin.",
+      "ingredients": [
+        "Air mineral"
+      ]
+    },
+    "sikma-portakal": {
+      "name": "Jeruk Segar Peras",
+      "desc": "Jus jeruk alami yang baru diperas.",
+      "ingredients": [
+        "Jeruk"
+      ]
+    },
+    "frozen": {
+      "name": "Frozen",
+      "desc": "Campuran mango, strawberry, persik, blueberry, blackberry",
+      "ingredients": [
+        "Smoothie buah beku"
+      ]
+    },
+    "italian-soda": {
+      "name": "Soda Italia",
+      "desc": "Minuman soda buah di atas es.",
+      "ingredients": [
+        "Soda",
+        "Sirup buah",
+        "Es"
+      ]
+    },
+    "limonata": {
+      "name": "Limonata Rumahan",
+      "desc": "Limonata dengan aroma jeruk segar.",
+      "ingredients": [
+        "Jeruk lemon",
+        "Gula",
+        "Air",
+        "Es"
+      ]
+    },
+    "aromali-limonata": {
+      "name": "Limonata Aromatik",
+      "desc": "Limonata segar dengan aroma alami.",
+      "ingredients": [
+        "Jeruk lemon",
+        "Aroma",
+        "Air",
+        "Es"
+      ]
+    },
+    "churchill": {
+      "name": "Churchill",
+      "desc": "Campuran klasik jeruk lemon, garam, dan soda.",
+      "ingredients": [
+        "Soda",
+        "Jeruk lemon",
+        "Garam",
+        "Es"
+      ]
+    },
+    "enerji-icecek": {
+      "name": "Minuman Energi",
+      "desc": "Minuman energi berkafein dan bergas.",
+      "ingredients": [
+        "Minuman energi"
+      ]
+    },
+    "mesrubatlar": {
+      "name": "Minuman Lainnya",
+      "desc": "Cola Turka, Gazoz, Ice Tea dll.",
+      "ingredients": [
+        "Pilihan minuman bergas"
+      ]
+    },
+    "milkshake": {
+      "name": "Milkshake",
+      "desc": "Strawberry, Vanilla, Cokelat, Oreo",
+      "ingredients": [
+        "Susu",
+        "Es krim",
+        "Sirup"
+      ]
+    },
+    "meyveli-soda": {
+      "name": "Soda Buah",
+      "desc": "Jeruk lemon, apel, delima, strawberry",
+      "ingredients": [
+        "Soda beraroma buah"
+      ]
+    },
+    "icecream-vanilya": {
+      "name": "Es Krim Vanila",
+      "desc": "Rasa vanila klasik yang lembut.",
+      "ingredients": [
+        "Susu",
+        "Gula",
+        "Vanila"
+      ]
+    },
+    "icecream-visne": {
+      "name": "Es Krim Ceri",
+      "desc": "Aroma ceri yang cerah dan asam manis.",
+      "ingredients": [
+        "Susu",
+        "Gula",
+        "Ceri"
+      ]
+    },
+    "icecream-cikolata": {
+      "name": "Es Krim Cokelat",
+      "desc": "Rasa kakao yang kaya dengan tekstur creamy.",
+      "ingredients": [
+        "Susu",
+        "Gula",
+        "Kakao"
+      ]
+    },
+    "icecream-karamel": {
+      "name": "Es Krim Karamel",
+      "desc": "Es krim dengan aroma karamel yang lembut.",
+      "ingredients": [
+        "Susu",
+        "Gula",
+        "Karamel"
+      ]
+    },
+    "icecream-cilek": {
+      "name": "Es Krim Strawberry",
+      "desc": "Es krim dengan aroma strawberry segar.",
+      "ingredients": [
+        "Susu",
+        "Gula",
+        "Strawberry"
+      ]
+    },
+    "icecream-parca-cikolata": {
+      "name": "Es Krim Cokelat Chip",
+      "desc": "Es krim vanila dengan potongan cokelat.",
+      "ingredients": [
+        "Susu",
+        "Gula",
+        "Chip cokelat"
+      ]
+    },
+    "icecream-krokan": {
+      "name": "Es Krim Krokan",
+      "desc": "Es krim dengan potongan karamel renyah.",
+      "ingredients": [
+        "Susu",
+        "Gula",
+        "Krokan"
+      ]
+    },
+    "espresso": {
+      "name": "Espresso",
+      "desc": "Shot kopi pekat dengan aroma kaya.",
+      "ingredients": [
+        "Espresso"
+      ],
+      "caffeine": 63
+    },
+    "espresso-macchiato": {
+      "name": "Espresso Macchiato",
+      "desc": "Espresso dengan busa susu ringan di atasnya.",
+      "ingredients": [
+        "Espresso",
+        "Busa susu"
+      ],
+      "caffeine": 63
+    },
+    "americano": {
+      "name": "Americano",
+      "desc": "Minuman lembut dengan espresso dan air panas.",
+      "ingredients": [
+        "Espresso",
+        "Air panas"
+      ],
+      "caffeine": 75
+    },
+    "latte": {
+      "name": "Latte",
+      "desc": "Espresso lembut dengan susu, busa halus.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Busa susu"
+      ],
+      "caffeine": 75
+    },
+    "white-mocha": {
+      "name": "White Mocha",
+      "desc": "Kombinasi sempurna cokelat putih dan espresso.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Cokelat putih"
+      ],
+      "caffeine": 90
+    },
+    "mocha": {
+      "name": "Mocha",
+      "desc": "Latte dengan aroma cokelat.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Cokelat"
+      ],
+      "caffeine": 90
+    },
+    "caramel-latte": {
+      "name": "Caramel Latte",
+      "desc": "Espresso dengan susu dan karamel.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Karamel"
+      ],
+      "caffeine": 80
+    },
+    "cappuccino": {
+      "name": "Cappuccino",
+      "desc": "Susu dan espresso seimbang dengan busa tebal.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Busa susu"
+      ],
+      "caffeine": 75
+    },
+    "cortado": {
+      "name": "Cortado",
+      "desc": "Espresso pekat dengan sedikit susu.",
+      "ingredients": [
+        "Espresso",
+        "Susu"
+      ],
+      "caffeine": 75
+    },
+    "flat-white": {
+      "name": "Flat White",
+      "desc": "Double shot espresso dengan susu silk.",
+      "ingredients": [
+        "Double espresso",
+        "Susu"
+      ],
+      "caffeine": 126
+    },
+    "latte-macchiato": {
+      "name": "Latte Macchiato",
+      "desc": "Espresso di atas susu panas.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Busa susu"
+      ],
+      "caffeine": 75
+    },
+    "nutellatte": {
+      "name": "Nutellatte",
+      "desc": "Latte dengan krim hazelnut-kakao.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Krim hazelnut-kakao"
+      ],
+      "caffeine": 80
+    },
+    "deca-cream": {
+      "name": "Espresso Creamy Tanpa Kafein",
+      "desc": "Espresso tanpa kafein yang creamy.",
+      "ingredients": [
+        "Espresso tanpa kafein"
+      ],
+      "caffeine": 6
+    },
+    "turk-kahvesi": {
+      "name": "Kopi Turki",
+      "desc": "Kopi Turki klasik yang kental dan berbusa.",
+      "ingredients": [
+        "Kopi Turki",
+        "Air"
+      ],
+      "caffeine": 60
+    },
+    "double-turk": {
+      "name": "Double Kopi Turki",
+      "desc": "Kopi Turki double shot yang lebih kental.",
+      "ingredients": [
+        "Kopi Turki (double)",
+        "Air"
+      ],
+      "caffeine": 120
+    },
+    "dibek": {
+      "name": "Kopi Dibek",
+      "desc": "Kopi dibek tradisional yang lembut.",
+      "ingredients": [
+        "Kopi dibek",
+        "Air"
+      ],
+      "caffeine": 60
+    },
+    "menengic": {
+      "name": "Kopi Menengiç",
+      "desc": "Alami, tanpa kafein, dengan aroma hazelnut ringan.",
+      "ingredients": [
+        "Menengiç",
+        "Susu atau air"
+      ],
+      "caffeine": 0
+    },
+    "kenya": {
+      "name": "Kenya AA",
+      "desc": "Buah-buahan, cerah dengan nada sitrus.",
+      "ingredients": [
+        "Kopi filter",
+        "Air"
+      ],
+      "caffeine": 120
+    },
+    "colombia": {
+      "name": "Kolombia",
+      "desc": "Minuman seimbang dengan nada hazelnut dan karamel.",
+      "ingredients": [
+        "Kopi filter",
+        "Air"
+      ],
+      "caffeine": 115
+    },
+    "ethiopia": {
+      "name": "Etiopia",
+      "desc": "Ringan, bunga-bunga dan keasaman buah-buahan.",
+      "ingredients": [
+        "Kopi filter",
+        "Air"
+      ],
+      "caffeine": 120
+    },
+    "costarica": {
+      "name": "Kosta Rika",
+      "desc": "Cerah, manis sitrus, minuman lembut.",
+      "ingredients": [
+        "Kopi filter",
+        "Air"
+      ],
+      "caffeine": 115
+    },
+    "guatemala": {
+      "name": "Guatemala",
+      "desc": "Nada cokelat dengan manisnya buah ringan.",
+      "ingredients": [
+        "Kopi filter",
+        "Air"
+      ],
+      "caffeine": 115
+    },
+    "v60": {
+      "name": "V60",
+      "desc": "Kopi seduhan tangan yang bersih dan cerah.",
+      "ingredients": [
+        "Kopi giling",
+        "Air"
+      ],
+      "caffeine": 120
+    },
+    "chemex": {
+      "name": "Chemex",
+      "desc": "Seduhan lambat dengan tekstur silk dan akhir manis.",
+      "ingredients": [
+        "Kopi giling",
+        "Air"
+      ],
+      "caffeine": 120
+    },
+    "iced-americano": {
+      "name": "Iced Americano",
+      "desc": "Espresso di atas air es, segar dan kuat.",
+      "ingredients": [
+        "Espresso",
+        "Air",
+        "Es"
+      ],
+      "caffeine": 95
+    },
+    "iced-latte": {
+      "name": "Iced Latte",
+      "desc": "Kopi latte lembut dengan es.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Es"
+      ],
+      "caffeine": 80
+    },
+    "iced-mocha": {
+      "name": "Iced Mocha",
+      "desc": "Latte es dengan cokelat.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Cokelat",
+        "Es"
+      ],
+      "caffeine": 90
+    },
+    "iced-caramel-latte": {
+      "name": "Iced Caramel Latte",
+      "desc": "Latte dingin dengan karamel.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Karamel",
+        "Es"
+      ],
+      "caffeine": 80
+    },
+    "iced-white-mocha": {
+      "name": "Iced White Mocha",
+      "desc": "Kopi es dengan cokelat putih.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Cokelat putih",
+        "Es"
+      ],
+      "caffeine": 90
+    },
+    "cold-brew": {
+      "name": "Cold Brew",
+      "desc": "Kopi seduhan dingin dengan aroma dalam dan minuman lembut.",
+      "ingredients": [
+        "Kopi cold brew",
+        "Es"
+      ],
+      "caffeine": 150
+    },
+    "frappe": {
+      "name": "Frappe",
+      "desc": "Strawberry, Vanilla, Cokelat, Karamel",
+      "ingredients": [
+        "Kopi",
+        "Susu atau air",
+        "Es"
+      ],
+      "caffeine": 80
+    },
+    "italian-frappe": {
+      "name": "Frappe Italia",
+      "desc": "Frappe gaya klasik yang aromatik dan berbusa.",
+      "ingredients": [
+        "Kopi",
+        "Susu atau air",
+        "Es"
+      ],
+      "caffeine": 85
+    },
+    "greek-frappe": {
+      "name": "Frappe Yunani",
+      "desc": "Kopi es tradisional Yunani yang berbusa dan sedikit manis.",
+      "ingredients": [
+        "Kopi instan",
+        "Air",
+        "Es"
+      ],
+      "caffeine": 75
+    },
+    "ice-nutellatte": {
+      "name": "Ice Nutellatte",
+      "desc": "Latte dingin dengan krim hazelnut-kakao.",
+      "ingredients": [
+        "Espresso",
+        "Susu",
+        "Krim hazelnut-kakao",
+        "Es"
+      ],
+      "caffeine": 80
+    },
+    "ice-chai-latte": {
+      "name": "Iced Chai Latte",
+      "desc": "Teh rempah dingin dengan susu.",
+      "ingredients": [
+        "Teh",
+        "Susu",
+        "Rempah",
+        "Es"
+      ]
+    },
+    "affogato": {
+      "name": "Affogato",
+      "desc": "Espresso panas di atas es krim.",
+      "ingredients": [
+        "Espresso",
+        "Es krim"
+      ],
+      "caffeine": 63
+    },
+    "extra-shot": {
+      "name": "Extra Espresso Shot",
+      "desc": "Untuk kopi yang lebih kuat.",
+      "ingredients": [
+        "Espresso"
+      ]
+    },
+    "extra-syrup": {
+      "name": "Extra Sirup",
+      "desc": "Tambahkan sirup favorit Anda.",
+      "ingredients": [
+        "Sirup"
+      ]
+    },
+    "extra-milk": {
+      "name": "Extra Susu",
+      "desc": "Tambahan susu.",
+      "ingredients": [
+        "Susu"
+      ]
+    },
+    "extra-honey": {
+      "name": "Extra Madu",
+      "desc": "Sentuhan madu alami.",
+      "ingredients": [
+        "Madu"
+      ]
+    },
+    "powerbank": {
+      "name": "Powerbank (30 menit)",
+      "desc": "Layanan pengisian daya 30 menit.",
+      "ingredients": [
+        "Layanan"
+      ]
+    },
+    "magnolia": {
+      "name": "Magnolia",
+      "desc": "Manisan pisang creamy, berlapis kue.",
+      "ingredients": [
+        "Susu",
+        "Krim",
+        "Pisang",
+        "Kue"
+      ]
+    },
+    "profiterol": {
+      "name": "Profiterol",
+      "desc": "Bola adonan mini creamy dengan saus cokelat.",
+      "ingredients": [
+        "Adonan",
+        "Krim",
+        "Cokelat"
+      ]
+    },
+    "san-sebastian": {
+      "name": "San Sebastian Cheesecake",
+      "desc": "Cheesecake lembut dengan permukaan karamelize.",
+      "ingredients": [
+        "Krim keju",
+        "Telur",
+        "Gula"
+      ]
+    },
+    "brownie": {
+      "name": "Brownie",
+      "desc": "Manisan cokelat yang kaya.",
+      "ingredients": [
+        "Kakao",
+        "Mentega",
+        "Tepung",
+        "Gula"
+      ]
+    },
+    "lotus-cup": {
+      "name": "Lotus Cup",
+      "desc": "Manisan creamy dengan kue lotus.",
+      "ingredients": [
+        "Kue lotus",
+        "Krim"
+      ]
+    },
+    "fistikli-cup": {
+      "name": "Pistachio Cup",
+      "desc": "Manisan creamy dengan rasa pistachio.",
+      "ingredients": [
+        "Pistachio",
+        "Krim",
+        "Kue"
+      ]
+    },
+    "oreo-cup": {
+      "name": "Oreo Cup",
+      "desc": "Manisan creamy dengan potongan Oreo.",
+      "ingredients": [
+        "Oreo",
+        "Krim"
+      ]
+    },
+    "lotus-cheesecake": {
+      "name": "Lotus Cheesecake",
+      "desc": "Cheesecake dengan dasar lotus.",
+      "ingredients": [
+        "Krim keju",
+        "Kue",
+        "Krim lotus"
+      ]
+    },
+    "mini-cookies": {
+      "name": "Mini Cookies",
+      "desc": "Berbagai jenis kue kecil.",
+      "ingredients": [
+        "Tepung",
+        "Mentega",
+        "Gula",
+        "Cokelat"
+      ]
+    }
+  },
+  "ui": {
+    "nav_about": "Tentang Kami",
+    "nav_menu": "Menu",
+    "btn_location": "Lokasi",
+    "btn_instagram": "Instagram",
+    "btn_open_menu": "Lihat Menu →",
+    "lang_title": "🌐 Pilih Bahasa",
+    "lang_sub": "Amour Café — Yalova"
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "subtitle": "Amour Coffee — Pusat pertemuan di jantung Yalova selama bertahun-tahun untuk kopi sejati dan suasana hangat.",
+    "block1_title": "Sejarah & Lokasi",
+    "block1_text": "Amour Coffee telah melayani selama bertahun-tahun. Dulu kafe kami bernama <b class=\"text-white\">Choridor</b>, kemudian namanya berubah — tetapi jiwanya tetap sama. Kami terus meningkatkan layanan, menambahkan teknologi baru, dan menjaga sejarah tempat ini. Kami berada di pusat kota; tempat ribuan orang melewati setiap hari.",
+    "block2_title": "Kopi & Teknologi",
+    "block2_text": "Kami menyiapkan kopi dengan resep khusus dan mesin profesional. Yang membuat kami dicintai: rasa yang konsisten, teknik yang tepat, dan pengalaman. Barista kami adalah dari tim paling berpengalaman di Yalova: pengalaman 10+ tahun dan proses seleksi ketat dalam perekrutan.",
+    "block3_title": "Komunitas",
+    "block3_text": "Orang-orang yang lewat di sini sangat beragam: dari walikota hingga siswa. Di sini mudah untuk membuat teman baru — baik dengan tamu maupun dengan tim.",
+    "block4_title": "Tim & Keluarga",
+    "block4_text": "Tim kami sangat harmonis — kami menyebut satu sama lain \"keluarga\". Amour adalah jantung dari pemuda Yalova: pesta, acara, dan suasana yang meriah.",
+    "block5_title": "Suasana",
+    "block5_text": "Di sini Anda dapat merasakan suasana yang intim dan hangat, memainkan berbagai permainan dari catur hingga backgammon, dan menikmati berbagai manisan."
+  }
+}

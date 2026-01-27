@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="id">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,31 @@
       }
     </script>
     <style>
-	body { background:#000; color:#fff; }	
-      .card { background: rgba(255,255,255,.01); border: 1px solid rgba(255,255,255,.03); border-radius: 12px; }
+  :root {
+    --bg: #000;
+    --bg-alt: #0b0b0b;
+    --text-primary: #fff;
+    --text-secondary: rgba(255,255,255,0.8);
+    --text-muted: rgba(255,255,255,0.6);
+    --surface-0: rgba(255,255,255,0.01);
+    --surface-1: rgba(255,255,255,0.02);
+    --border-soft: rgba(255,255,255,0.03);
+    --border-subtle: rgba(255,255,255,0.1);
+    --divider: rgba(255,255,255,0.1);
+    --overlay: rgba(0,0,0,0.30);
+    --shadow: rgba(0,0,0,0.25);
+    --interactive-bg: rgba(255,255,255,0.02);
+    --interactive-border: rgba(255,255,255,0.1);
+    --interactive-active-bg: #fff;
+    --interactive-active-fg: #000;
+    --lang-bg: rgba(255,255,255,0.08);
+    --lang-bg-hover: rgba(255,255,255,0.16);
+    --lang-border: rgba(255,255,255,0.15);
+    --lang-border-hover: rgba(255,255,255,0.3);
+  }
+
+	body { background: var(--bg); color: var(--text-primary); }	
+      .card { background: var(--surface-0); border: 1px solid var(--border-soft); border-radius: 12px; }
       .img {
         aspect-ratio: 4/3;
         object-fit: cover;
@@ -37,7 +60,7 @@
         filter: brightness(1.25) contrast(1.2) saturate(1.2);
         transform: scale(1.02);
       }
-      .divider { border-top: 1px dashed rgba(255,255,255,.1); }
+      .divider { border-top: 1px dashed var(--divider); }
 
       @media (max-width: 768px) {
         #mobile-layout {
@@ -52,20 +75,20 @@
           overflow-y: auto;
           height: calc(100vh - 120px);
           padding-right: 4px;
-          border-right: 1px solid rgba(255,255,255,0.1);
+          border-right: 1px solid var(--border-subtle);
         }
         #mobile-menu button {
           font-size: 0.8rem;
           text-align: left;
           padding: 6px 8px;
           border-radius: 8px;
-          border: 1px solid rgba(255,255,255,0.1);
-          background: rgba(255,255,255,0.02);
-          color: white;
+          border: 1px solid var(--interactive-border);
+          background: var(--interactive-bg);
+          color: var(--text-primary);
         }
         #mobile-menu button.active {
-          background: white;
-          color: black;
+          background: var(--interactive-active-bg);
+          color: var(--interactive-active-fg);
         }
       }
 
@@ -111,10 +134,10 @@
         body.rtl button {
           text-align: right;
         }
-		#lang-modal {
+    #lang-modal {
 		  backdrop-filter: blur(22px);
 		  -webkit-backdrop-filter: blur(22px);
-		  background: rgba(0,0,0,0.30);
+      background: var(--overlay);
 		}
         .amour-logo{
           display:flex;
@@ -127,7 +150,7 @@
           font-weight: 600;
           font-size: clamp(16px, 2.6vw, 22px);
           letter-spacing: 0.02em;
-          color:#fff;
+          color: var(--text-primary);
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
@@ -138,7 +161,7 @@
           font-weight: 600;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.6);
+          color: var(--text-muted);
           white-space: nowrap;
         }
 
@@ -147,9 +170,9 @@
         display: inline-block;
         width: 50px;
         height: 50px;
-        border: 5px solid rgba(255,255,255,.1);
+        border: 5px solid var(--border-subtle);
         border-radius: 50%;
-        border-top-color: #fff;
+        border-top-color: var(--text-primary);
         animation: spin 1s ease-in-out infinite;
       }
       @keyframes spin {
@@ -225,10 +248,7 @@
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
         <button class="lang-btn" data-lang="tr">🇹🇷 Türkçe</button>
         <button class="lang-btn" data-lang="en">🇬🇧 English</button>
-        <button class="lang-btn" data-lang="ru">🇷🇺 Русский</button>
-        <button class="lang-btn" data-lang="ar">🇸🇦 العربية</button>
-        <button class="lang-btn" data-lang="fa">🇮🇷 فارسی</button>
-        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+        <button class="lang-btn" data-lang="id">🇮🇩 Bahasa Indonesia</button>
       </div>
 
       <p class="mt-6 text-sm text-white/60 italic" data-i18n="ui.lang_sub">Amour Café — Yalova</p>
@@ -240,12 +260,12 @@
   .lang-btn {
     width: 100%;
     padding: 0.75rem 1rem;
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
+    background: var(--lang-bg);
+    color: var(--text-primary);
     font-weight: 700;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    border: 1px solid var(--lang-border);
+    box-shadow: 0 6px 16px var(--shadow);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -254,8 +274,8 @@
   .lang-btn:hover {
     transform: scale(1.03);
     opacity: 0.95;
-    background: rgba(255, 255, 255, 0.16);
-    border-color: rgba(255, 255, 255, 0.3);
+    background: var(--lang-bg-hover);
+    border-color: var(--lang-border-hover);
   }
 
   .lang-btn:active {
@@ -859,7 +879,7 @@ async function initMenuData(){
     const modal = document.getElementById("lang-modal");
     const ALWAYS_SHOW_LANG_MODAL = false;
 
-    window.currentLang = localStorage.getItem(LS_KEY) || "tr";
+    window.currentLang = localStorage.getItem(LS_KEY) || "id";
     window.translations = {};
 
     function deepGet(obj, path){
