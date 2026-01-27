@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amour — Hakkımızda</title>
-  <meta name="description" content="Amour Coffee — Yalova. Hakkımızda.">
+  <title>Amour — Tentang Kami</title>
+  <meta name="description" content="Amour Coffee — Yalova. Tentang Kami.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +45,8 @@
       --button-hover-bg: rgba(217,119,6,0.15);
       --button-primary-bg: #d97706;
       --button-primary-text: #fdfbf7;
+      --header: #422006;
+      --header-text: #fdfbf7;
     }
 
     body { background: var(--bg); color: var(--text-secondary); }
@@ -119,43 +121,46 @@
     }
   </style>
 
-  <!-- Ust menu (WE tarzinda sade) -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
+  <!-- Menu atas (gaya WE sederhana) -->
+  <header class="sticky top-0 z-50 border-b backdrop-blur" style="background-color: var(--header); border-color: var(--border-soft);">
     <div class="mx-auto w-full max-w-6xl px-4 py-2">
       <div class="flex items-center justify-between gap-3">
         <div class="min-w-0 flex items-center gap-3">
           <img src="images/logo.png" alt="Amour logo" class="h-9 w-9 shrink-0 rounded-full">
           <div class="min-w-0 leading-tight">
             <div class="flex items-center gap-2 min-w-0">
-              <span class="text-base font-semibold text-white">amour</span>
+              <span class="text-base font-semibold" style="color: var(--header-text);">amour</span>
               <span class="shrink-0 text-[11px] opacity-80" aria-hidden="true">🇮🇹</span>
             </div>
             <div class="min-w-0">
-              <span class="block text-[9px] uppercase tracking-widest text-white/60 truncate">
-                Yalova’nın İtalyan Kahvecisi
+              <span class="block text-[9px] uppercase tracking-widest truncate" style="color: var(--header-text);">
+                Kedai kopi Italia di Yalova
               </span>
             </div>
           </div>
         </div>
 
-        <div class="shrink-0 flex items-center gap-2 text-sm text-white/80">
+        <div class="shrink-0 flex items-center gap-2 text-sm" style="color: var(--header-text);">
           <button
             onclick="openLangModal()"
             aria-label="Change language"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/80 transition hover:bg-white/10 hover:text-white">
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border transition"
+            style="border-color: var(--border-soft); background-color: rgba(253, 251, 247, 0.05); color: var(--header-text);"
+            onmouseover="this.style.backgroundColor='rgba(253, 251, 247, 0.1)'"
+            onmouseout="this.style.backgroundColor='rgba(253, 251, 247, 0.05)'">
             🌐
           </button>
-          <a href="index.html" class="hover:text-white" data-i18n="ui.nav_about">Hakkımızda</a>
-          <a href="menu.html" class="hover:text-white" data-i18n="ui.nav_menu">Menü</a>
+          <a href="index.html" style="color: var(--header-text);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--header-text)'" data-i18n="ui.nav_about">Tentang Kami</a>
+          <a href="menu.html" style="color: var(--header-text);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--header-text)'" data-i18n="ui.nav_menu">Menu</a>
         </div>
       </div>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 py-10">
-    <h1 class="text-4xl font-extrabold tracking-tight" data-i18n="about.title">Hakkımızda</h1>
+    <h1 class="text-4xl font-extrabold tracking-tight" data-i18n="about.title">Tentang Kami</h1>
     <p class="mt-3 leading-relaxed" data-i18n="about.subtitle" style="color: var(--text-secondary);">
-      Amour Coffee — Yalova’nın merkezinde, gerçek kahve ve sıcak atmosfer için yıllardır buluşma noktası.
+      Amour Coffee — Di pusat Yalova, titik pertemuan selama bertahun-tahun untuk kopi asli dan suasana hangat.
     </p>
 
     <div class="mt-6 flex flex-wrap gap-3">
@@ -166,7 +171,7 @@
           <path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path>
           <circle cx="12" cy="9" r="2.5"></circle>
         </svg>
-        Konum
+        Lokasi
       </a>
 
       <a href="https://www.instagram.com/amour_coffee77" target="_blank" rel="noopener"
@@ -182,11 +187,11 @@
 
       <a href="menu.html"
          class="rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_open_menu">
-        Menüyü Gör →
+        Lihat Menu →
       </a>
     </div>
 
-    <!-- WE tarzinda bloklar: solda gorsel + sagda metin (mobilde kolon) -->
+    <!-- Blok gaya WE: kiri gambar + kanan teks (kolom di mobile) -->
     <section class="mt-10 grid gap-12">
 
       <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
@@ -198,7 +203,7 @@
           </div>
         </div>
         <div class="order-2 md:order-2 text-left">
-          <h3 class="text-xl font-semibold" data-i18n="about.block1_title">Tarihçe & Konum</h3>
+          <h3 class="text-xl font-semibold" data-i18n="about.block1_title">Sejarah & Lokasi</h3>
           <p class="mt-2 leading-relaxed" data-i18n-html="about.block1_text" style="color: var(--text-secondary);">
             Amour Coffee sudah bertahun-tahun melayani. Dulu kafe ini bernama <b style="color: var(--text-primary);">Choridor</b>,
             lalu berganti nama — tetapi jiwanya tetap sama. Kami terus memperbarui layanan,
@@ -208,7 +213,7 @@
           <div class="mt-4">
             <a href="https://maps.app.goo.gl/kALGBiL9deJ3uM13A" target="_blank" rel="noopener"
                class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_location">
-              Konumu Aç
+              Buka Lokasi
             </a>
           </div>
         </div>
@@ -216,7 +221,7 @@
 
       <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
         <div class="order-2 md:order-1 text-left">
-          <h3 class="text-xl font-semibold" data-i18n="about.block2_title">Kahve & Teknoloji</h3>
+          <h3 class="text-xl font-semibold" data-i18n="about.block2_title">Kopi & Teknologi</h3>
           <p class="mt-2 leading-relaxed" data-i18n="about.block2_text" style="color: var(--text-secondary);">
             Kami meracik kopi dengan resep terukur dan mesin profesional.
             Yang membuat kami disukai: rasa konsisten, teknik yang tepat, dan pengalaman.
@@ -237,12 +242,12 @@
         <div class="order-1 md:order-1">
           <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery3.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Topluluk" loading="lazy">
+              <img src="images/gallery3.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Komunitas" loading="lazy">
             </div>
           </div>
         </div>
         <div class="order-2 md:order-2 text-left">
-          <h3 class="text-xl font-semibold" data-i18n="about.block3_title">Topluluk</h3>
+          <h3 class="text-xl font-semibold" data-i18n="about.block3_title">Komunitas</h3>
           <p class="mt-2 leading-relaxed" data-i18n="about.block3_text" style="color: var(--text-secondary);">
             Orang-orang yang datang ke sini sangat beragam: dari wali kota sampai mahasiswa.
             Membuat teman baru itu mudah — baik dengan para tamu maupun dengan tim.
@@ -252,7 +257,7 @@
 
       <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
         <div class="order-2 md:order-1 text-left">
-          <h3 class="text-xl font-semibold" data-i18n="about.block4_title">Ekip & Aile</h3>
+          <h3 class="text-xl font-semibold" data-i18n="about.block4_title">Tim & Keluarga</h3>
           <p class="mt-2 leading-relaxed" data-i18n="about.block4_text" style="color: var(--text-secondary);">
             Tim kami sangat kompak — kami menyebutnya keluarga.
             Amour adalah jantung anak muda Yalova: pesta, acara, dan suasana yang selalu hidup.
@@ -261,7 +266,7 @@
           <div class="mt-5 flex flex-wrap gap-3">
             <a href="menu.html"
                class="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_open_menu">
-              Menüyü Gör →
+              Lihat Menu →
             </a>
             <a href="https://www.instagram.com/amour_coffee77" target="_blank" rel="noopener"
                class="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold" style="background: var(--button-primary-bg); color: var(--button-primary-text);" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" data-i18n="ui.btn_instagram">
@@ -272,7 +277,7 @@
         <div class="order-1 md:order-2">
           <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery4.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Ekip" loading="lazy">
+              <img src="images/gallery4.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Tim" loading="lazy">
             </div>
           </div>
         </div>
@@ -287,7 +292,7 @@
           </div>
         </div>
         <div class="order-2 md:order-2 text-left">
-          <h3 class="text-xl font-semibold" data-i18n="about.block5_title">Atmosfer</h3>
+          <h3 class="text-xl font-semibold" data-i18n="about.block5_title">Suasana</h3>
           <p class="mt-2 leading-relaxed" data-i18n="about.block5_text" style="color: var(--text-secondary);">
             Di sini Anda merasakan suasana hangat dan akrab, bisa bermain dari catur hingga backgammon,
             dan menikmati berbagai hidangan penutup.
@@ -299,7 +304,7 @@
   </main>
 
   <footer class="border-t text-center text-sm py-6" style="border-color: var(--border-subtle); color: var(--text-muted);">
-    <p>© 2025 Amour Coffee — Site yapıldı <a href="https://bond-dev.vercel.app/" target="_blank" class="font-semibold" style="color: var(--text-primary);">Dmitrii Bondarev</a></p>
+    <p>© 2025 Amour Coffee — Situs dibuat oleh <a href="https://bond-dev.vercel.app/" target="_blank" class="font-semibold" style="color: var(--text-primary);">Dmitrii Bondarev</a></p>
   </footer>
 
   <div id="about-gallery-modal" class="fixed inset-0 z-[99999] hidden">
