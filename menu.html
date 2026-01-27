@@ -24,29 +24,32 @@
     </script>
     <style>
   :root {
-    --bg: #000;
-    --bg-alt: #0b0b0b;
-    --text-primary: #fff;
-    --text-secondary: rgba(255,255,255,0.8);
-    --text-muted: rgba(255,255,255,0.6);
-    --surface-0: rgba(255,255,255,0.01);
-    --surface-1: rgba(255,255,255,0.02);
-    --border-soft: rgba(255,255,255,0.03);
-    --border-subtle: rgba(255,255,255,0.1);
-    --divider: rgba(255,255,255,0.1);
-    --overlay: rgba(0,0,0,0.30);
-    --shadow: rgba(0,0,0,0.25);
-    --interactive-bg: rgba(255,255,255,0.02);
-    --interactive-border: rgba(255,255,255,0.1);
-    --interactive-active-bg: #fff;
-    --interactive-active-fg: #000;
-    --lang-bg: rgba(255,255,255,0.08);
-    --lang-bg-hover: rgba(255,255,255,0.16);
-    --lang-border: rgba(255,255,255,0.15);
-    --lang-border-hover: rgba(255,255,255,0.3);
+    --bg: #fdfbf7;
+    --bg-alt: #fdfbf7;
+    --text-primary: #d97706;
+    --text-secondary:#422006;
+    --border-soft: #E8D5B7;
+    --text-muted: rgba(66,32,6,0.6);
+    --surface-0: rgba(255,248,235,0.85);
+    --surface-1: rgba(255,248,235,0.65);
+    --border-subtle: rgba(217,119,6,0.15);
+    --divider: rgba(217,119,6,0.2);
+    --overlay: rgba(66,32,6,0.12);
+    --shadow: rgba(66,32,6,0.2);
+    --interactive-bg: rgba(233,196,106,0.18);
+    --interactive-border: rgba(217,119,6,0.35);
+    --interactive-active-bg: #fff6e5;
+    --interactive-active-fg: #422006;
+    --lang-bg: rgba(255,248,235,0.9);
+    --lang-bg-hover: rgba(255,239,213,0.95);
+    --lang-border: rgba(217,119,6,0.28);
+    --lang-border-hover: rgba(184,94,5,0.4);
+    --sidebar-button: #d97706;
+    --sidebar-hover: #E8D5B7;
+    --sidebar-text: #fdfbf7;
   }
 
-	body { background: var(--bg); color: var(--text-primary); }	
+	body { background: var(--bg); color: var(--text-secondary); }	
       .card { background: var(--surface-0); border: 1px solid var(--border-soft); border-radius: 12px; }
       .img {
         aspect-ratio: 4/3;
@@ -643,17 +646,6 @@ const AMOUR_ENRICH = {
       return card;
     }
 
-    function header() {
-      const h = document.createElement("div");
-      h.className = "sticky top-0 bg-black border-b border-white/0 z-30";
-      h.innerHTML = `
-        <div class="max-w-6xl mx-auto h-20 px-4 flex items-center justify-between">
-          <img src="images/logo-segafredo.png" class="h-12 opacity-80">
-          <img src="images/logo-alpedo.png" class="h-14 opacity-90">
-        </div>`;
-      return h;
-    }
-
 	function layout(items) {
 	  const wrap = document.createElement("div");
 	  wrap.className = "max-w-6xl mx-auto grid grid-cols-12 gap-2 p-2";
@@ -669,9 +661,19 @@ const AMOUR_ENRICH = {
 	  Object.keys(CATS).forEach(key => {
 		const btn = document.createElement("button");
 		btn.className = `
-		  w-full text-left px-2 py-2 rounded text-xs sm:text-sm
-		  ${active === key ? "bg-white text-black font-semibold" : "text-white hover:bg-white/10"}
+		  w-full text-left px-2 py-2 rounded text-xs sm:text-sm transition-colors
+		  ${active === key ? "font-semibold" : ""}
 		`;
+		btn.style.cssText = active === key 
+		  ? "background-color: var(--sidebar-button); color: var(--sidebar-text);"
+		  : "background-color: transparent; color: var(--text-secondary);";
+		
+		btn.onmouseover = () => {
+		  if (active !== key) btn.style.backgroundColor = "var(--sidebar-hover)";
+		};
+		btn.onmouseout = () => {
+		  if (active !== key) btn.style.backgroundColor = "transparent";
+		};
 
 		btn.dataset.cat = key;
 		btn.textContent = catTitle(key);
@@ -806,7 +808,7 @@ async function render(){
     .filter(m => m.cat === active && m.active !== false)
     .map(renderCard);
   
-  root.append(header(), layout(items));
+  root.append(layout(items));
   initReveal();
 }
 

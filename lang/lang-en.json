@@ -854,7 +854,7 @@
     "title": "About",
     "subtitle": "Amour Coffee — a long-time meeting spot for real coffee and a warm atmosphere in central Yalova.",
     "block1_title": "History & Location",
-    "block1_text": "Amour Coffee has been serving guests for many years. Our café used to be called <b class=\"text-white\">Choridor</b>; the name changed, but the spirit stayed the same. We keep improving service, adding new technology while preserving the history of the place. We’re right in the city center, where thousands of people pass by every day.",
+    "block1_text": "Amour Coffee has been serving guests for many years. Our café used to be called <b style=\"color: var(--text-primary);\">Choridor</b>; the name changed, but the spirit stayed the same. We keep improving service, adding new technology while preserving the history of the place. We're right in the city center, where thousands of people pass by every day.",
     "block2_title": "Coffee & Technology",
     "block2_text": "We prepare coffee with precise recipes and professional machines. What makes us loved: consistent taste, correct technique, and experience. Our baristas are among the most experienced in Yalova: 10+ years of experience and a strict selection process.",
     "block3_title": "Community",

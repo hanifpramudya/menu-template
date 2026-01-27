@@ -854,7 +854,7 @@
     "title": "Tentang Kami",
     "subtitle": "Amour Coffee — Pusat pertemuan di jantung Yalova selama bertahun-tahun untuk kopi sejati dan suasana hangat.",
     "block1_title": "Sejarah & Lokasi",
-    "block1_text": "Amour Coffee telah melayani selama bertahun-tahun. Dulu kafe kami bernama <b class=\"text-white\">Choridor</b>, kemudian namanya berubah — tetapi jiwanya tetap sama. Kami terus meningkatkan layanan, menambahkan teknologi baru, dan menjaga sejarah tempat ini. Kami berada di pusat kota; tempat ribuan orang melewati setiap hari.",
+    "block1_text": "Amour Coffee telah melayani selama bertahun-tahun. Dulu kafe kami bernama <b style=\"color: var(--text-primary);\">Choridor</b>, kemudian namanya berubah — tetapi jiwanya tetap sama. Kami terus meningkatkan layanan, menambahkan teknologi baru, dan menjaga sejarah tempat ini. Kami berada di pusat kota; tempat ribuan orang melewati setiap hari.",
     "block2_title": "Kopi & Teknologi",
     "block2_text": "Kami menyiapkan kopi dengan resep khusus dan mesin profesional. Yang membuat kami dicintai: rasa yang konsisten, teknik yang tepat, dan pengalaman. Barista kami adalah dari tim paling berpengalaman di Yalova: pengalaman 10+ tahun dan proses seleksi ketat dalam perekrutan.",
     "block3_title": "Komunitas",
