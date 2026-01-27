@@ -633,8 +633,8 @@ const AMOUR_ENRICH = {
 
     function renderCard(item) {
       const price = formatPrice(item);
-
-      const name = getName(item);
+  const name = getName(item);
+  const desc = getDesc(item.id);
 
       const card = document.createElement("article");
       card.className = "card overflow-hidden reveal cursor-pointer";
@@ -642,9 +642,10 @@ const AMOUR_ENRICH = {
 
       card.innerHTML = `
         <img class="img" src="${item.img}">
-        <div class="p-3 flex justify-between text-sm">
-          <span>${name}</span>
-          <span>${price}</span>
+        <div class="p-3 text-sm">
+          <div class="font-semibold mb-1">${name}</div>
+          ${desc ? `<div class="text-xs mb-2 opacity-75">${desc}</div>` : ''}
+          <div class="font-semibold" style="color: var(--text-primary);">${price}</div>
         </div>
       `;
       return card;
