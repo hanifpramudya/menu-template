@@ -1,0 +1,997 @@
+[
+  {
+    "id": "cay",
+    "cat": "hot",
+    "name": "Çay",
+    "price": 60,
+    "img": "images/cay.webp",
+    "desc": "Geleneksel ve taze demlenmiş siyah çay.",
+    "ingredients": ["Siyah çay", "Su"],
+    "active": true
+  },
+  {
+    "id": "fincan-cay",
+    "cat": "hot",
+    "name": "Fincan Çay",
+    "price": 90,
+    "img": "images/fincan-cay.webp",
+    "desc": "Bardakta geleneksel çay",
+    "ingredients": ["Siyah çay", "Su"],
+    "active": true
+  },
+  {
+    "id": "takeaway-cay",
+    "cat": "hot",
+    "name": "Take a way Çay",
+    "price": 90,
+    "img": "images/takeaway-cay.webp",
+    "desc": "Kağıt bardakta çay",
+    "ingredients": ["Siyah çay", "Su"],
+    "active": true
+  },
+  {
+    "id": "salep",
+    "cat": "hot",
+    "name": "Salep",
+    "price": 220,
+    "img": "images/salep.webp",
+    "desc": "Tarçın ve sütlü sıcak içecek",
+    "ingredients": ["Salep", "Süt", "Tarçın", "Şeker"],
+    "active": true
+  },
+  {
+    "id": "sicak-cikolata",
+    "cat": "hot",
+    "name": "Sıcak Çikolata",
+    "price": 220,
+    "img": "images/sicak-cikolata.webp",
+    "desc": "Sıcak ve yoğun kakaolu çikolatalı içecek",
+    "ingredients": ["Kakao", "Süt", "Şeker"],
+    "active": true
+  },
+  {
+    "id": "beyaz-sicak-cikolata",
+    "cat": "hot",
+    "name": "Beyaz Sıcak Çikolata",
+    "price": 220,
+    "img": "images/beyaz-sicak-cikolata.webp",
+    "desc": "Yoğun ve sıcak beyaz çikolatalı içecek.",
+    "ingredients": ["Beyaz çikolata", "Süt"],
+    "active": true
+  },
+  {
+    "id": "chai-latte",
+    "cat": "hot",
+    "name": "Chai Tea Latte",
+    "price": 220,
+    "img": "images/chai-latte.webp",
+    "desc": "Baharatlı sütlü çay içeceği",
+    "ingredients": ["Çay", "Süt", "Chai baharatı"],
+    "active": true
+  },
+  {
+    "id": "balli-sut",
+    "cat": "hot",
+    "name": "Ballı Süt",
+    "price": 180,
+    "img": "images/balli-sut.webp",
+    "desc": "Bal ile tatlandırılmış sıcak süt",
+    "ingredients": ["Süt", "Bal"],
+    "active": true
+  },
+  {
+    "id": "herbal-0",
+    "cat": "herbal",
+    "name": "Ihlamur",
+    "price": 220,
+    "img": "images/herbal-0.webp",
+    "desc": "French press ile hazırlanan taze ıhlamur çayı",
+    "ingredients": ["Ihlamur"],
+    "active": true
+  },
+  {
+    "id": "herbal-1",
+    "cat": "herbal",
+    "name": "Kış Çayı",
+    "price": 220,
+    "img": "images/herbal-1.webp",
+    "desc": "French press ile hazırlanan taze kış çayı",
+    "ingredients": ["Kış Çayı"],
+    "active": true
+  },
+  {
+    "id": "herbal-2",
+    "cat": "herbal",
+    "name": "Yeşil Çay",
+    "price": 220,
+    "img": "images/herbal-2.webp",
+    "desc": "French press ile hazırlanan hafif ve taze yeşil çay",
+    "ingredients": ["Yeşil Çay"],
+    "active": true
+  },
+  {
+    "id": "herbal-3",
+    "cat": "herbal",
+    "name": "Ada Çayı",
+    "price": 220,
+    "img": "images/herbal-3.webp",
+    "desc": "French press ile hazırlanan taze ada çayı",
+    "ingredients": ["Ada Çayı"],
+    "active": true
+  },
+  {
+    "id": "herbal-4",
+    "cat": "herbal",
+    "name": "Papatya",
+    "price": 220,
+    "img": "images/herbal-4.webp",
+    "desc": "French press ile hazırlanan taze papatya çayı",
+    "ingredients": ["Papatya"],
+    "active": true
+  },
+  {
+    "id": "herbal-5",
+    "cat": "herbal",
+    "name": "Kuşburnu Çayı",
+    "price": 220,
+    "img": "images/herbal-5.webp",
+    "desc": "French press ile hazırlanan taze kuşburnu çayı",
+    "ingredients": ["Kuşburnu Çayı"],
+    "active": true
+  },
+  {
+    "id": "amour-milano",
+    "cat": "cocktails",
+    "name": "Amour Milano",
+    "price": 230,
+    "img": "images/amour-milano.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-special",
+    "cat": "cocktails",
+    "name": "Amour Special",
+    "price": 230,
+    "img": "images/amour-special.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-melo",
+    "cat": "cocktails",
+    "name": "Amour Melo",
+    "price": 230,
+    "img": "images/amour-melo.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-wild-berry",
+    "cat": "cocktails",
+    "name": "Amour Wild Berry",
+    "price": 230,
+    "img": "images/amour-wild-berry.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-vibe",
+    "cat": "cocktails",
+    "name": "Amour Vibe",
+    "price": 230,
+    "img": "images/amour-vibe.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-sky",
+    "cat": "cocktails",
+    "name": "Amour Sky",
+    "price": 230,
+    "img": "images/amour-sky.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-lime",
+    "cat": "cocktails",
+    "name": "Amour Lime",
+    "price": 200,
+    "img": "images/amour-lime.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-mango-portakal",
+    "cat": "cocktails",
+    "name": "Amour Mango Portakal (Sıfır Şeker)",
+    "price": 190,
+    "img": "images/amour-mango-portakal.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-lime-zero",
+    "cat": "cocktails",
+    "name": "Amour Lime (Sıfır Şeker)",
+    "price": 190,
+    "img": "images/amour-lime-zero.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-hibiscus",
+    "cat": "cocktails",
+    "name": "Amour Hibiscus (Sıfır Şeker)",
+    "price": 190,
+    "img": "images/amour-hibiscus.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "amour-dark",
+    "cat": "cocktails",
+    "name": "Amour Dark",
+    "price": 230,
+    "img": "images/amour-dark.webp",
+    "desc": "Daha sonra buraya yazacağım",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "su",
+    "cat": "cold",
+    "name": "Su",
+    "price": 60,
+    "img": "images/su.webp",
+    "ingredients": ["Su"],
+    "active": true
+  },
+  {
+    "id": "soda",
+    "cat": "cold",
+    "name": "Soda",
+    "price": 110,
+    "img": "images/soda.webp",
+    "desc": "Ferahlatıcı gazlı mineral içeceği",
+    "ingredients": ["Soda"],
+    "active": true
+  },
+  {
+    "id": "sikma-portakal",
+    "cat": "cold",
+    "name": "Sıkma Portakal Suyu",
+    "price": 220,
+    "img": "images/sikma-portakal.webp",
+    "desc": "Taze sıkılmış doğal ve ferahlatıcı portakal suyu.",
+    "ingredients": ["Portakal"],
+    "active": true
+  },
+  {
+    "id": "frozen",
+    "cat": "cold",
+    "name": "Frozen",
+    "price": 190,
+    "img": "images/frozen.webp",
+    "desc": "Mango, Çilek, Şeftali, Yaban Mersini, Frambuaz, Orman Meyveli",
+    "ingredients": ["Meyve püresi", "Buz"],
+    "active": true
+  },
+  {
+    "id": "italian-soda",
+    "cat": "cold",
+    "name": "İtalian Soda",
+    "price": 190,
+    "img": "images/italian-soda.webp",
+    "desc": "Nar, çilek, mango, böğürtlen",
+    "ingredients": ["Soda", "Meyve şurubu", "Buz"],
+    "active": true
+  },
+  {
+    "id": "limonata",
+    "cat": "cold",
+    "name": "Limonata",
+    "price": 180,
+    "img": "images/limonata.webp",
+    "desc": "Taze narenciye aromalı ev yapımı limonata.",
+    "ingredients": ["Limon", "Şeker", "Su", "Buz"],
+    "active": true
+  },
+  {
+    "id": "aromali-limonata",
+    "cat": "cold",
+    "name": "Aromalı Limonata",
+    "price": 180,
+    "img": "images/aromali-limonata.webp",
+    "desc": "Çilek, nar, nane",
+    "ingredients": ["Limon", "Aroma", "Şeker", "Su", "Buz"],
+    "active": true
+  },
+  {
+    "id": "churchill",
+    "cat": "cold",
+    "name": "Churchill",
+    "price": 100,
+    "img": "images/churchill.webp",
+    "desc": "Limon tuz ve soda ile ferah.",
+    "ingredients": ["Soda", "Limon", "Tuz", "Buz"],
+    "active": true
+  },
+  {
+    "id": "enerji-icecek",
+    "cat": "cold",
+    "name": "Enerji İçeceği",
+    "price": 180,
+    "img": "images/enerji-icecek.webp",
+    "desc": "Gazlı ve tatlı enerji içeceği.",
+    "ingredients": ["Gazlı içecek"],
+    "active": true
+  },
+  {
+    "id": "mesrubatlar",
+    "cat": "cold",
+    "name": "Meşrubatlar",
+    "price": 140,
+    "img": "images/mesrubatlar.webp",
+    "desc": "Cola turka, uludağ portakal, uludağ gazoz, ice tea",
+    "ingredients": ["Çeşitli meşrubatlar"],
+    "active": true
+  },
+  {
+    "id": "milkshake",
+    "cat": "cold",
+    "name": "Milkshake",
+    "price": 230,
+    "img": "images/milkshake.webp",
+    "desc": "Çikolata, çilek, muz, vanilya, oreo",
+    "ingredients": ["Süt", "Dondurma", "Şurup"],
+    "active": true
+  },
+  {
+    "id": "meyveli-soda",
+    "cat": "cold",
+    "name": "Meyveli Soda",
+    "price": 120,
+    "img": "images/meyveli-soda.webp",
+    "desc": "Limon, elma, nar, karpuz çilek",
+    "ingredients": ["Soda", "Meyve aroması"],
+    "active": true
+  },
+  {
+    "id": "icecream-vanilya",
+    "cat": "icecream",
+    "name": "Vanilya Dondurma",
+    "price": 60,
+    "img": "images/icecream-vanilya.webp",
+    "desc": "Klasik vanilya lezzeti.",
+    "ingredients": ["Süt", "Şeker", "Vanilya"],
+    "active": true
+  },
+  {
+    "id": "icecream-visne",
+    "cat": "icecream",
+    "name": "Vişne Dondurma",
+    "price": 60,
+    "img": "images/icecream-visne.webp",
+    "desc": "Hafif ekşi vişne tadı.",
+    "ingredients": ["Süt", "Şeker", "Vişne"],
+    "active": true
+  },
+  {
+    "id": "icecream-cikolata",
+    "cat": "icecream",
+    "name": "Çikolata Dondurma",
+    "price": 60,
+    "img": "images/icecream-cikolata.webp",
+    "desc": "Zengin çikolata tadı.",
+    "ingredients": ["Süt", "Şeker", "Kakao"],
+    "active": true
+  },
+  {
+    "id": "icecream-karamel",
+    "cat": "icecream",
+    "name": "Karamel Dondurma",
+    "price": 60,
+    "img": "images/icecream-karamel.webp",
+    "desc": "Karamel dokunuşlu tatlı lezzet.",
+    "ingredients": ["Süt", "Şeker", "Karamel"],
+    "active": true
+  },
+  {
+    "id": "icecream-cilek",
+    "cat": "icecream",
+    "name": "Çilek Dondurma",
+    "price": 60,
+    "img": "images/icecream-cilek.webp",
+    "desc": "Taze çilek aroması.",
+    "ingredients": ["Süt", "Şeker", "Çilek"],
+    "active": true
+  },
+  {
+    "id": "icecream-parca-cikolata",
+    "cat": "icecream",
+    "name": "Parça Çikolata Dondurma",
+    "price": 60,
+    "img": "images/icecream-parca-cikolata.webp",
+    "desc": "Çikolata parçacıklı keyif.",
+    "ingredients": ["Süt", "Şeker", "Çikolata parçaları"],
+    "active": true
+  },
+  {
+    "id": "icecream-krokan",
+    "cat": "icecream",
+    "name": "Krokan Dondurma",
+    "price": 60,
+    "img": "images/icecream-krokan.webp",
+    "desc": "Kıtır krokan parçalarlı.",
+    "ingredients": ["Süt", "Şeker", "Krokan"],
+    "active": true
+  },
+  {
+    "id": "espresso",
+    "cat": "coffees",
+    "name": "Espresso",
+    "sizes": {
+      "S": 140,
+      "M": 160
+    },
+    "img": "images/espresso.webp",
+    "desc": "Yoğun aromalı güçlü ve konsantre kahve",
+    "ingredients": ["Espresso"],
+    "caffeine": 63,
+    "active": true
+  },
+  {
+    "id": "espresso-macchiato",
+    "cat": "coffees",
+    "name": "Espresso Macchiato",
+    "sizes": {
+      "S": 160,
+      "M": 180
+    },
+    "img": "images/espresso-macchiato.webp",
+    "desc": "Az miktarda süt köpüğü ile servis edilen yoğun ve karakterli espresso",
+    "ingredients": ["Espresso", "Süt köpüğü"],
+    "caffeine": 63,
+    "active": true
+  },
+  {
+    "id": "americano",
+    "cat": "coffees",
+    "name": "Coffee Americano",
+    "sizes": {
+      "S": 200,
+      "M": 210
+    },
+    "img": "images/americano.webp",
+    "desc": "Espresso bazlı sıcak su ile hazırlanmış yumuşak siyah kahve.",
+    "ingredients": ["Espresso", "Sıcak su"],
+    "caffeine": 95,
+    "active": true
+  },
+  {
+    "id": "latte",
+    "cat": "coffees",
+    "name": "Coffee Latte",
+    "sizes": {
+      "S": 220,
+      "M": 230
+    },
+    "img": "images/latte.webp",
+    "desc": "Bol sütlü yumuşak içimli nazik kahve içeceği.",
+    "ingredients": ["Espresso", "Süt", "Süt köpüğü"],
+    "caffeine": 80,
+    "active": true
+  },
+  {
+    "id": "white-mocha",
+    "cat": "coffees",
+    "name": "White Mocha",
+    "sizes": {
+      "S": 230,
+      "M": 240
+    },
+    "img": "images/white-mocha.webp",
+    "desc": "Beyaz çikolata ve süt ile hazırlanmış tatlı ve kremamsı kahve.",
+    "ingredients": ["Espresso", "Süt", "Beyaz çikolata sosu"],
+    "caffeine": 90,
+    "active": true
+  },
+  {
+    "id": "mocha",
+    "cat": "coffees",
+    "name": "Mocha",
+    "sizes": {
+      "S": 230,
+      "M": 240
+    },
+    "img": "images/mocha.webp",
+    "desc": "Çikolata ve süt ile hazırlanan, yoğun ve tatlı kahve.",
+    "ingredients": ["Espresso", "Süt", "Çikolata sosu"],
+    "caffeine": 90,
+    "active": true
+  },
+  {
+    "id": "caramel-latte",
+    "cat": "coffees",
+    "name": "Caramel Latte",
+    "sizes": {
+      "S": 230,
+      "M": 240
+    },
+    "img": "images/caramel-latte.webp",
+    "desc": "Vanilya-karamel tatlılığına sahip yumuşak ve kremamsı latte.",
+    "ingredients": ["Espresso", "Süt", "Karamel sosu"],
+    "caffeine": 80,
+    "active": true
+  },
+  {
+    "id": "cappuccino",
+    "cat": "coffees",
+    "name": "Cappuccino",
+    "price": 220,
+    "img": "images/cappuccino.webp",
+    "desc": "Yoğun köpüklü süt ile hazırlanmış dengeli lezzette kahve.",
+    "ingredients": ["Espresso", "Süt", "Süt köpüğü"],
+    "caffeine": 75,
+    "active": true
+  },
+  {
+    "id": "cortado",
+    "cat": "coffees",
+    "name": "Cortado",
+    "price": 220,
+    "img": "images/cortado.webp",
+    "desc": "Az sütle hazırlanan yoğun ve yumuşak içimli espresso.",
+    "ingredients": ["Espresso", "Az süt"],
+    "caffeine": 75,
+    "active": true
+  },
+  {
+    "id": "flat-white",
+    "cat": "coffees",
+    "name": "Flat White",
+    "price": 220,
+    "img": "images/flat-white.webp",
+    "desc": "Kadifemsi süt dokusuyla güçlü kahve aroması.",
+    "ingredients": ["Çift espresso", "Süt"],
+    "caffeine": 126,
+    "active": true
+  },
+  {
+    "id": "latte-macchiato",
+    "cat": "coffees",
+    "name": "Latte Macchiato",
+    "price": 220,
+    "img": "images/latte-macchiato.webp",
+    "desc": "Sütün üzerine eklenen espresso dokunuşu hafif ve sütlü tat.",
+    "ingredients": ["Espresso", "Süt", "Süt köpüğü"],
+    "caffeine": 75,
+    "active": true
+  },
+  {
+    "id": "nutellatte",
+    "cat": "coffees",
+    "name": "Nutellatte",
+    "price": 240,
+    "img": "images/nutellatte.webp",
+    "desc": "Nutella ile hazırlanan çikolatalı-fındıklı tatlı ve kremamsı latte.",
+    "ingredients": ["Espresso", "Süt", "Fındık-kakao kreması"],
+    "caffeine": 80,
+    "active": true
+  },
+  {
+    "id": "deca-cream",
+    "cat": "coffees",
+    "name": "Deca Cream (Espresso)",
+    "price": 200,
+    "img": "images/deca-cream.webp",
+    "desc": "Süt bazlı, kafeinsiz kremamsı içecek.",
+    "ingredients": ["Kafeinsiz espresso"],
+    "caffeine": 6,
+    "active": true
+  },
+  {
+    "id": "turk-kahvesi",
+    "cat": "coffees",
+    "name": "Türk Kahvesi",
+    "price": 170,
+    "img": "images/turk-kahvesi.webp",
+    "desc": "İnce çekilmiş kahvenin geleneksel yöntemle hazırlanmış aromatik hali.",
+    "ingredients": ["Türk kahvesi", "Su"],
+    "caffeine": 60,
+    "active": true
+  },
+  {
+    "id": "double-turk",
+    "cat": "coffees",
+    "name": "Duble Türk Kahvesi",
+    "price": 190,
+    "img": "images/double-turk.webp",
+    "desc": "Çift porsiyon Türk kahvesi güçlü ve yoğun lezzet.",
+    "ingredients": ["Türk kahvesi (duble)", "Su"],
+    "caffeine": 120,
+    "active": true
+  },
+  {
+    "id": "dibek",
+    "cat": "coffees",
+    "name": "Dibek Kahvesi",
+    "price": 170,
+    "img": "images/dibek.webp",
+    "desc": "Havanda dövülmüş yumuşak ve kremamsı kıvamda zengin aromalı kahve.",
+    "ingredients": ["Dibek kahvesi", "Su"],
+    "caffeine": 60,
+    "active": true
+  },
+  {
+    "id": "menengic",
+    "cat": "coffees",
+    "name": "Menengiç Kahvesi",
+    "price": 180,
+    "img": "images/menengic.webp",
+    "desc": "Doğal ve kafeinsiz fındıksı aromalı ve yumuşak dokulu içecek.",
+    "ingredients": ["Menengiç", "Süt veya su"],
+    "caffeine": 0,
+    "active": true
+  },
+  {
+    "id": "kenya",
+    "cat": "filter",
+    "name": "Kenya AA",
+    "price": 190,
+    "img": "images/kenya.webp",
+    "desc": "Meyvemsi notalar ve parlak asiditeye sahip filtre kahve",
+    "ingredients": ["Filtre kahve", "Su"],
+    "caffeine": 120,
+    "active": true
+  },
+  {
+    "id": "colombia",
+    "cat": "filter",
+    "name": "Colombia",
+    "price": 190,
+    "img": "images/colombia.webp",
+    "desc": "Yumuşak asidite karamel ve fındık notalarına sahip filtre kahve",
+    "ingredients": ["Filtre kahve", "Su"],
+    "caffeine": 115,
+    "active": true
+  },
+  {
+    "id": "ethiopia",
+    "cat": "filter",
+    "name": "Ethiopia",
+    "price": 190,
+    "img": "images/ethiopia.webp",
+    "desc": "Narenciye ve çiçek notalarına sahip hafif ve aromatik filtre kahve",
+    "ingredients": ["Filtre kahve", "Su"],
+    "caffeine": 120,
+    "active": true
+  },
+  {
+    "id": "costarica",
+    "cat": "filter",
+    "name": "Costarica",
+    "price": 190,
+    "img": "images/costarica.webp",
+    "desc": "Karamel ve narenciye notalarıyla dengeli ve parlak bir tat",
+    "ingredients": ["Filtre kahve", "Su"],
+    "caffeine": 115,
+    "active": true
+  },
+  {
+    "id": "guatemala",
+    "cat": "filter",
+    "name": "Guatemala",
+    "price": 190,
+    "img": "images/guatemala.webp",
+    "desc": "Çikolata notaları ve hafif meyvemsi tatlılığa sahip zengin bir lezzet",
+    "ingredients": ["Filtre kahve", "Su"],
+    "caffeine": 115,
+    "active": true
+  },
+  {
+    "id": "v60",
+    "cat": "filter",
+    "name": "V60",
+    "price": 210,
+    "img": "images/v60.webp",
+    "desc": "El demleme yöntemiyle hazırlanan filtre kahve temiz ve parlak tat (V60)",
+    "ingredients": ["Öğütülmüş kahve", "Su"],
+    "caffeine": 120,
+    "active": true
+  },
+  {
+    "id": "chemex",
+    "cat": "filter",
+    "name": "Chemex",
+    "price": 210,
+    "img": "images/chemex.webp",
+    "desc": "Chemex yöntemiyle hazırlanmış temiz ve yumuşak, hafif tatlılık sunan kahve",
+    "ingredients": ["Öğütülmüş kahve", "Su"],
+    "caffeine": 120,
+    "active": true
+  },
+  {
+    "id": "iced-americano",
+    "cat": "iced",
+    "name": "Iced Americano",
+    "price": 210,
+    "img": "images/iced-americano.webp",
+    "desc": "Buzlu ferah ve net kahve tadı.",
+    "ingredients": ["Espresso", "Su", "Buz"],
+    "caffeine": 95,
+    "active": true
+  },
+  {
+    "id": "iced-latte",
+    "cat": "iced",
+    "name": "Iced Latte",
+    "price": 230,
+    "img": "images/iced-latte.webp",
+    "desc": "Soğuk sütle yumuşak kahve.",
+    "ingredients": ["Espresso", "Süt", "Buz"],
+    "caffeine": 80,
+    "active": true
+  },
+  {
+    "id": "iced-mocha",
+    "cat": "iced",
+    "name": "Iced Mocha",
+    "price": 240,
+    "img": "images/iced-mocha.webp",
+    "desc": "Çikolatalı buzlu latte.",
+    "ingredients": ["Espresso", "Süt", "Çikolata", "Buz"],
+    "caffeine": 90,
+    "active": true
+  },
+  {
+    "id": "iced-caramel-latte",
+    "cat": "iced",
+    "name": "Iced Caramel Latte",
+    "price": 240,
+    "img": "images/iced-caramel-latte.webp",
+    "desc": "Karamel dokunuşlu buzlu latte.",
+    "ingredients": ["Espresso", "Süt", "Karamel", "Buz"],
+    "caffeine": 80,
+    "active": true
+  },
+  {
+    "id": "iced-white-mocha",
+    "cat": "iced",
+    "name": "Iced White Mocha",
+    "price": 240,
+    "img": "images/iced-white-mocha.webp",
+    "desc": "Beyaz çikolatalı buzlu latte.",
+    "ingredients": ["Espresso", "Süt", "Beyaz çikolata", "Buz"],
+    "caffeine": 90,
+    "active": true
+  },
+  {
+    "id": "cold-brew",
+    "cat": "iced",
+    "name": "Cold Brew",
+    "price": 240,
+    "img": "images/cold-brew.webp",
+    "desc": "Uzun demleme, yumuşak ve güçlü.",
+    "ingredients": ["Öğütülmüş kahve", "Su", "Buz"],
+    "caffeine": 150,
+    "active": true
+  },
+  {
+    "id": "frappe",
+    "cat": "iced",
+    "name": "Frappe",
+    "price": 240,
+    "img": "images/frappe.webp",
+    "desc": "Çilek, Çikolata, Vanilya, Karamel",
+    "ingredients": ["Kahve", "Süt veya su", "Buz"],
+    "caffeine": 80,
+    "active": true
+  },
+  {
+    "id": "italian-frappe",
+    "cat": "iced",
+    "name": "Italian Frappe",
+    "price": 240,
+    "img": "images/italian-frappe.webp",
+    "desc": "Klasik İtalyan tarzı frappe.",
+    "ingredients": ["Kahve", "Süt veya su", "Buz"],
+    "caffeine": 85,
+    "active": true
+  },
+  {
+    "id": "greek-frappe",
+    "cat": "iced",
+    "name": "Greek Frappe",
+    "price": 240,
+    "img": "images/greek-frappe.webp",
+    "desc": "Yunan tarzı hafif köpüklü.",
+    "ingredients": ["Çözünebilir kahve", "Su", "Buz"],
+    "caffeine": 75,
+    "active": true
+  },
+  {
+    "id": "ice-nutellatte",
+    "cat": "iced",
+    "name": "Ice Nutellatte",
+    "price": 250,
+    "img": "images/ice-nutellatte.webp",
+    "desc": "Fındık-kakaolu buzlu latte.",
+    "ingredients": ["Espresso", "Süt", "Fındık-kakao kreması", "Buz"],
+    "caffeine": 80,
+    "active": true
+  },
+  {
+    "id": "ice-chai-latte",
+    "cat": "iced",
+    "name": "Ice Chai Tea Latte",
+    "price": 240,
+    "img": "images/ice-chai-latte.webp",
+    "desc": "Baharatlı sütlü ve ferah.",
+    "ingredients": ["Çay", "Süt", "Baharat", "Buz"],
+    "active": true
+  },
+  {
+    "id": "affogato",
+    "cat": "iced",
+    "name": "Affogato",
+    "price": 240,
+    "img": "images/affogato.webp",
+    "desc": "Dondurma üstüne sıcak espresso.",
+    "ingredients": ["Espresso", "Dondurma"],
+    "caffeine": 63,
+    "active": true
+  },
+  {
+    "id": "extra-shot",
+    "cat": "extras",
+    "name": "Ekstra Shot (espresso)",
+    "price": 60,
+    "img": "images/extra-shot.webp",
+    "desc": "Bir shot espresso ekleme.",
+    "ingredients": ["Espresso"],
+    "active": true
+  },
+  {
+    "id": "extra-syrup",
+    "cat": "extras",
+    "name": "Ekstra Şurup",
+    "price": 30,
+    "img": "images/extra-syrup.webp",
+    "desc": "Favori şurubunu ekle.",
+    "ingredients": ["Şurup"],
+    "active": true
+  },
+  {
+    "id": "extra-milk",
+    "cat": "extras",
+    "name": "Ekstra Süt",
+    "price": 30,
+    "img": "images/extra-milk.webp",
+    "desc": "Süt tercihini seç.",
+    "ingredients": ["Süt"],
+    "active": true
+  },
+  {
+    "id": "extra-honey",
+    "cat": "extras",
+    "name": "Ekstra Bal",
+    "price": 30,
+    "img": "images/extra-honey.webp",
+    "desc": "Doğal bal dokunuşu.",
+    "ingredients": ["Bal"],
+    "active": true
+  },
+  {
+    "id": "powerbank",
+    "cat": "extras",
+    "name": "Powerbank (30 dakika)",
+    "price": 40,
+    "img": "images/powerbank.webp",
+    "desc": "30 dk şarj hizmeti.",
+    "ingredients": ["Hizmet"],
+    "active": true
+  },
+  {
+    "id": "magnolia",
+    "cat": "desserts",
+    "name": "Magnolia",
+    "price": 250,
+    "img": "images/magnolia.webp",
+    "desc": "İpeksi kremalı tatlı.",
+    "ingredients": ["Süt", "Krema", "Meyve/kurabiye"],
+    "active": true
+  },
+  {
+    "id": "profiterol",
+    "cat": "desserts",
+    "name": "Profiterol",
+    "price": 250,
+    "img": "images/profiterol.webp",
+    "desc": "Çikolata soslu mini toplar.",
+    "ingredients": ["Hamur topları", "Krema", "Çikolata"],
+    "active": true
+  },
+  {
+    "id": "san-sebastian",
+    "cat": "desserts",
+    "name": "San Sebastian",
+    "price": 280,
+    "img": "images/san-sebastian.webp",
+    "desc": "Kıvamlı cheesecake dokusu.",
+    "ingredients": ["Krem peynir", "Yumurta", "Şeker"],
+    "active": true
+  },
+  {
+    "id": "brownie",
+    "cat": "desserts",
+    "name": "Brownie",
+    "price": 260,
+    "img": "images/brownie.webp",
+    "desc": "Yoğun çikolatalı tatlı.",
+    "ingredients": ["Kakao", "Tereyağı", "Un", "Şeker"],
+    "active": true
+  },
+  {
+    "id": "lotus-cup",
+    "cat": "desserts",
+    "name": "Lotus Cup",
+    "price": 280,
+    "img": "images/lotus-cup.webp",
+    "desc": "Lotus bisküvili fincan tatlı.",
+    "ingredients": ["Bisküvi", "Krema"],
+    "active": true
+  },
+  {
+    "id": "fistikli-cup",
+    "cat": "desserts",
+    "name": "Fıstıklı Cup",
+    "price": 280,
+    "img": "images/fistikli-cup.webp",
+    "desc": "Fıstık aromalı fincan tatlı.",
+    "ingredients": ["Fıstık", "Krema", "Bisküvi"],
+    "active": true
+  },
+  {
+    "id": "oreo-cup",
+    "cat": "desserts",
+    "name": "Oreo Cup",
+    "price": 280,
+    "img": "images/oreo-cup.webp",
+    "desc": "Oreo parçacıklı tatlı.",
+    "ingredients": ["Oreo", "Krema"],
+    "active": true
+  },
+  {
+    "id": "lotus-cheesecake",
+    "cat": "desserts",
+    "name": "Lotus Cheesecake",
+    "price": 280,
+    "img": "images/lotus-cheesecake.webp",
+    "desc": "Lotus tabanlı cheesecake.",
+    "ingredients": ["Krem peynir", "Bisküvi", "Lotus"],
+    "active": true
+  },
+  {
+    "id": "mini-cookies",
+    "cat": "desserts",
+    "name": "Atıştırmalık Kurabiye Çeşitleri",
+    "price": 100,
+    "img": "images/mini-cookies.webp",
+    "desc": "Atıştırmalık mini kurabiyeler.",
+    "ingredients": ["Un", "Tereyağı", "Şeker", "Çikolata"],
+    "active": true
+  }
+]

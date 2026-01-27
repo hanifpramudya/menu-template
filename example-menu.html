@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Menu</title>
+  <style>
+    .menu-item { border:1px solid #ccc; padding:10px; margin:10px; display:inline-block; width:200px; vertical-align:top; }
+    .quantity-controls { margin-top:10px; }
+    .summary { border-top:2px solid #333; margin-top:20px; padding-top:10px; }
+    .summary-list { list-style:none; padding:0; }
+    .summary-list li { margin-bottom:5px; }
+    button { width:30px; }
+  </style>
+</head>
+<body>
+  <div id="menu"></div>
+  <div class="summary">
+    <h3>Order Summary</h3>
+    <ul class="summary-list" id="summary-list"></ul>
+    <div><strong>Total: ₺<span id="total">0</span></strong></div>
+    <button onclick="pay()">Pay</button>
+  </div>
+  <script>
+    // Sample menu data
+    const menuItems = [
+      { id:"espresso", name:"Espresso", price:140, img:"images/espresso.webp" },
+      { id:"latte", name:"Latte", price:220, img:"images/latte.webp" },
+      { id:"icecream-vanilya", name:"Vanilla Ice Cream", price:60, img:"images/icecream-vanilya.webp" }
+    ];
+
+    const quantities = {};
+
+    function renderMenu() {
+      const menuDiv = document.getElementById('menu');
+      menuDiv.innerHTML = '';
+      menuItems.forEach(item => {
+        quantities[item.id] = quantities[item.id] || 0;
+        menuDiv.innerHTML += `
+          <div class="menu-item" id="item-${item.id}">
+            <img src="${item.img}" alt="${item.name}" width="100"><br>
+            <strong>${item.name}</strong><br>
+            ₺${item.price}
+            <div class="quantity-controls">
+              <button onclick="changeQty('${item.id}', -1)">-</button>
+              <span id="qty-${item.id}">${quantities[item.id]}</span>
+              <button onclick="changeQty('${item.id}', 1)">+</button>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function changeQty(id, delta) {
+      quantities[id] = Math.max(0, (quantities[id] || 0) + delta);
+      document.getElementById(`qty-${id}`).textContent = quantities[id];
+      updateSummary();
+    }
+
+    function updateSummary() {
+      const summaryList = document.getElementById('summary-list');
+      summaryList.innerHTML = '';
+      let total = 0;
+      menuItems.forEach(item => {
+        const qty = quantities[item.id];
+        if (qty > 0) {
+          summaryList.innerHTML += `<li>${item.name} x${qty} = ₺${item.price * qty}</li>`;
+          total += item.price * qty;
+        }
+      });
+      document.getElementById('total').textContent = total;
+    }
+
+    function pay() {
+      alert('Proceed to cashier. Total: ₺' + document.getElementById('total').textContent);
+    }
+
+    renderMenu();
+    updateSummary();
+  </script>
+</body>
+</html>
