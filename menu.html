@@ -384,11 +384,12 @@ function loadMenuJSONP() {
   });
 }
 
-// Local JSON fallback (data/menu.json + data/categories.json)
+// Local JSON fallback (data/menu menbar.json + data/categories menbar.json)
 async function loadMenuFromLocalJSON() {
+  const timestamp = Date.now();
   const [catsRes, menuRes] = await Promise.all([
-    fetch("./data/categories.json", { cache: "no-store" }),
-    fetch("./data/menu.json", { cache: "no-store" })
+    fetch(`./data/categories%20menbar.json?t=${timestamp}`, { cache: "no-store" }),
+    fetch(`./data/menu%20menbar.json?t=${timestamp}`, { cache: "no-store" })
   ]);
 
   if (!catsRes.ok || !menuRes.ok) {
@@ -397,6 +398,9 @@ async function loadMenuFromLocalJSON() {
 
   const categories = await catsRes.json();
   const items = await menuRes.json();
+
+  console.log("📊 Loaded categories:", categories);
+  console.log("📊 Loaded menu items:", items.length, "items");
 
   return {
     ok: true,
@@ -455,112 +459,10 @@ function applyRemoteData(data) {
   return false;
 }
 
-// Keep AMOUR_ENRICH for backward compatibility and fallback descriptions
-const AMOUR_ENRICH = {
-		// Kopi (lengkap)
-    "espresso":{"desc":"Kopi pekat dengan aroma kuat dan konsentrat","ingredients":["Espresso"],"caffeine":63},
-    "espresso-macchiato":{"desc":"Espresso pekat dengan sedikit busa susu","ingredients":["Espresso","Busa susu"],"caffeine":63},
-    "americano":{"desc":"Kopi hitam lembut berbasis espresso dengan air panas","ingredients":["Espresso","Air panas"],"caffeine":95},
-    "latte":{"desc":"Kopi susu lembut dengan banyak susu","ingredients":["Espresso","Susu","Busa susu"],"caffeine":80},
-    "white-mocha":{"desc":"Kopi manis dan creamy dengan cokelat putih dan susu","ingredients":["Espresso","Susu","Saus cokelat putih"],"caffeine":90},
-    "mocha":{"desc":"Kopi manis dan kaya dengan cokelat dan susu","ingredients":["Espresso","Susu","Saus cokelat"],"caffeine":90},
-    "caramel-latte":{"desc":"Latte lembut dan creamy dengan manis vanila-karamel","ingredients":["Espresso","Susu","Saus karamel"],"caffeine":80},
-    "cappuccino":{"desc":"Kopi seimbang dengan susu berbusa tebal","ingredients":["Espresso","Susu","Busa susu"],"caffeine":75},
-    "cortado":{"desc":"Espresso pekat dengan sedikit susu, tetap lembut","ingredients":["Espresso","Sedikit susu"],"caffeine":75},
-    "flat-white":{"desc":"Aroma kopi kuat dengan tekstur susu lembut","ingredients":["Dua shot espresso","Susu"],"caffeine":126},
-    "latte-macchiato":{"desc":"Susu panas dengan sentuhan espresso, ringan dan milky","ingredients":["Espresso","Susu","Busa susu"],"caffeine":75},
-    "nutellatte":{"desc":"Latte manis dan creamy dengan Nutella cokelat-hazelnut","ingredients":["Espresso","Susu","Krim cokelat-hazelnut (Nutella)"],"caffeine":80},
-    "deca-cream":{"desc":"Minuman creamy berbasis susu tanpa kafein","ingredients":["Espresso tanpa kafein"],"caffeine":6},
-    "turk-kahvesi":{"desc":"Kopi Turki aromatik diseduh tradisional dari bubuk halus","ingredients":["Kopi Turki","Air"],"caffeine":60},
-    "double-turk":{"desc":"Kopi Turki porsi ganda, rasa kuat dan intens","ingredients":["Kopi Turki (double)","Air"],"caffeine":120},
-    "dibek":{"desc":"Kopi dibek ditumbuk, tekstur lembut dan creamy dengan aroma kaya","ingredients":["Kopi dibek","Air"],"caffeine":60},
-    "menengic":{"desc":"Minuman menengic tanpa kafein, aroma kacang lembut","ingredients":["Menengic","Susu atau air"]},
-		// Kopi filter (lengkap)
-    "kenya":{"desc":"Kopi filter dengan sentuhan buah dan keasaman terang","ingredients":["Kopi filter","Air"],"caffeine":120},
-    "colombia":{"desc":"Kopi filter dengan asam lembut, karamel, dan rasa kacang","ingredients":["Kopi filter","Air"],"caffeine":115},
-    "ethiopia":{"desc":"Kopi filter ringan dan aromatik dengan hint citrus dan bunga","ingredients":["Kopi filter","Air"],"caffeine":120},
-    "costarica":{"desc":"Rasa seimbang dan cerah dengan karamel dan citrus","ingredients":["Kopi filter","Air"],"caffeine":115},
-    "guatemala":{"desc":"Rasa kaya dengan cokelat dan manis buah yang ringan","ingredients":["Kopi filter","Air"],"caffeine":115},
-    "v60":{"desc":"Kopi filter seduh tangan (V60) dengan rasa bersih dan cerah","ingredients":["Kopi giling","Air"],"caffeine":120},
-    "chemex":{"desc":"Kopi Chemex bersih dan lembut dengan manis ringan","ingredients":["Kopi giling","Air"],"caffeine":120},
-		// Kopi dingin
-    "iced-americano":{"desc":"Americano dingin, rasa kopi jelas dan segar","ingredients":["Espresso","Air","Es"],"caffeine":95},
-    "iced-latte":{"desc":"Latte dingin lembut dengan susu","ingredients":["Espresso","Susu","Es"],"caffeine":80},
-    "iced-mocha":{"desc":"Latte dingin dengan cokelat","ingredients":["Espresso","Susu","Cokelat","Es"],"caffeine":90},
-    "iced-caramel-latte":{"desc":"Latte dingin dengan sentuhan karamel","ingredients":["Espresso","Susu","Karamel","Es"],"caffeine":80},
-    "iced-white-mocha":{"desc":"Latte dingin dengan cokelat putih","ingredients":["Espresso","Susu","Cokelat putih","Es"],"caffeine":90},
-    "cold-brew":{"desc":"Cold brew seduhan lama, halus tapi kuat","ingredients":["Kopi giling","Air","Es"],"caffeine":150},
-    "frappe":{"desc":"Frappe rasa Stroberi, Cokelat, Vanila, atau Karamel","ingredients":["Kopi","Susu atau air","Es"],"caffeine":80},
-    "italian-frappe":{"desc":"Frappe gaya Italia klasik","ingredients":["Kopi","Susu atau air","Es"],"caffeine":85},
-    "greek-frappe":{"desc":"Frappe gaya Yunani dengan busa ringan","ingredients":["Kopi instan","Air","Es"],"caffeine":75},
-    "ice-nutellatte":{"desc":"Latte dingin dengan Nutella cokelat-hazelnut","ingredients":["Espresso","Susu","Krim cokelat-hazelnut","Es"],"caffeine":80},
-    "ice-chai-latte":{"desc":"Chai latte dingin, susu dan rempah yang segar","ingredients":["Teh","Susu","Rempah chai","Es"]},
-    "affogato":{"desc":"Espresso panas di atas es krim","ingredients":["Espresso","Es krim"],"caffeine":63},
-		// Minuman panas (lengkap)
-    "cay":{"desc":"Teh hitam tradisional seduhan segar","ingredients":["Teh hitam","Air"]},
-    "fincan-cay":{"desc":"Teh tradisional dalam cangkir","ingredients":["Teh hitam","Air"]},
-    "takeaway-cay":{"desc":"Teh dalam gelas kertas","ingredients":["Teh hitam","Air"]},
-    "salep":{"desc":"Minuman hangat susu dengan kayu manis","ingredients":["Salep","Susu","Kayu manis","Gula"]},
-    "sicak-cikolata":{"desc":"Minuman cokelat panas kaya kakao","ingredients":["Kakao","Susu","Gula"]},
-    "beyaz-sicak-cikolata":{"desc":"Minuman cokelat putih panas yang kaya","ingredients":["Cokelat putih","Susu"]},
-    "chai-latte":{"desc":"Minuman teh susu dengan rempah chai","ingredients":["Teh","Susu","Rempah chai"]},
-    "balli-sut":{"desc":"Susu hangat manis dengan madu","ingredients":["Susu","Madu"]},
-		// Minuman dingin siap
-    "su":{"ingredients":["Air"]},
-    "soda":{"desc":"Minuman mineral berkarbonasi yang menyegarkan","ingredients":["Soda"]},
-    "sikma-portakal":{"desc":"Jus jeruk peras segar yang alami dan menyegarkan","ingredients":["Jeruk"]},
-    "frozen":{"desc":"Frozen buah: Mangga, Stroberi, Persik, Blueberry, Raspberry, Berry hutan","ingredients":["Pure buah","Es"]},
-    "italian-soda":{"desc":"Soda Italia dengan sirup buah, ringan dan menyegarkan","ingredients":["Soda","Sirup buah","Es"]},
-    "limonata":{"desc":"Lemonade rumahan dengan aroma sitrus segar","ingredients":["Lemon","Gula","Air","Es"]},
-    "aromali-limonata":{"desc":"Lemonade rasa: Stroberi, Delima, atau Mint","ingredients":["Lemon","Perisa","Gula","Air","Es"]},
-    "churchill":{"desc":"Soda dengan lemon dan garam, sangat segar","ingredients":["Soda","Lemon","Garam","Es"]},
-    "enerji-icecek":{"desc":"Minuman energi berkarbonasi yang manis","ingredients":["Minuman energi"]},
-    "mesrubatlar":{"desc":"Cola Turka, soda jeruk Uludag, gazoz Uludag, es teh","ingredients":["Berbagai minuman ringan"]},
-    "milkshake":{"desc":"Milkshake rasa Stroberi, Cokelat, Vanila, atau Oreo","ingredients":["Susu","Es krim","Sirup"]},
-    "meyveli-soda":{"desc":"Soda buah: Lemon, Apel, Delima, Semangka Stroberi","ingredients":["Soda","Aroma buah"]},
-		// Es krim siap
-    "icecream-vanilya":{"desc":"Es krim vanila klasik","ingredients":["Susu","Gula","Vanila"]},
-    "icecream-visne":{"desc":"Es krim rasa ceri asam yang lembut","ingredients":["Susu","Gula","Ceri asam"]},
-    "icecream-cikolata":{"desc":"Es krim cokelat yang kaya","ingredients":["Susu","Gula","Kakao"]},
-    "icecream-karamel":{"desc":"Es krim manis dengan karamel","ingredients":["Susu","Gula","Karamel"]},
-    "icecream-cilek":{"desc":"Es krim rasa stroberi segar","ingredients":["Susu","Gula","Stroberi"]},
-    "icecream-parca-cikolata":{"desc":"Es krim dengan potongan cokelat","ingredients":["Susu","Gula","Potongan cokelat"]},
-    "icecream-krokan":{"desc":"Es krim dengan krokan renyah","ingredients":["Susu","Gula","Krokan"]},
-		// Tambahan (lengkap)
-    "extra-shot":{"desc":"Tambahan satu shot espresso","ingredients":["Espresso"]},
-    "extra-syrup":{"desc":"Tambahkan sirup favoritmu","ingredients":["Sirup"]},
-    "extra-milk":{"desc":"Pilih jenis susu","ingredients":["Susu"]},
-    "extra-honey":{"desc":"Sentuhan madu alami","ingredients":["Madu"]},
-    "powerbank":{"desc":"Layanan isi daya 30 menit","ingredients":["Layanan"]},
-		// Teh herbal siap
-    "herbal-0":{"desc":"Teh linden segar seduhan french press","ingredients":["Linden"]},
-    "herbal-1":{"desc":"Teh musim dingin segar seduhan french press","ingredients":["Teh musim dingin"]},
-    "herbal-2":{"desc":"Teh hijau segar dan ringan seduhan french press","ingredients":["Teh hijau"]},
-    "herbal-3":{"desc":"Teh sage segar seduhan french press","ingredients":["Teh sage"]},
-    "herbal-4":{"desc":"Teh chamomile segar seduhan french press","ingredients":["Chamomile"]},
-    "herbal-5":{"desc":"Teh rosehip segar seduhan french press","ingredients":["Rosehip"]},
-		 // Koktail
-    "amour-milano":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-special":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-melo":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-wild-berry":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-vibe":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-sky":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-lime":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-mango-portakal":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-hibiscus":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-    "amour-dark":{"desc":"Akan ditulis nanti","ingredients":["Espresso"]},
-		// Pencuci mulut
-    "magnolia":{"desc":"Puding krem lembut","ingredients":["Susu","Krim","Buah/kue kering"]},
-    "profiterol":{"desc":"Bola choux mini dengan saus cokelat","ingredients":["Adonan choux","Krim","Cokelat"]},
-    "san-sebastian":{"desc":"Cheesecake San Sebastian yang creamy dan lembut","ingredients":["Krim keju","Telur","Gula"]},
-    "brownie":{"desc":"Brownie cokelat pekat","ingredients":["Kakao","Mentega","Tepung","Gula"]},
-    "lotus-cup":{"desc":"Dessert cangkir dengan biskuit Lotus","ingredients":["Biskuit","Krim"]},
-    "fistikli-cup":{"desc":"Dessert cangkir rasa pistachio","ingredients":["Pistachio","Krim","Biskuit"]},
-    "oreo-cup":{"desc":"Dessert cangkir dengan Oreo","ingredients":["Oreo","Krim"]},
-    "lotus-cheesecake":{"desc":"Cheesecake dengan dasar Lotus","ingredients":["Krim keju","Biskuit","Lotus"]},
-    "mini-cookies":{"desc":"Kue kering mini untuk ngemil","ingredients":["Tepung","Mentega","Gula","Cokelat"]}
-		};
+
+// Keep HARDCODED_MENU for backward compatibility and fallback descriptions
+const HARDCODED_MENU = {};
+
 </script>
 
 <script>
@@ -572,17 +474,19 @@ const AMOUR_ENRICH = {
 
     // i18n mini-API
     const fmt = n =>
-      new Intl.NumberFormat("tr-TR", {
+      new Intl.NumberFormat("id-ID", {
         style: "currency",
-        currency: "TRY",
+        currency: "IDR",
+        currencyDisplay: "symbol",
+        minimumFractionDigits: 0,
         maximumFractionDigits: 0
       }).format(n);
 
-    // terjemahan umum (utamakan JSON, lalu ENRICH, lalu fallback)
-    function t(id, fallback) {
+    // Translate menu item - priority: JSON translations > hardcoded menu > fallback
+    function translate(id, fallback) {
       return window.translations?.menu?.[id]
           || window.translations?.[id]
-          || AMOUR_ENRICH?.[id]?.name
+          || HARDCODED_MENU?.[id]?.name
           || fallback;
     }
 
@@ -596,13 +500,13 @@ const AMOUR_ENRICH = {
 
     function getDesc(id) {
       return window.translations?.menu?.[id]?.desc
-          || AMOUR_ENRICH?.[id]?.desc
+          || HARDCODED_MENU?.[id]?.desc
           || "";
     }
 
     function getIngredients(id) {
       return window.translations?.menu?.[id]?.ingredients
-          || AMOUR_ENRICH?.[id]?.ingredients
+          || HARDCODED_MENU?.[id]?.ingredients
           || [];
     }
 
@@ -724,7 +628,7 @@ const AMOUR_ENRICH = {
       const name        = getName(item);
       const desc        = getDesc(item.id);
       const ingredients = getIngredients(item.id);
-      const caffeine    = item.caffeine || AMOUR_ENRICH[item.id]?.caffeine || null;
+      const caffeine    = item.caffeine || HARDCODED_MENU[item.id]?.caffeine || null;
 
       document.getElementById("modalImg").src = item.img;
       document.getElementById("modalName").textContent = name;
@@ -866,11 +770,11 @@ async function initMenuData(){
     root.innerHTML = `
       <div class="flex items-center justify-center min-h-screen">
         <div class="text-center max-w-md">
-          <div class="text-6xl mb-4">⚠️</div>
-          <h2 class="text-xl font-semibold text-white mb-2">Menü Yüklenemedi</h2>
-          <p class="mb-4" style="color: var(--text-muted);">Veriler hem Excel API'den hem de yerel JSON dosyalarından yüklenemedi.</p>
+          <div class="text-6xl mb-4">📭</div>
+          <h2 class="text-xl font-semibold text-white mb-2">No Menu</h2>
+          <p class="mb-4" style="color: var(--text-muted);">Menu file not found. Please check if data files are loaded correctly.</p>
           <button onclick="location.reload()" class="px-6 py-3 bg-white text-black rounded-lg font-semibold hover:bg-white/90 transition">
-            Tekrar Dene
+            Retry
           </button>
         </div>
       </div>
@@ -885,6 +789,7 @@ async function initMenuData(){
     const LS_KEY = "lang";
     const modal = document.getElementById("lang-modal");
     const ALWAYS_SHOW_LANG_MODAL = false;
+    const ENABLE_LANG_MODAL = false;
 
     window.currentLang = localStorage.getItem(LS_KEY) || "id";
     window.translations = {};
@@ -969,7 +874,8 @@ async function initMenuData(){
       // Initialize menu data from Excel
       await initMenuData();
 
-      if (ALWAYS_SHOW_LANG_MODAL || !localStorage.getItem(LS_KEY)) {
+      // Language modal is disabled - ENABLE_LANG_MODAL controls it
+      if (ENABLE_LANG_MODAL && (ALWAYS_SHOW_LANG_MODAL || !localStorage.getItem(LS_KEY))) {
         openModal();
       } else if (modal) {
         modal.classList.add("hidden");
