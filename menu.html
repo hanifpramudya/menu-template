@@ -7,16 +7,12 @@
     <meta name="description" content="Amour Coffee — Yalova. Menu daring.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            fontFamily: {
-              sans: ['Inter','ui-sans-serif','system-ui','sans-serif'],
-              script: ['Parisienne','cursive']
-            },
             colors: { bg: '#0b0b0b' }
           }
         }
@@ -49,6 +45,10 @@
     --sidebar-text: #fdfbf7;
     --header: #422006;
     --header-text: #fdfbf7;
+    
+    /* Centralized Font Families (synced with Google Fonts import above) */
+    --font-sans: 'Roboto', 'ui-sans-serif', 'system-ui', 'sans-serif';
+    --font-logo: 'Roboto', 'Dancing Script', 'system-ui', 'sans-serif';
   }
 
 	body { background: var(--bg); color: var(--text-secondary); }	
@@ -151,7 +151,7 @@
           line-height:1;
         }
         .amour-word{
-          font-family: "Varela Round","Quicksand","Nunito","Poppins",system-ui,sans-serif;
+          font-family: var(--font-logo);
           font-weight: 600;
           font-size: clamp(16px, 2.6vw, 22px);
           letter-spacing: 0.02em;
@@ -161,7 +161,7 @@
         }
         .amour-tagline{
           margin-top: 0.15em;
-          font-family: "Inter","Poppins",system-ui,sans-serif;
+          font-family: var(--font-sans);
           font-size: 9px;
           font-weight: 600;
           letter-spacing: 0.2em;
@@ -192,7 +192,7 @@
   </head>
   
 
-<body class="font-sans">
+<body style="font-family: var(--font-sans);">
 
 <header class="sticky top-0 z-50 border-b backdrop-blur" style="background-color: var(--header); border-color: var(--border-soft);">
   <div class="mx-auto w-full max-w-6xl px-4 py-2">
