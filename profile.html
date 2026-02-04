@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amour — Tentang Kami</title>
+  <meta name="description" content="Amour Coffee — Yalova. Tentang Kami.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Parisienne&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter','system-ui','sans-serif'],
+            script: ['Parisienne','cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg: #fdfbf7;
+      --text-primary: #d97706;
+      --text-secondary: #422006;
+      --border-soft: #E8D5B7;
+      --text-muted: rgba(66,32,6,0.6);
+      --border-subtle: rgba(217,119,6,0.15);
+      --overlay: rgba(66,32,6,0.12);
+      --shadow: rgba(66,32,6,0.2);
+      --interactive-bg: rgba(233,196,106,0.18);
+      --interactive-border: rgba(217,119,6,0.35);
+      --lang-bg: rgba(255,248,235,0.9);
+      --lang-bg-hover: rgba(255,239,213,0.95);
+      --lang-border: rgba(217,119,6,0.28);
+      --lang-border-hover: rgba(184,94,5,0.4);
+      --button-bg: rgba(217,119,6,0.08);
+      --button-border: rgba(217,119,6,0.3);
+      --button-hover-bg: rgba(217,119,6,0.15);
+      --button-primary-bg: #d97706;
+      --button-primary-text: #fdfbf7;
+      --header: #422006;
+      --header-text: #fdfbf7;
+    }
+
+    body { background: var(--bg); color: var(--text-secondary); }
+    html { scroll-behavior:smooth; }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <div id="lang-modal" class="fixed inset-0 z-[99999] hidden">
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-xl"></div>
+
+    <div class="relative mx-auto flex min-h-screen max-w-md items-center px-4">
+      <div class="w-full rounded-3xl border border-white/10 bg-black/70 p-6 text-center shadow-xl">
+        <h2 class="text-2xl font-semibold mb-6 tracking-wide text-white" data-i18n="ui.lang_title">
+          🌐 Select Your Language
+        </h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
+          <button class="lang-btn" data-lang="tr">🇹🇷 Türkçe</button>
+          <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+          <button class="lang-btn" data-lang="id">🇮🇩 Bahasa Indonesia</button>
+        </div>
+
+        <p class="mt-6 text-sm text-white/60 italic" data-i18n="ui.lang_sub">Amour Café — Yalova</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    html, body { max-width: 100%; overflow-x: hidden; }
+    img, video, canvas, svg { max-width: 100%; height: auto; }
+    .lang-btn{
+      width:100%;
+      padding:.75rem 1rem;
+      background: var(--lang-bg);
+      color: var(--text-primary);
+      font-weight:700;
+      border-radius:14px;
+      border: 1px solid var(--lang-border);
+      box-shadow: 0 6px 16px var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: transform .15s ease, opacity .15s ease, background-color .2s ease, border-color .2s ease;
+    }
+    .lang-btn:hover{ transform: scale(1.03); opacity:.95; background: var(--lang-bg-hover); border-color: var(--lang-border-hover); }
+    .lang-btn:active{ transform: scale(.98); }
+    .amour-logo{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      line-height:1;
+    }
+    .amour-word{
+      font-family: "Varela Round","Quicksand","Nunito","Poppins",system-ui,sans-serif;
+      font-weight: 600;
+      font-size: clamp(16px, 2.6vw, 22px);
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .amour-tagline{
+      margin-top: 0.15em;
+      font-family: "Inter","Poppins",system-ui,sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+  </style>
+
+  <!-- Menu atas (gaya WE sederhana) -->
+  <header class="sticky top-0 z-50 border-b backdrop-blur" style="background-color: var(--header); border-color: var(--border-soft);">
+    <div class="mx-auto w-full max-w-6xl px-4 py-2">
+      <div class="flex items-center justify-between gap-3">
+        <div class="min-w-0 flex items-center gap-3">
+          <img src="../images/logo.png" alt="Amour logo" class="h-9 w-9 shrink-0 rounded-full">
+          <div class="min-w-0 leading-tight">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="text-base font-semibold" style="color: var(--header-text);">amour</span>
+              <span class="shrink-0 text-[11px] opacity-80" aria-hidden="true">🇮🇹</span>
+            </div>
+            <div class="min-w-0">
+              <span class="block text-[9px] uppercase tracking-widest truncate" style="color: var(--header-text);">
+                Kedai kopi Italia di Yalova
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="shrink-0 flex items-center gap-2 text-sm" style="color: var(--header-text);">
+          <button
+            onclick="openLangModal()"
+            aria-label="Change language"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full border transition"
+            style="border-color: var(--border-soft); background-color: rgba(253, 251, 247, 0.05); color: var(--header-text);"
+            onmouseover="this.style.backgroundColor='rgba(253, 251, 247, 0.1)'"
+            onmouseout="this.style.backgroundColor='rgba(253, 251, 247, 0.05)'">
+            🌐
+          </button>
+          <a href="profile.html" style="color: var(--header-text);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--header-text)'" data-i18n="ui.nav_about">Tentang Kami</a>
+          <a href="index.html" style="color: var(--header-text);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--header-text)'" data-i18n="ui.nav_menu">Menu</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <h1 class="text-4xl font-extrabold tracking-tight" data-i18n="about.title">Tentang Kami</h1>
+    <p class="mt-3 leading-relaxed" data-i18n="about.subtitle" style="color: var(--text-secondary);">
+      Amour Coffee — Di pusat Yalova, titik pertemuan selama bertahun-tahun untuk kopi asli dan suasana hangat.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="https://maps.app.goo.gl/kALGBiL9deJ3uM13A" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_location">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+          <path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"></path>
+          <circle cx="12" cy="9" r="2.5"></circle>
+        </svg>
+        Lokasi
+      </a>
+
+      <a href="https://www.instagram.com/amour_coffee77" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--button-primary-bg); color: var(--button-primary-text);" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" data-i18n="ui.btn_instagram">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+          <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+          <circle cx="12" cy="12" r="3"></circle>
+          <circle cx="17.5" cy="6.5" r="1"></circle>
+        </svg>
+        Instagram: @amour_coffee77
+      </a>
+
+      <a href="index.html"
+         class="rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_open_menu">
+        Lihat Menu →
+      </a>
+    </div>
+
+    <!-- Blok gaya WE: kiri gambar + kanan teks (kolom di mobile) -->
+    <section class="mt-10 grid gap-12">
+
+      <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
+        <div class="order-1 md:order-1">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="../images/gallery1.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Tarihçe" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="order-2 md:order-2 text-left">
+          <h3 class="text-xl font-semibold" data-i18n="about.block1_title">Sejarah & Lokasi</h3>
+          <p class="mt-2 leading-relaxed" data-i18n-html="about.block1_text" style="color: var(--text-secondary);">
+            Amour Coffee sudah bertahun-tahun melayani. Dulu kafe ini bernama <b style="color: var(--text-primary);">Choridor</b>,
+            lalu berganti nama — tetapi jiwanya tetap sama. Kami terus memperbarui layanan,
+            menambah teknologi baru, dan menjaga sejarah tempat ini.
+            Lokasinya tepat di pusat kota; setiap hari ribuan orang melintas di sini.
+          </p>
+          <div class="mt-4">
+            <a href="https://maps.app.goo.gl/kALGBiL9deJ3uM13A" target="_blank" rel="noopener"
+               class="inline-flex items-center rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_location">
+              Buka Lokasi
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
+        <div class="order-2 md:order-1 text-left">
+          <h3 class="text-xl font-semibold" data-i18n="about.block2_title">Kopi & Teknologi</h3>
+          <p class="mt-2 leading-relaxed" data-i18n="about.block2_text" style="color: var(--text-secondary);">
+            Kami meracik kopi dengan resep terukur dan mesin profesional.
+            Yang membuat kami disukai: rasa konsisten, teknik yang tepat, dan pengalaman.
+            Barista kami termasuk yang paling berpengalaman di Yalova:
+            lebih dari 10 tahun pengalaman dengan proses rekrutmen yang ketat.
+          </p>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="../images/gallery2.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Kahve" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
+        <div class="order-1 md:order-1">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="../images/gallery3.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Komunitas" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="order-2 md:order-2 text-left">
+          <h3 class="text-xl font-semibold" data-i18n="about.block3_title">Komunitas</h3>
+          <p class="mt-2 leading-relaxed" data-i18n="about.block3_text" style="color: var(--text-secondary);">
+            Orang-orang yang datang ke sini sangat beragam: dari wali kota sampai mahasiswa.
+            Membuat teman baru itu mudah — baik dengan para tamu maupun dengan tim.
+          </p>
+        </div>
+      </article>
+
+      <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
+        <div class="order-2 md:order-1 text-left">
+          <h3 class="text-xl font-semibold" data-i18n="about.block4_title">Tim & Keluarga</h3>
+          <p class="mt-2 leading-relaxed" data-i18n="about.block4_text" style="color: var(--text-secondary);">
+            Tim kami sangat kompak — kami menyebutnya keluarga.
+            Amour adalah jantung anak muda Yalova: pesta, acara, dan suasana yang selalu hidup.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="index.html"
+               class="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_open_menu">
+              Lihat Menu →
+            </a>
+            <a href="https://www.instagram.com/amour_coffee77" target="_blank" rel="noopener"
+               class="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold" style="background: var(--button-primary-bg); color: var(--button-primary-text);" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'" data-i18n="ui.btn_instagram">
+              Instagram
+            </a>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="../images/gallery4.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Tim" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="relative isolate grid gap-6 md:grid-cols-2 md:items-center">
+        <div class="order-1 md:order-1">
+          <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="../images/gallery5.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Atmosfer" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="order-2 md:order-2 text-left">
+          <h3 class="text-xl font-semibold" data-i18n="about.block5_title">Suasana</h3>
+          <p class="mt-2 leading-relaxed" data-i18n="about.block5_text" style="color: var(--text-secondary);">
+            Di sini Anda merasakan suasana hangat dan akrab, bisa bermain dari catur hingga backgammon,
+            dan menikmati berbagai hidangan penutup.
+          </p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="border-t text-center text-sm py-6" style="border-color: var(--border-subtle); color: var(--text-muted);">
+    <p>© 2025 Amour Coffee — Situs dibuat oleh <a href="https://bond-dev.vercel.app/" target="_blank" class="font-semibold" style="color: var(--text-primary);">Dmitrii Bondarev</a></p>
+  </footer>
+
+  <div id="about-gallery-modal" class="fixed inset-0 z-[99999] hidden">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div class="relative mx-auto flex min-h-screen max-w-5xl items-center px-4 py-10">
+      <div class="relative w-full rounded-3xl border border-white/10 bg-black/80 p-4 text-white shadow-2xl">
+        <button id="about-gallery-close" class="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 hover:bg-white/10" aria-label="Close gallery">
+          ✕
+        </button>
+        <div class="flex items-center justify-between gap-4">
+          <button id="about-gallery-prev" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/80 hover:bg-white/10" aria-label="Previous image">
+            ‹
+          </button>
+          <div class="flex-1">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img id="about-gallery-image" src="" alt="" class="absolute inset-0 h-full w-full object-cover">
+            </div>
+            <p id="about-gallery-caption" class="mt-3 text-center text-sm" style="color: var(--text-secondary);"></p>
+          </div>
+          <button id="about-gallery-next" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/80 hover:bg-white/10" aria-label="Next image">
+            ›
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const LS_KEY = "lang";
+      const modal = document.getElementById("lang-modal");
+      const ALWAYS_SHOW_LANG_MODAL = false;
+
+      window.currentLang = localStorage.getItem(LS_KEY) || "id";
+      window.translations = {};
+
+      function deepGet(obj, path){
+        return path.split(".").reduce((acc, k) => (acc && acc[k] != null) ? acc[k] : undefined, obj);
+      }
+
+      async function loadTranslations(lang){
+        try{
+          const res = await fetch(`../lang/lang-${lang}.json`, { cache: "no-store" });
+          window.translations = await res.json();
+        } catch(e){
+          console.warn("❗ Translation JSON not found:", lang, e);
+          window.translations = {};
+        }
+      }
+
+      function applyI18nToDOM(){
+        document.querySelectorAll("[data-i18n-html]").forEach(el=>{
+          const key = el.getAttribute("data-i18n-html");
+          const val = deepGet(window.translations, key);
+          if (typeof val === "string") el.innerHTML = val;
+        });
+
+        document.querySelectorAll("[data-i18n]").forEach(el=>{
+          const key = el.getAttribute("data-i18n");
+          const val = deepGet(window.translations, key);
+          if (typeof val === "string") el.textContent = val;
+        });
+
+        document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
+          const key = el.getAttribute("data-i18n-placeholder");
+          const val = deepGet(window.translations, key);
+          if (typeof val === "string") el.setAttribute("placeholder", val);
+        });
+
+        document.querySelectorAll("[data-i18n-title]").forEach(el=>{
+          const key = el.getAttribute("data-i18n-title");
+          const val = deepGet(window.translations, key);
+          if (typeof val === "string") el.setAttribute("title", val);
+        });
+      }
+
+      function setDirForLang(lang){
+        const isRTL = (lang === "ar" || lang === "fa");
+        document.documentElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
+        document.body.classList.toggle("rtl", isRTL);
+      }
+
+      async function setLanguage(lang){
+        window.currentLang = lang;
+        localStorage.setItem(LS_KEY, lang);
+
+        setDirForLang(lang);
+        await loadTranslations(lang);
+        applyI18nToDOM();
+
+        if (modal) modal.classList.add("hidden");
+      }
+
+      function openModal(){
+        if (modal) modal.classList.remove("hidden");
+      }
+
+      document.querySelectorAll(".lang-btn").forEach(btn=>{
+        btn.addEventListener("click", ()=> setLanguage(btn.dataset.lang));
+      });
+
+      window.addEventListener("load", async ()=>{
+        setDirForLang(window.currentLang);
+        await loadTranslations(window.currentLang);
+        applyI18nToDOM();
+
+        if (ALWAYS_SHOW_LANG_MODAL || !localStorage.getItem(LS_KEY)) {
+          openModal();
+        } else if (modal) {
+          modal.classList.add("hidden");
+        }
+      });
+
+    window.openLangModal = openModal;
+  })();
+  </script>
+
+  <script>
+    (function(){
+      const modal = document.getElementById("about-gallery-modal");
+      const modalImage = document.getElementById("about-gallery-image");
+      const modalCaption = document.getElementById("about-gallery-caption");
+      const closeBtn = document.getElementById("about-gallery-close");
+      const prevBtn = document.getElementById("about-gallery-prev");
+      const nextBtn = document.getElementById("about-gallery-next");
+      const items = Array.from(document.querySelectorAll(".about-gallery-image")).map(img => {
+        const article = img.closest("article");
+        const captionEl = article ? article.querySelector("p") : null;
+        return { img, captionEl };
+      });
+      let currentIndex = 0;
+
+      function openAt(index){
+        if (!items.length) return;
+        currentIndex = (index + items.length) % items.length;
+        const item = items[currentIndex];
+        modalImage.src = item.img.getAttribute("src");
+        modalImage.alt = item.img.getAttribute("alt") || "";
+        modalCaption.textContent = item.captionEl ? item.captionEl.textContent.trim() : "";
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeModal(){
+        modal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      function next(){
+        openAt(currentIndex + 1);
+      }
+
+      function prev(){
+        openAt(currentIndex - 1);
+      }
+
+      document.querySelectorAll(".about-gallery-image").forEach((img, index) => {
+        img.addEventListener("click", () => openAt(index));
+      });
+
+      closeBtn.addEventListener("click", closeModal);
+      prevBtn.addEventListener("click", prev);
+      nextBtn.addEventListener("click", next);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (modal.classList.contains("hidden")) return;
+        if (event.key === "Escape") closeModal();
+        if (event.key === "ArrowRight") next();
+        if (event.key === "ArrowLeft") prev();
+      });
+    })();
+  </script>
+
+</body>
+</html>
