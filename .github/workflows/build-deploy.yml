@@ -1,0 +1,37 @@
+name: Build and Deploy
+
+# Trigger deployment on branch push to main trunk
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.11.0' # select suitable Node.js version
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Setup menu.html as default entry point
+        run: |
+          if [ -f "menu.html" ]; then
+            cp menu.html index.html
+          fi
+      
+      - name: Deploy to EdgeOne Pages
+        run: npx edgeone pages deploy <outputDirectory> -n <projectName> -t ${{ secrets.EDGEONE_API_TOKEN }} [-e <env>]
+        env:
+          EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}
