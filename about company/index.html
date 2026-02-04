@@ -126,7 +126,7 @@
     <div class="mx-auto w-full max-w-6xl px-4 py-2">
       <div class="flex items-center justify-between gap-3">
         <div class="min-w-0 flex items-center gap-3">
-          <img src="images/logo.png" alt="Amour logo" class="h-9 w-9 shrink-0 rounded-full">
+          <img src="../images/logo.png" alt="Amour logo" class="h-9 w-9 shrink-0 rounded-full">
           <div class="min-w-0 leading-tight">
             <div class="flex items-center gap-2 min-w-0">
               <span class="text-base font-semibold" style="color: var(--header-text);">amour</span>
@@ -151,7 +151,7 @@
             🌐
           </button>
           <a href="index.html" style="color: var(--header-text);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--header-text)'" data-i18n="ui.nav_about">Tentang Kami</a>
-          <a href="menu.html" style="color: var(--header-text);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--header-text)'" data-i18n="ui.nav_menu">Menu</a>
+          <a href="../menu.html" style="color: var(--header-text);" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--header-text)'" data-i18n="ui.nav_menu">Menu</a>
         </div>
       </div>
     </div>
@@ -185,7 +185,7 @@
         Instagram: @amour_coffee77
       </a>
 
-      <a href="menu.html"
+      <a href="../menu.html"
          class="rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_open_menu">
         Lihat Menu →
       </a>
@@ -198,7 +198,7 @@
         <div class="order-1 md:order-1">
           <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery1.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Tarihçe" loading="lazy">
+              <img src="../images/gallery1.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Tarihçe" loading="lazy">
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@
         <div class="order-1 md:order-2">
           <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery2.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Kahve" loading="lazy">
+              <img src="../images/gallery2.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Kahve" loading="lazy">
             </div>
           </div>
         </div>
@@ -242,7 +242,7 @@
         <div class="order-1 md:order-1">
           <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery3.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Komunitas" loading="lazy">
+              <img src="../images/gallery3.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Komunitas" loading="lazy">
             </div>
           </div>
         </div>
@@ -264,7 +264,7 @@
           </p>
 
           <div class="mt-5 flex flex-wrap gap-3">
-            <a href="menu.html"
+            <a href="../menu.html"
                class="inline-flex items-center rounded-xl px-5 py-3 text-sm font-semibold" style="background: var(--button-bg); border: 1px solid var(--button-border); color: var(--text-primary);" onmouseover="this.style.background='var(--button-hover-bg)'" onmouseout="this.style.background='var(--button-bg)'" data-i18n="ui.btn_open_menu">
               Lihat Menu →
             </a>
@@ -277,7 +277,7 @@
         <div class="order-1 md:order-2">
           <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery4.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Tim" loading="lazy">
+              <img src="../images/gallery4.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Tim" loading="lazy">
             </div>
           </div>
         </div>
@@ -287,7 +287,7 @@
         <div class="order-1 md:order-1">
           <div class="mx-auto w-full max-w-[420px] sm:max-w-[520px] md:max-w-[640px]">
             <div class="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src="images/gallery5.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Atmosfer" loading="lazy">
+              <img src="../images/gallery5.jpg" class="about-gallery-image absolute inset-0 h-full w-full cursor-zoom-in object-cover" alt="Atmosfer" loading="lazy">
             </div>
           </div>
         </div>
@@ -347,7 +347,7 @@
 
       async function loadTranslations(lang){
         try{
-          const res = await fetch(`./lang/lang-${lang}.json`, { cache: "no-store" });
+          const res = await fetch(`../lang/lang-${lang}.json`, { cache: "no-store" });
           window.translations = await res.json();
         } catch(e){
           console.warn("❗ Translation JSON not found:", lang, e);
