@@ -253,9 +253,8 @@
         🌐 Select Your Language
       </h2>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
-        <button class="lang-btn" data-lang="en">🇬🇧 English</button>
-        <button class="lang-btn" data-lang="id">🇮🇩 Bahasa Indonesia</button>
+      <div class="flex justify-center">
+        <button class="lang-btn w-full max-w-xs" data-lang="id">🇮🇩 Bahasa Indonesia</button>
       </div>
 
       <p class="mt-6 text-sm text-white/60 italic" data-i18n="ui.lang_sub">Amour Café — Yalova</p>
@@ -572,9 +571,11 @@ const AMOUR_ENRICH = {
 
     // i18n mini-API
     const fmt = n =>
-      new Intl.NumberFormat("tr-TR", {
+      new Intl.NumberFormat("id-ID", {
         style: "currency",
-        currency: "TRY",
+        currency: "IDR",
+        currencyDisplay: "symbol",
+        minimumFractionDigits: 0,
         maximumFractionDigits: 0
       }).format(n);
 
@@ -885,6 +886,7 @@ async function initMenuData(){
     const LS_KEY = "lang";
     const modal = document.getElementById("lang-modal");
     const ALWAYS_SHOW_LANG_MODAL = false;
+    const ENABLE_LANG_MODAL = false;
 
     window.currentLang = localStorage.getItem(LS_KEY) || "id";
     window.translations = {};
@@ -969,7 +971,8 @@ async function initMenuData(){
       // Initialize menu data from Excel
       await initMenuData();
 
-      if (ALWAYS_SHOW_LANG_MODAL || !localStorage.getItem(LS_KEY)) {
+      // Only show language modal if enabled
+      if (ENABLE_LANG_MODAL && (ALWAYS_SHOW_LANG_MODAL || !localStorage.getItem(LS_KEY))) {
         openModal();
       } else if (modal) {
         modal.classList.add("hidden");
